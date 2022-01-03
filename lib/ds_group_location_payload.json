@@ -1,0 +1,311 @@
+{
+    "name": "DS-GROUP-LOCATION",
+    "description": null,
+    "api": "/dsGroupLocation",
+    "permanentDeleteData": true,
+    "wizard": [],
+    "definition": [{
+        "key": "_id",
+        "type": "String",
+        "prefix": "DS",
+        "suffix": null,
+        "padding": null,
+        "counter": 1001,
+        "properties": {
+            "label": null,
+            "readonly": false,
+            "errorMessage": null,
+            "name": "ID",
+            "required": false,
+            "fieldLength": 10,
+            "_description": null,
+            "_typeChanged": "id",
+            "_isParrentArray": null,
+            "_isGrpParentArray": null,
+            "dataPath": "_id",
+            "_detailedType": "",
+            "dataKey": "_id"
+        }
+    }, {
+        "type": "Object",
+        "key": "groupLocation",
+        "properties": {
+            "name": "GROUP-LOCATION",
+            "fieldLength": 10,
+            "_typeChanged": "Object",
+            "dataKey": "groupLocation",
+            "dataPath": "groupLocation"
+        },
+        "definition": [{
+            "type": "Geojson",
+            "key": "dsLocation1001",
+            "properties": {
+                "name": "DS LOCATION 1001",
+                "fieldLength": 10,
+                "_typeChanged": "Geojson",
+                "geoType": "point",
+                "dataKey": "dsLocation1001",
+                "dataPath": "groupLocation.dsLocation1001"
+            }
+        }, {
+            "type": "Geojson",
+            "key": "dsLocation1002",
+            "properties": {
+                "name": "DS LOCATION 1002",
+                "label": "Custom DS LOCATION 1002",
+                "readonly": true,
+                "errorMessage": "Error DS LOCATION 1002",
+                "required": true,
+                "fieldLength": 10,
+                "_description": "test description",
+                "_typeChanged": "Geojson",
+                "geoType": "point",
+                "dataKey": "dsLocation1002",
+                "dataPath": "groupLocation.dsLocation1002"
+            }
+        }, {
+            "type": "Geojson",
+            "key": "dsLocation1003",
+            "properties": {
+                "name": "DS LOCATION 1003",
+                "required": true,
+                "fieldLength": 10,
+                "_typeChanged": "Geojson",
+                "geoType": "point",
+                "dataKey": "dsLocation1003",
+                "dataPath": "groupLocation.dsLocation1003"
+            }
+        }, {
+            "type": "Geojson",
+            "key": "dsLocation1004",
+            "properties": {
+                "name": "DS LOCATION 1004",
+                "readonly": true,
+                "fieldLength": 10,
+                "_typeChanged": "Geojson",
+                "geoType": "point",
+                "dataKey": "dsLocation1004",
+                "dataPath": "groupLocation.dsLocation1004"
+            }
+        }, {
+            "type": "Geojson",
+            "key": "dsLocation1005",
+            "properties": {
+                "name": "DS LOCATION 1005",
+                "readonly": true,
+                "required": true,
+                "fieldLength": 10,
+                "_typeChanged": "Geojson",
+                "geoType": "point",
+                "dataKey": "dsLocation1005",
+                "dataPath": "groupLocation.dsLocation1005"
+            }
+        }, {
+            "type": "Geojson",
+            "key": "dsLocation1006",
+            "properties": {
+                "name": "DS LOCATION 1006",
+                "label": "Custom DS LOCATION 1006",
+                "fieldLength": 10,
+                "_typeChanged": "Geojson",
+                "geoType": "point",
+                "dataKey": "dsLocation1006",
+                "dataPath": "groupLocation.dsLocation1006"
+            }
+        }, {
+            "type": "Geojson",
+            "key": "dsLocation1007",
+            "properties": {
+                "name": "DS LOCATION 1007",
+                "errorMessage": "Error DS LOCATION 1007",
+                "fieldLength": 10,
+                "_typeChanged": "Geojson",
+                "geoType": "point",
+                "dataKey": "dsLocation1007",
+                "dataPath": "groupLocation.dsLocation1007"
+            }
+        }, {
+            "type": "Geojson",
+            "key": "dsLocation1008",
+            "properties": {
+                "name": "DS LOCATION 1008",
+                "label": "Custom DS LOCATION 1008",
+                "errorMessage": "Error DS LOCATION 1008",
+                "fieldLength": 10,
+                "_description": "test descrition",
+                "_typeChanged": "Geojson",
+                "geoType": "point",
+                "dataKey": "dsLocation1008",
+                "dataPath": "groupLocation.dsLocation1008"
+            }
+        }, {
+            "type": "Geojson",
+            "key": "dsLocation1009",
+            "properties": {
+                "name": "DS LOCATION 1009",
+                "fieldLength": 10,
+                "_typeChanged": "Geojson",
+                "geoType": "point",
+                "dataKey": "dsLocation1009",
+                "dataPath": "groupLocation.dsLocation1009"
+            }
+        }]
+    }],
+    "webHooks": [],
+    "preHooks": [],
+    "workflowHooks": {
+        "postHooks": {
+            "submit": [],
+            "rework": [],
+            "discard": [],
+            "approve": [],
+            "reject": []
+        }
+    },
+    "versionValidity": {
+        "validityType": "count",
+        "validityValue": -1
+    },
+    "disableInsights": false,
+    "headers": [],
+    "enableSearchIndex": false,
+    "role": {
+        "_id": "SRVC2039",
+        "_metadata": {
+            "version": {
+                "document": 1,
+                "release": "1.0"
+            },
+            "deleted": false,
+            "lastUpdated": "2021-02-02T07:20:13.080Z",
+            "createdAt": "2021-02-02T07:20:13.080Z"
+        },
+        "app": "harshi",
+        "entity": "SRVC2039",
+        "entityName": "DS-GROUP-LOCATION",
+        "roles": [{
+            "skipReviewRole": true,
+            "id": "P4218717640",
+            "name": "Skip Review",
+            "operations": [{
+                "method": "SKIP_REVIEW"
+            }, {
+                "method": "POST"
+            }, {
+                "method": "PUT"
+            }, {
+                "method": "DELETE"
+            }],
+            "description": "This role entitles an authorized user to create, update or delete a record and without any approval"
+        }, {
+            "manageRole": true,
+            "id": "P5393046175",
+            "name": "Manage",
+            "operations": [{
+                "method": "POST"
+            }, {
+                "method": "PUT"
+            }, {
+                "method": "DELETE"
+            }, {
+                "method": "GET"
+            }],
+            "description": "This role entitles an authorized user to create, update or delete a record"
+        }, {
+            "viewRole": true,
+            "id": "P4902848775",
+            "name": "View",
+            "operations": [{
+                "method": "GET"
+            }],
+            "description": "This role entitles an authorized user to view the record"
+        }],
+        "type": "appcenter",
+        "fields": {
+            "_id": {
+                "_t": "String",
+                "_p": {
+                    "P4218717640": "R",
+                    "P5393046175": "R",
+                    "P4902848775": "R"
+                }
+            },
+            "groupLocation": {
+                "dsLocation1001": {
+                    "_t": "String",
+                    "_p": {
+                        "P4218717640": "R",
+                        "P5393046175": "R",
+                        "P4902848775": "R"
+                    }
+                },
+                "dsLocation1002": {
+                    "_t": "String",
+                    "_p": {
+                        "P4218717640": "R",
+                        "P5393046175": "R",
+                        "P4902848775": "R"
+                    }
+                },
+                "dsLocation1003": {
+                    "_t": "String",
+                    "_p": {
+                        "P4218717640": "R",
+                        "P5393046175": "R",
+                        "P4902848775": "R"
+                    }
+                },
+                "dsLocation1004": {
+                    "_t": "String",
+                    "_p": {
+                        "P4218717640": "R",
+                        "P5393046175": "R",
+                        "P4902848775": "R"
+                    }
+                },
+                "dsLocation1005": {
+                    "_t": "String",
+                    "_p": {
+                        "P4218717640": "R",
+                        "P5393046175": "R",
+                        "P4902848775": "R"
+                    }
+                },
+                "dsLocation1006": {
+                    "_t": "String",
+                    "_p": {
+                        "P4218717640": "R",
+                        "P5393046175": "R",
+                        "P4902848775": "R"
+                    }
+                },
+                "dsLocation1007": {
+                    "_t": "String",
+                    "_p": {
+                        "P4218717640": "R",
+                        "P5393046175": "R",
+                        "P4902848775": "R"
+                    }
+                },
+                "dsLocation1008": {
+                    "_t": "String",
+                    "_p": {
+                        "P4218717640": "R",
+                        "P5393046175": "R",
+                        "P4902848775": "R"
+                    }
+                },
+                "dsLocation1009": {
+                    "_t": "String",
+                    "_p": {
+                        "P4218717640": "R",
+                        "P5393046175": "R",
+                        "P4902848775": "R"
+                    }
+                }
+            }
+        },
+        "__v": 0
+    },
+    "app": "harshi"
+}

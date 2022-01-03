@@ -1,0 +1,118 @@
+{
+    "testName": "Create Super admin ,App and app admin ",
+    "url": [
+        "https://qa.ds.appveen.com/api"
+    ],
+    "modules": [],
+    "globals": ["loginResponse", "createGroupResponse", "groupResponse"],
+    "tests": [{
+            "endpoint": "1",
+            "name": "Login as superAdmin",
+            "request": {
+                "method": "POST",
+                "url": "/a/rbac/login",
+                "payload": {
+                    "username": "admin",
+                    "password": "u?5k167v13w5"
+                },
+                "wait": 5,
+                "responseCode": 200,
+                "saveResponse": "loginResponse"
+            }
+        }, {
+            "endpoint": "1",
+            "name": "Create a superAdmin",
+            "request": {
+                "method": "POST",
+                "url": "/a/rbac/usr",
+                "payload": {
+                    "username": "test_superadmin@appveen.com",
+                    "password": "123123123",
+                    "cpassword": "123123123",
+                    "isSuperAdmin": true,
+                    "attributes": {},
+                    "basicDetails": {
+                        "name": "test_superadmin@appveen.com",
+                        "phone": null
+                    },
+                    "accessControl": {
+                        "accessLevel": "Selected",
+                        "apps": []
+                    },
+                    "roles": null
+                },
+                "headers": {
+                    "Authorization": "JWT {{loginResponse.token}}",
+                    "content-type": "application/json"
+                },
+                "wait": 5,
+                "responseCode": 200
+            }
+        }, {
+            "endpoint": "1",
+            "name": "Create an app",
+            "request": {
+                "method": "POST",
+                "url": "/a/rbac/app",
+                "payload": {
+                    "_id": "TEST-API"
+                },
+                "headers": {
+                    "Authorization": "JWT {{loginResponse.token}}",
+                    "content-type": "application/json"
+                },
+                "wait": 10,
+                "responseCode": 200
+            }
+        },
+        {
+            "endpoint": "1",
+            "name": "Create a user",
+            "request": {
+                "method": "POST",
+                "url": "/a/rbac/usr/app/TEST-API/create",
+                "payload": {
+                    "user": {
+                        "username": "test_appadmin@appveen.com",
+                        "password": "123123123",
+                        "cpassword": "123123123",
+                        "isSuperAdmin": false,
+                        "attributes": {},
+                        "basicDetails": {
+                            "name": "test_appadmin@appveen.com",
+                            "phone": null
+                        },
+                        "accessControl": {
+                            "accessLevel": "Selected",
+                            "apps": ["TEST-API"]
+                        },
+                        "roles": null
+                    },
+                    "groups": []
+                },
+                "headers": {
+                    "Authorization": "JWT {{loginResponse.token}}",
+                    "content-type": "application/json"
+                },
+                "wait": 10,
+                "responseCode": 200
+            }
+        }, {
+            "endpoint": "1",
+            "name": "Make user app admin",
+            "request": {
+                "method": "PUT",
+                "url": "/a/rbac/usr/test_appadmin@appveen.com/appAdmin/grant",
+                "payload": {
+                    "apps": ["TEST-API"]
+                },
+                "headers": {
+                    "Authorization": "JWT {{loginResponse.token}}",
+                    "content-type": "application/json"
+                },
+                "wait": 7,
+                "responseCode": 200
+            }
+        }
+    ]
+}

@@ -1,0 +1,1587 @@
+{
+    "name": "DS-GROUP-NUMBER",
+    "description": null,
+    "api": "/dsGroupNumber",
+    "permanentDeleteData": true,
+    "wizard": [],
+    "definition": [{
+        "key": "_id",
+        "type": "String",
+        "prefix": "DS",
+        "suffix": null,
+        "padding": null,
+        "counter": 1001,
+        "properties": {
+            "label": null,
+            "readonly": false,
+            "errorMessage": null,
+            "name": "ID",
+            "required": false,
+            "fieldLength": 10,
+            "_description": null,
+            "_typeChanged": "id",
+            "_isParrentArray": null,
+            "_isGrpParentArray": null,
+            "dataPath": "_id",
+            "_detailedType": "",
+            "dataKey": "_id"
+        }
+    }, {
+        "type": "Object",
+        "key": "dsGroupNumber",
+        "properties": {
+            "name": "DS-GROUP_NUMBER",
+            "fieldLength": 10,
+            "_typeChanged": "Object",
+            "dataKey": "dsGroupNumber",
+            "dataPath": "dsGroupNumber"
+        },
+        "definition": [{
+            "type": "Number",
+            "key": "dsNumberNumber1001",
+            "properties": {
+                "name": "DS NUMBER NUMBER 1001",
+                "fieldLength": 10,
+                "_typeChanged": "Number",
+                "precision": 2,
+                "dataKey": "dsNumberNumber1001",
+                "dataPath": "dsGroupNumber.dsNumberNumber1001"
+            }
+        }, {
+            "type": "Number",
+            "key": "dsNumberNumber1002",
+            "properties": {
+                "label": "Custom DS NUMBER NUMBER 1002",
+                "errorMessage": "Error DS NUMBER NUMBER 1002",
+                "name": "DS NUMBER NUMBER 1002",
+                "required": true,
+                "fieldLength": 10,
+                "_description": "test description",
+                "_typeChanged": "Number",
+                "createOnly": true,
+                "unique": true,
+                "min": 4,
+                "max": 10,
+                "precision": 2,
+                "dataKey": "dsNumberNumber1002",
+                "dataPath": "dsGroupNumber.dsNumberNumber1002"
+            }
+        }, {
+            "type": "Number",
+            "key": "dsNumberNumber1003",
+            "properties": {
+                "name": "DS NUMBER NUMBER 1003",
+                "required": true,
+                "fieldLength": 10,
+                "_typeChanged": "Number",
+                "precision": 2,
+                "dataKey": "dsNumberNumber1003",
+                "dataPath": "dsGroupNumber.dsNumberNumber1003"
+            }
+        }, {
+            "type": "Number",
+            "key": "dsNumberNumber1004",
+            "properties": {
+                "name": "DS NUMBER NUMBER 1004",
+                "fieldLength": 10,
+                "_typeChanged": "Number",
+                "createOnly": true,
+                "precision": 2,
+                "dataKey": "dsNumberNumber1004",
+                "dataPath": "dsGroupNumber.dsNumberNumber1004"
+            }
+        }, {
+            "type": "Number",
+            "key": "dsNumberNumber1005",
+            "properties": {
+                "name": "DS NUMBER NUMBER 1005",
+                "fieldLength": 10,
+                "_typeChanged": "Number",
+                "unique": true,
+                "precision": 2,
+                "dataKey": "dsNumberNumber1005",
+                "dataPath": "dsGroupNumber.dsNumberNumber1005"
+            }
+        }, {
+            "type": "Number",
+            "key": "dsNumberNumber1006",
+            "properties": {
+                "readonly": true,
+                "name": "DS NUMBER NUMBER 1006",
+                "fieldLength": 10,
+                "_typeChanged": "Number",
+                "precision": 2,
+                "dataKey": "dsNumberNumber1006",
+                "dataPath": "dsGroupNumber.dsNumberNumber1006"
+            }
+        }, {
+            "type": "Number",
+            "key": "dsNumberNumber1007",
+            "properties": {
+                "name": "DS NUMBER NUMBER 1007",
+                "required": true,
+                "fieldLength": 10,
+                "_typeChanged": "Number",
+                "createOnly": true,
+                "precision": 2,
+                "dataKey": "dsNumberNumber1007",
+                "dataPath": "dsGroupNumber.dsNumberNumber1007"
+            }
+        }, {
+            "type": "Number",
+            "key": "dsNumberNumber1008",
+            "properties": {
+                "name": "DS NUMBER NUMBER 1008",
+                "required": true,
+                "fieldLength": 10,
+                "_typeChanged": "Number",
+                "unique": true,
+                "precision": 2,
+                "dataKey": "dsNumberNumber1008",
+                "dataPath": "dsGroupNumber.dsNumberNumber1008"
+            }
+        }, {
+            "type": "Number",
+            "key": "dsNumberNumber1009",
+            "properties": {
+                "readonly": true,
+                "name": "DS NUMBER NUMBER 1009",
+                "required": true,
+                "fieldLength": 10,
+                "_typeChanged": "Number",
+                "precision": 2,
+                "dataKey": "dsNumberNumber1009",
+                "dataPath": "dsGroupNumber.dsNumberNumber1009"
+            }
+        }, {
+            "type": "Number",
+            "key": "dsNumberNumber1010",
+            "properties": {
+                "name": "DS NUMBER NUMBER 1010",
+                "fieldLength": 10,
+                "_typeChanged": "Number",
+                "createOnly": true,
+                "unique": true,
+                "precision": 2,
+                "dataKey": "dsNumberNumber1010",
+                "dataPath": "dsGroupNumber.dsNumberNumber1010"
+            }
+        }, {
+            "type": "Number",
+            "key": "dsNumberNumber1011",
+            "properties": {
+                "readonly": true,
+                "name": "DS NUMBER NUMBER 1011",
+                "fieldLength": 10,
+                "_typeChanged": "Number",
+                "createOnly": true,
+                "precision": 2,
+                "dataKey": "dsNumberNumber1011",
+                "dataPath": "dsGroupNumber.dsNumberNumber1011"
+            }
+        }, {
+            "type": "Number",
+            "key": "dsNumberNumber1012",
+            "properties": {
+                "readonly": true,
+                "name": "DS NUMBER NUMBER 1012",
+                "fieldLength": 10,
+                "_typeChanged": "Number",
+                "unique": true,
+                "precision": 2,
+                "dataKey": "dsNumberNumber1012",
+                "dataPath": "dsGroupNumber.dsNumberNumber1012"
+            }
+        }, {
+            "type": "Number",
+            "key": "dsNumberNumber1013",
+            "properties": {
+                "label": "Custom DS NUMBER NUMBER 1013",
+                "name": "DS NUMBER NUMBER 1013",
+                "fieldLength": 10,
+                "_typeChanged": "Number",
+                "precision": 2,
+                "dataKey": "dsNumberNumber1013",
+                "dataPath": "dsGroupNumber.dsNumberNumber1013"
+            }
+        }, {
+            "type": "Number",
+            "key": "dsNumberNumber1014",
+            "properties": {
+                "errorMessage": "Error DS NUMBER NUMBER 1014",
+                "name": "DS NUMBER NUMBER 1014",
+                "fieldLength": 10,
+                "_typeChanged": "Number",
+                "precision": 2,
+                "dataKey": "dsNumberNumber1014",
+                "dataPath": "dsGroupNumber.dsNumberNumber1014"
+            }
+        }, {
+            "type": "Number",
+            "key": "dsNumberNumber1015",
+            "properties": {
+                "label": "Custom DS NUMBER NUMBER 1015",
+                "errorMessage": "Error DS NUMBER NUMBER 1015",
+                "name": "DS NUMBER NUMBER 1015",
+                "fieldLength": 10,
+                "_typeChanged": "Number",
+                "precision": 2,
+                "dataKey": "dsNumberNumber1015",
+                "dataPath": "dsGroupNumber.dsNumberNumber1015"
+            }
+        }, {
+            "type": "Number",
+            "key": "dsNumberNumber1016",
+            "properties": {
+                "label": "Custom DS NUMBER NUMBER 1016",
+                "readonly": true,
+                "name": "DS NUMBER NUMBER 1016",
+                "fieldLength": 10,
+                "_typeChanged": "Number",
+                "precision": 2,
+                "dataKey": "dsNumberNumber1016",
+                "dataPath": "dsGroupNumber.dsNumberNumber1016"
+            }
+        }, {
+            "type": "Number",
+            "key": "dsNumberNumber1017",
+            "properties": {
+                "readonly": true,
+                "errorMessage": "Error DS NUMBER NUMBER 1017",
+                "name": "DS NUMBER NUMBER 1017",
+                "fieldLength": 10,
+                "_typeChanged": "Number",
+                "precision": 2,
+                "dataKey": "dsNumberNumber1017",
+                "dataPath": "dsGroupNumber.dsNumberNumber1017"
+            }
+        }, {
+            "type": "Number",
+            "key": "dsNumberNumber1018",
+            "properties": {
+                "name": "DS NUMBER NUMBER 1018",
+                "fieldLength": 10,
+                "_typeChanged": "Number",
+                "default": 12,
+                "precision": 2,
+                "dataKey": "dsNumberNumber1018",
+                "dataPath": "dsGroupNumber.dsNumberNumber1018"
+            }
+        }, {
+            "type": "Number",
+            "key": "dsNumberNumber1019",
+            "properties": {
+                "readonly": true,
+                "name": "DS NUMBER NUMBER 1019",
+                "fieldLength": 10,
+                "_typeChanged": "Number",
+                "default": 12,
+                "precision": 2,
+                "dataKey": "dsNumberNumber1019",
+                "dataPath": "dsGroupNumber.dsNumberNumber1019"
+            }
+        }, {
+            "type": "Number",
+            "key": "dsNumberNumber1020",
+            "properties": {
+                "name": "DS NUMBER NUMBER 1020",
+                "fieldLength": 10,
+                "_description": "test description",
+                "_typeChanged": "Number",
+                "precision": 2,
+                "dataKey": "dsNumberNumber1020",
+                "dataPath": "dsGroupNumber.dsNumberNumber1020"
+            }
+        }, {
+            "type": "Number",
+            "key": "dsNumberNumber1021",
+            "properties": {
+                "name": "DS NUMBER NUMBER 1021",
+                "fieldLength": 10,
+                "_typeChanged": "Number",
+                "precision": 3,
+                "dataKey": "dsNumberNumber1021",
+                "dataPath": "dsGroupNumber.dsNumberNumber1021"
+            }
+        }, {
+            "type": "Number",
+            "key": "dsNumberNumber1022",
+            "properties": {
+                "name": "DS NUMBER NUMBER 1022",
+                "fieldLength": 10,
+                "_typeChanged": "Number",
+                "min": 4,
+                "precision": 2,
+                "dataKey": "dsNumberNumber1022",
+                "dataPath": "dsGroupNumber.dsNumberNumber1022"
+            }
+        }, {
+            "type": "Number",
+            "key": "dsNumberNumber1023",
+            "properties": {
+                "name": "DS NUMBER NUMBER 1023",
+                "fieldLength": 10,
+                "_typeChanged": "Number",
+                "max": 10,
+                "precision": 2,
+                "dataKey": "dsNumberNumber1023",
+                "dataPath": "dsGroupNumber.dsNumberNumber1023"
+            }
+        }, {
+            "type": "Number",
+            "key": "dsNumberNumber1024",
+            "properties": {
+                "name": "DS NUMBER NUMBER 1024",
+                "fieldLength": 10,
+                "_typeChanged": "Number",
+                "min": 4,
+                "max": 10,
+                "precision": 2,
+                "dataKey": "dsNumberNumber1024",
+                "dataPath": "dsGroupNumber.dsNumberNumber1024"
+            }
+        }]
+    }, {
+        "type": "Object",
+        "key": "dsGroupNumber2",
+        "properties": {
+            "name": "DS-GROUP-NUMBER2",
+            "fieldLength": 10,
+            "_typeChanged": "Object",
+            "dataKey": "dsGroupNumber2",
+            "dataPath": "dsGroupNumber2"
+        },
+        "definition": [{
+            "type": "Number",
+            "key": "dsNumberCurrency1001",
+            "properties": {
+                "name": "DS NUMBER CURRENCY 1001",
+                "fieldLength": 10,
+                "_typeChanged": "Number",
+                "currency": "INR",
+                "precision": 2,
+                "dataKey": "dsNumberCurrency1001",
+                "dataPath": "dsGroupNumber2.dsNumberCurrency1001"
+            }
+        }, {
+            "type": "Number",
+            "key": "dsNumberCurrency1002",
+            "properties": {
+                "label": "Custom DS NUMBER CURRENCY 1002",
+                "errorMessage": "Error DS NUMBER CURRENCY 1002",
+                "name": "DS NUMBER CURRENCY 1002",
+                "required": true,
+                "fieldLength": 10,
+                "_description": "test description",
+                "_typeChanged": "Number",
+                "createOnly": true,
+                "unique": true,
+                "min": 3,
+                "max": 10,
+                "currency": "INR",
+                "precision": 3,
+                "dataKey": "dsNumberCurrency1002",
+                "dataPath": "dsGroupNumber2.dsNumberCurrency1002"
+            }
+        }, {
+            "type": "Number",
+            "key": "dsNumberCurrency1003",
+            "properties": {
+                "name": "DS NUMBER CURRENCY 1003",
+                "required": true,
+                "fieldLength": 10,
+                "_typeChanged": "Number",
+                "currency": "INR",
+                "precision": 2,
+                "dataKey": "dsNumberCurrency1003",
+                "dataPath": "dsGroupNumber2.dsNumberCurrency1003"
+            }
+        }, {
+            "type": "Number",
+            "key": "dsNumberCurrency1004",
+            "properties": {
+                "name": "DS NUMBER CURRENCY 1004",
+                "fieldLength": 10,
+                "_typeChanged": "Number",
+                "createOnly": true,
+                "currency": "INR",
+                "precision": 2,
+                "dataKey": "dsNumberCurrency1004",
+                "dataPath": "dsGroupNumber2.dsNumberCurrency1004"
+            }
+        }, {
+            "type": "Number",
+            "key": "dsNumberCurrency1005",
+            "properties": {
+                "name": "DS NUMBER CURRENCY 1005",
+                "fieldLength": 10,
+                "_typeChanged": "Number",
+                "unique": true,
+                "currency": "INR",
+                "precision": 2,
+                "dataKey": "dsNumberCurrency1005",
+                "dataPath": "dsGroupNumber2.dsNumberCurrency1005"
+            }
+        }, {
+            "type": "Number",
+            "key": "dsNumberCurrency1006",
+            "properties": {
+                "readonly": true,
+                "name": "DS NUMBER CURRENCY 1006",
+                "fieldLength": 10,
+                "_typeChanged": "Number",
+                "currency": "INR",
+                "precision": 2,
+                "dataKey": "dsNumberCurrency1006",
+                "dataPath": "dsGroupNumber2.dsNumberCurrency1006"
+            }
+        }, {
+            "type": "Number",
+            "key": "dsNumberCurrency1007",
+            "properties": {
+                "name": "DS NUMBER CURRENCY 1007",
+                "required": true,
+                "fieldLength": 10,
+                "_typeChanged": "Number",
+                "createOnly": true,
+                "currency": "INR",
+                "precision": 2,
+                "dataKey": "dsNumberCurrency1007",
+                "dataPath": "dsGroupNumber2.dsNumberCurrency1007"
+            }
+        }, {
+            "type": "Number",
+            "key": "dsNumberCurrency1008",
+            "properties": {
+                "name": "DS NUMBER CURRENCY 1008",
+                "required": true,
+                "fieldLength": 10,
+                "_typeChanged": "Number",
+                "unique": true,
+                "currency": "INR",
+                "precision": 2,
+                "dataKey": "dsNumberCurrency1008",
+                "dataPath": "dsGroupNumber2.dsNumberCurrency1008"
+            }
+        }, {
+            "type": "Number",
+            "key": "dsNumberCurrency1009",
+            "properties": {
+                "readonly": true,
+                "name": "DS NUMBER CURRENCY 1009",
+                "required": true,
+                "fieldLength": 10,
+                "_typeChanged": "Number",
+                "currency": "INR",
+                "precision": 2,
+                "dataKey": "dsNumberCurrency1009",
+                "dataPath": "dsGroupNumber2.dsNumberCurrency1009"
+            }
+        }, {
+            "type": "Number",
+            "key": "dsNumberCurrency1010",
+            "properties": {
+                "name": "DS NUMBER CURRENCY 1010",
+                "fieldLength": 10,
+                "_typeChanged": "Number",
+                "createOnly": true,
+                "unique": true,
+                "currency": "INR",
+                "precision": 2,
+                "dataKey": "dsNumberCurrency1010",
+                "dataPath": "dsGroupNumber2.dsNumberCurrency1010"
+            }
+        }, {
+            "type": "Number",
+            "key": "dsNumberCurrency1011",
+            "properties": {
+                "readonly": true,
+                "name": "DS NUMBER CURRENCY 1011",
+                "fieldLength": 10,
+                "_typeChanged": "Number",
+                "createOnly": true,
+                "currency": "INR",
+                "precision": 2,
+                "dataKey": "dsNumberCurrency1011",
+                "dataPath": "dsGroupNumber2.dsNumberCurrency1011"
+            }
+        }, {
+            "type": "Number",
+            "key": "dsNumberCurrency1012",
+            "properties": {
+                "readonly": true,
+                "name": "DS NUMBER CURRENCY 1012",
+                "fieldLength": 10,
+                "_typeChanged": "Number",
+                "unique": true,
+                "currency": "INR",
+                "precision": 2,
+                "dataKey": "dsNumberCurrency1012",
+                "dataPath": "dsGroupNumber2.dsNumberCurrency1012"
+            }
+        }, {
+            "type": "Number",
+            "key": "dsNumberCurrency1013",
+            "properties": {
+                "label": "Custom DS NUMBER CURRENCY 1013",
+                "name": "DS NUMBER CURRENCY 1013",
+                "fieldLength": 10,
+                "_typeChanged": "Number",
+                "currency": "INR",
+                "precision": 2,
+                "dataKey": "dsNumberCurrency1013",
+                "dataPath": "dsGroupNumber2.dsNumberCurrency1013"
+            }
+        }, {
+            "type": "Number",
+            "key": "dsNumberCurrency1014",
+            "properties": {
+                "errorMessage": "Error DS NUMBER CURRENCY 1014",
+                "name": "DS NUMBER CURRENCY 1014",
+                "fieldLength": 10,
+                "_typeChanged": "Number",
+                "currency": "INR",
+                "precision": 2,
+                "dataKey": "dsNumberCurrency1014",
+                "dataPath": "dsGroupNumber2.dsNumberCurrency1014"
+            }
+        }, {
+            "type": "Number",
+            "key": "dsNumberCurrency1015",
+            "properties": {
+                "label": "Custom DS NUMBER CURRENCY 1015",
+                "errorMessage": "Error DS NUMBER CURRENCY 1015",
+                "name": "DS NUMBER CURRENCY 1015",
+                "fieldLength": 10,
+                "_typeChanged": "Number",
+                "currency": "INR",
+                "precision": 2,
+                "dataKey": "dsNumberCurrency1015",
+                "dataPath": "dsGroupNumber2.dsNumberCurrency1015"
+            }
+        }, {
+            "type": "Number",
+            "key": "dsNumberCurrency1016",
+            "properties": {
+                "label": "Custom DS NUMBER CURRENCY 1016",
+                "readonly": true,
+                "name": "DS NUMBER CURRENCY 1016",
+                "fieldLength": 10,
+                "_typeChanged": "Number",
+                "currency": "INR",
+                "precision": 2,
+                "dataKey": "dsNumberCurrency1016",
+                "dataPath": "dsGroupNumber2.dsNumberCurrency1016"
+            }
+        }, {
+            "type": "Number",
+            "key": "dsNumberCurrency1017",
+            "properties": {
+                "readonly": true,
+                "errorMessage": "Error DS NUMBER CURRENCY 1017",
+                "name": "DS NUMBER CURRENCY 1017",
+                "fieldLength": 10,
+                "_typeChanged": "Number",
+                "currency": "INR",
+                "precision": 2,
+                "dataKey": "dsNumberCurrency1017",
+                "dataPath": "dsGroupNumber2.dsNumberCurrency1017"
+            }
+        }, {
+            "type": "Number",
+            "key": "dsNumberCurrency1018",
+            "properties": {
+                "name": "DS NUMBER CURRENCY 1018",
+                "fieldLength": 10,
+                "_typeChanged": "Number",
+                "default": 3,
+                "currency": "INR",
+                "precision": 2,
+                "dataKey": "dsNumberCurrency1018",
+                "dataPath": "dsGroupNumber2.dsNumberCurrency1018"
+            }
+        }, {
+            "type": "Number",
+            "key": "dsNumberCurrency1019",
+            "properties": {
+                "readonly": true,
+                "name": "DS NUMBER CURRENCY 1019",
+                "fieldLength": 10,
+                "_typeChanged": "Number",
+                "default": 3,
+                "currency": "INR",
+                "precision": 2,
+                "dataKey": "dsNumberCurrency1019",
+                "dataPath": "dsGroupNumber2.dsNumberCurrency1019"
+            }
+        }, {
+            "type": "Number",
+            "key": "dsNumberCurrency1020",
+            "properties": {
+                "name": "DS NUMBER CURRENCY 1020",
+                "fieldLength": 10,
+                "_description": "description",
+                "_typeChanged": "Number",
+                "currency": "INR",
+                "precision": 2,
+                "dataKey": "dsNumberCurrency1020",
+                "dataPath": "dsGroupNumber2.dsNumberCurrency1020"
+            }
+        }, {
+            "type": "Number",
+            "key": "dsNumberCurrency1021",
+            "properties": {
+                "name": "DS NUMBER CURRENCY 1021",
+                "fieldLength": 10,
+                "_typeChanged": "Number",
+                "currency": "INR",
+                "precision": 3,
+                "dataKey": "dsNumberCurrency1021",
+                "dataPath": "dsGroupNumber2.dsNumberCurrency1021"
+            }
+        }, {
+            "type": "Number",
+            "key": "dsNumberCurrency1022",
+            "properties": {
+                "name": "DS NUMBER CURRENCY 1022",
+                "fieldLength": 10,
+                "_typeChanged": "Number",
+                "min": 3,
+                "currency": "INR",
+                "precision": 2,
+                "dataKey": "dsNumberCurrency1022",
+                "dataPath": "dsGroupNumber2.dsNumberCurrency1022"
+            }
+        }, {
+            "type": "Number",
+            "key": "dsNumberCurrency1023",
+            "properties": {
+                "name": "DS NUMBER CURRENCY 1023",
+                "fieldLength": 10,
+                "_typeChanged": "Number",
+                "max": 10,
+                "currency": "INR",
+                "precision": 2,
+                "dataKey": "dsNumberCurrency1023",
+                "dataPath": "dsGroupNumber2.dsNumberCurrency1023"
+            }
+        }, {
+            "type": "Number",
+            "key": "dsNumberCurrency1024",
+            "properties": {
+                "name": "DS NUMBER CURRENCY 1024",
+                "fieldLength": 10,
+                "_typeChanged": "Number",
+                "min": 3,
+                "max": 10,
+                "currency": "INR",
+                "precision": 2,
+                "dataKey": "dsNumberCurrency1024",
+                "dataPath": "dsGroupNumber2.dsNumberCurrency1024"
+            }
+        }]
+    }, {
+        "type": "Object",
+        "key": "dsGroupNumber3",
+        "properties": {
+            "name": "DS-GROUP-NUMBER3",
+            "fieldLength": 10,
+            "_typeChanged": "Object",
+            "dataKey": "dsGroupNumber3",
+            "dataPath": "dsGroupNumber3"
+        },
+        "definition": [{
+            "type": "Number",
+            "key": "dsNumberListOfValues1001",
+            "properties": {
+                "name": "DS NUMBER LIST OF VALUES 1001",
+                "fieldLength": 10,
+                "_typeChanged": "Number",
+                "precision": 2,
+                "dataKey": "dsNumberListOfValues1001",
+                "dataPath": "dsGroupNumber3.dsNumberListOfValues1001"
+            }
+        }, {
+            "type": "Number",
+            "key": "dsNumberListOfValues1002",
+            "properties": {
+                "label": "Custom DS NUMBER LIST OF VALUES 1002",
+                "errorMessage": "Error DS NUMBER LIST OF VALUES 1002",
+                "name": "DS NUMBER LIST OF VALUES 1002",
+                "required": true,
+                "fieldLength": 10,
+                "_description": "test description",
+                "_typeChanged": "Number",
+                "createOnly": true,
+                "unique": true,
+                "min": 3,
+                "max": 10,
+                "precision": 3,
+                "enum": [1, 2, 3],
+                "dataKey": "dsNumberListOfValues1002",
+                "dataPath": "dsGroupNumber3.dsNumberListOfValues1002"
+            }
+        }, {
+            "type": "Number",
+            "key": "dsNumberListOfValues1003",
+            "properties": {
+                "name": "DS NUMBER LIST OF VALUES 1003",
+                "required": true,
+                "fieldLength": 10,
+                "_typeChanged": "Number",
+                "precision": 2,
+                "dataKey": "dsNumberListOfValues1003",
+                "dataPath": "dsGroupNumber3.dsNumberListOfValues1003"
+            }
+        }, {
+            "type": "Number",
+            "key": "dsNumberListOfValues1004",
+            "properties": {
+                "name": "DS NUMBER LIST OF VALUES 1004",
+                "fieldLength": 10,
+                "_typeChanged": "Number",
+                "createOnly": true,
+                "precision": 2,
+                "dataKey": "dsNumberListOfValues1004",
+                "dataPath": "dsGroupNumber3.dsNumberListOfValues1004"
+            }
+        }, {
+            "type": "Number",
+            "key": "dsNumberListOfValues1005",
+            "properties": {
+                "name": "DS NUMBER LIST OF VALUES 1005",
+                "fieldLength": 10,
+                "_typeChanged": "Number",
+                "unique": true,
+                "precision": 2,
+                "dataKey": "dsNumberListOfValues1005",
+                "dataPath": "dsGroupNumber3.dsNumberListOfValues1005"
+            }
+        }, {
+            "type": "Number",
+            "key": "dsNumberListOfValues1006",
+            "properties": {
+                "readonly": true,
+                "name": "DS NUMBER LIST OF VALUES 1006",
+                "fieldLength": 10,
+                "_typeChanged": "Number",
+                "precision": 2,
+                "dataKey": "dsNumberListOfValues1006",
+                "dataPath": "dsGroupNumber3.dsNumberListOfValues1006"
+            }
+        }, {
+            "type": "Number",
+            "key": "dsNumberListOfValues1007",
+            "properties": {
+                "name": "DS NUMBER LIST OF VALUES 1007",
+                "required": true,
+                "fieldLength": 10,
+                "_typeChanged": "Number",
+                "createOnly": true,
+                "precision": 2,
+                "dataKey": "dsNumberListOfValues1007",
+                "dataPath": "dsGroupNumber3.dsNumberListOfValues1007"
+            }
+        }, {
+            "type": "Number",
+            "key": "dsNumberListOfValues1008",
+            "properties": {
+                "name": "DS NUMBER LIST OF VALUES 1008",
+                "required": true,
+                "fieldLength": 10,
+                "_typeChanged": "Number",
+                "unique": true,
+                "precision": 2,
+                "dataKey": "dsNumberListOfValues1008",
+                "dataPath": "dsGroupNumber3.dsNumberListOfValues1008"
+            }
+        }, {
+            "type": "Number",
+            "key": "dsNumberListOfValues1009",
+            "properties": {
+                "readonly": true,
+                "name": "DS NUMBER LIST OF VALUES 1009",
+                "required": true,
+                "fieldLength": 10,
+                "_typeChanged": "Number",
+                "precision": 2,
+                "dataKey": "dsNumberListOfValues1009",
+                "dataPath": "dsGroupNumber3.dsNumberListOfValues1009"
+            }
+        }, {
+            "type": "Number",
+            "key": "dsNumberListOfValues1010",
+            "properties": {
+                "name": "DS NUMBER LIST OF VALUES 1010",
+                "fieldLength": 10,
+                "_typeChanged": "Number",
+                "createOnly": true,
+                "unique": true,
+                "precision": 2,
+                "dataKey": "dsNumberListOfValues1010",
+                "dataPath": "dsGroupNumber3.dsNumberListOfValues1010"
+            }
+        }, {
+            "type": "Number",
+            "key": "dsNumberListOfValues1011",
+            "properties": {
+                "readonly": true,
+                "name": "DS NUMBER LIST OF VALUES 1011",
+                "fieldLength": 10,
+                "_typeChanged": "Number",
+                "createOnly": true,
+                "precision": 2,
+                "dataKey": "dsNumberListOfValues1011",
+                "dataPath": "dsGroupNumber3.dsNumberListOfValues1011"
+            }
+        }, {
+            "type": "Number",
+            "key": "dsNumberListOfValues1012",
+            "properties": {
+                "readonly": true,
+                "name": "DS NUMBER LIST OF VALUES 1012",
+                "fieldLength": 10,
+                "_typeChanged": "Number",
+                "unique": true,
+                "precision": 2,
+                "dataKey": "dsNumberListOfValues1012",
+                "dataPath": "dsGroupNumber3.dsNumberListOfValues1012"
+            }
+        }, {
+            "type": "Number",
+            "key": "dsNumberListOfValues1013",
+            "properties": {
+                "label": "Custom DS NUMBER LIST OF VALUES 1013",
+                "name": "DS NUMBER LIST OF VALUES 1013",
+                "fieldLength": 10,
+                "_typeChanged": "Number",
+                "precision": 2,
+                "dataKey": "dsNumberListOfValues1013",
+                "dataPath": "dsGroupNumber3.dsNumberListOfValues1013"
+            }
+        }, {
+            "type": "Number",
+            "key": "dsNumberListOfValues1014",
+            "properties": {
+                "errorMessage": "Error DS NUMBER LIST OF VALUES 1014",
+                "name": "DS NUMBER LIST OF VALUES 1014",
+                "fieldLength": 10,
+                "_typeChanged": "Number",
+                "precision": 2,
+                "dataKey": "dsNumberListOfValues1014",
+                "dataPath": "dsGroupNumber3.dsNumberListOfValues1014"
+            }
+        }, {
+            "type": "Number",
+            "key": "dsNumberListOfValues1015",
+            "properties": {
+                "label": "Custom DS NUMBER LIST OF VALUES 1015",
+                "errorMessage": "Error DS NUMBER LIST OF VALUES 1015",
+                "name": "DS NUMBER LIST OF VALUES 1015",
+                "fieldLength": 10,
+                "_typeChanged": "Number",
+                "precision": 2,
+                "dataKey": "dsNumberListOfValues1015",
+                "dataPath": "dsGroupNumber3.dsNumberListOfValues1015"
+            }
+        }, {
+            "type": "Number",
+            "key": "dsNumberListOfValues1016",
+            "properties": {
+                "label": "Custom DS NUMBER LIST OF VALUES 1016",
+                "readonly": true,
+                "name": "DS NUMBER LIST OF VALUES 1016",
+                "fieldLength": 10,
+                "_typeChanged": "Number",
+                "precision": 2,
+                "dataKey": "dsNumberListOfValues1016",
+                "dataPath": "dsGroupNumber3.dsNumberListOfValues1016"
+            }
+        }, {
+            "type": "Number",
+            "key": "dsNumberListOfValues1017",
+            "properties": {
+                "readonly": true,
+                "errorMessage": "Error DS NUMBER LIST OF VALUES 1017",
+                "name": "DS NUMBER LIST OF VALUES 1017",
+                "fieldLength": 10,
+                "_typeChanged": "Number",
+                "precision": 2,
+                "dataKey": "dsNumberListOfValues1017",
+                "dataPath": "dsGroupNumber3.dsNumberListOfValues1017"
+            }
+        }, {
+            "type": "Number",
+            "key": "dsNumberListOfValues1018",
+            "properties": {
+                "name": "DS NUMBER LIST OF VALUES 1018",
+                "fieldLength": 10,
+                "_typeChanged": "Number",
+                "default": 2,
+                "precision": 2,
+                "enum": [2, 3, 4, 5, 6],
+                "dataKey": "dsNumberListOfValues1018",
+                "dataPath": "dsGroupNumber3.dsNumberListOfValues1018"
+            }
+        }, {
+            "type": "Number",
+            "key": "dsNumberListOfValues1019",
+            "properties": {
+                "readonly": true,
+                "name": "DS NUMBER LIST OF VALUES 1019",
+                "fieldLength": 10,
+                "_typeChanged": "Number",
+                "default": 23,
+                "precision": 2,
+                "enum": [1, 23, 4],
+                "dataKey": "dsNumberListOfValues1019",
+                "dataPath": "dsGroupNumber3.dsNumberListOfValues1019"
+            }
+        }, {
+            "type": "Number",
+            "key": "dsNumberListOfValues1020",
+            "properties": {
+                "name": "DS NUMBER LIST OF VALUES 1020",
+                "fieldLength": 10,
+                "_description": "test description",
+                "_typeChanged": "Number",
+                "precision": 2,
+                "dataKey": "dsNumberListOfValues1020",
+                "dataPath": "dsGroupNumber3.dsNumberListOfValues1020"
+            }
+        }]
+    }],
+    "webHooks": [],
+    "preHooks": [],
+    "workflowHooks": {
+        "postHooks": {
+            "submit": [],
+            "rework": [],
+            "discard": [],
+            "approve": [],
+            "reject": []
+        }
+    },
+    "versionValidity": {
+        "validityType": "count",
+        "validityValue": -1
+    },
+    "disableInsights": false,
+    "headers": [],
+    "enableSearchIndex": false,
+    "role": {
+        "_id": "SRVC2183",
+        "_metadata": {
+            "version": {
+                "document": 1,
+                "release": "1.0"
+            },
+            "deleted": false,
+            "lastUpdated": "2021-01-30T07:34:43.685Z",
+            "createdAt": "2021-01-30T07:34:43.681Z"
+        },
+        "app": "harshi",
+        "entity": "SRVC2183",
+        "entityName": "DS-GROUP-NUMBER",
+        "roles": [{
+            "skipReviewRole": true,
+            "id": "P9622590383",
+            "name": "Skip Review",
+            "operations": [{
+                "method": "SKIP_REVIEW"
+            }, {
+                "method": "POST"
+            }, {
+                "method": "PUT"
+            }, {
+                "method": "DELETE"
+            }],
+            "description": "This role entitles an authorized user to create, update or delete a record and without any approval"
+        }, {
+            "manageRole": true,
+            "id": "P5835951802",
+            "name": "Manage",
+            "operations": [{
+                "method": "POST"
+            }, {
+                "method": "PUT"
+            }, {
+                "method": "DELETE"
+            }, {
+                "method": "GET"
+            }],
+            "description": "This role entitles an authorized user to create, update or delete a record"
+        }, {
+            "viewRole": true,
+            "id": "P7787007418",
+            "name": "View",
+            "operations": [{
+                "method": "GET"
+            }],
+            "description": "This role entitles an authorized user to view the record"
+        }],
+        "type": "appcenter",
+        "fields": {
+            "_id": {
+                "_t": "String",
+                "_p": {
+                    "P9622590383": "R",
+                    "P5835951802": "R",
+                    "P7787007418": "R"
+                }
+            },
+            "dsGroupNumber": {
+                "dsNumberNumber1001": {
+                    "_t": "Number",
+                    "_p": {
+                        "P9622590383": "R",
+                        "P5835951802": "R",
+                        "P7787007418": "R"
+                    }
+                },
+                "dsNumberNumber1002": {
+                    "_t": "Number",
+                    "_p": {
+                        "P9622590383": "R",
+                        "P5835951802": "R",
+                        "P7787007418": "R"
+                    }
+                },
+                "dsNumberNumber1003": {
+                    "_t": "Number",
+                    "_p": {
+                        "P9622590383": "R",
+                        "P5835951802": "R",
+                        "P7787007418": "R"
+                    }
+                },
+                "dsNumberNumber1004": {
+                    "_t": "Number",
+                    "_p": {
+                        "P9622590383": "R",
+                        "P5835951802": "R",
+                        "P7787007418": "R"
+                    }
+                },
+                "dsNumberNumber1005": {
+                    "_t": "Number",
+                    "_p": {
+                        "P9622590383": "R",
+                        "P5835951802": "R",
+                        "P7787007418": "R"
+                    }
+                },
+                "dsNumberNumber1006": {
+                    "_t": "Number",
+                    "_p": {
+                        "P9622590383": "R",
+                        "P5835951802": "R",
+                        "P7787007418": "R"
+                    }
+                },
+                "dsNumberNumber1007": {
+                    "_t": "Number",
+                    "_p": {
+                        "P9622590383": "R",
+                        "P5835951802": "R",
+                        "P7787007418": "R"
+                    }
+                },
+                "dsNumberNumber1008": {
+                    "_t": "Number",
+                    "_p": {
+                        "P9622590383": "R",
+                        "P5835951802": "R",
+                        "P7787007418": "R"
+                    }
+                },
+                "dsNumberNumber1009": {
+                    "_t": "Number",
+                    "_p": {
+                        "P9622590383": "R",
+                        "P5835951802": "R",
+                        "P7787007418": "R"
+                    }
+                },
+                "dsNumberNumber1010": {
+                    "_t": "Number",
+                    "_p": {
+                        "P9622590383": "R",
+                        "P5835951802": "R",
+                        "P7787007418": "R"
+                    }
+                },
+                "dsNumberNumber1011": {
+                    "_t": "Number",
+                    "_p": {
+                        "P9622590383": "R",
+                        "P5835951802": "R",
+                        "P7787007418": "R"
+                    }
+                },
+                "dsNumberNumber1012": {
+                    "_t": "Number",
+                    "_p": {
+                        "P9622590383": "R",
+                        "P5835951802": "R",
+                        "P7787007418": "R"
+                    }
+                },
+                "dsNumberNumber1013": {
+                    "_t": "Number",
+                    "_p": {
+                        "P9622590383": "R",
+                        "P5835951802": "R",
+                        "P7787007418": "R"
+                    }
+                },
+                "dsNumberNumber1014": {
+                    "_t": "Number",
+                    "_p": {
+                        "P9622590383": "R",
+                        "P5835951802": "R",
+                        "P7787007418": "R"
+                    }
+                },
+                "dsNumberNumber1015": {
+                    "_t": "Number",
+                    "_p": {
+                        "P9622590383": "R",
+                        "P5835951802": "R",
+                        "P7787007418": "R"
+                    }
+                },
+                "dsNumberNumber1016": {
+                    "_t": "Number",
+                    "_p": {
+                        "P9622590383": "R",
+                        "P5835951802": "R",
+                        "P7787007418": "R"
+                    }
+                },
+                "dsNumberNumber1017": {
+                    "_t": "Number",
+                    "_p": {
+                        "P9622590383": "R",
+                        "P5835951802": "R",
+                        "P7787007418": "R"
+                    }
+                },
+                "dsNumberNumber1018": {
+                    "_t": "Number",
+                    "_p": {
+                        "P9622590383": "R",
+                        "P5835951802": "R",
+                        "P7787007418": "R"
+                    }
+                },
+                "dsNumberNumber1019": {
+                    "_t": "Number",
+                    "_p": {
+                        "P9622590383": "R",
+                        "P5835951802": "R",
+                        "P7787007418": "R"
+                    }
+                },
+                "dsNumberNumber1020": {
+                    "_t": "Number",
+                    "_p": {
+                        "P9622590383": "R",
+                        "P5835951802": "R",
+                        "P7787007418": "R"
+                    }
+                },
+                "dsNumberNumber1021": {
+                    "_t": "Number",
+                    "_p": {
+                        "P9622590383": "R",
+                        "P5835951802": "R",
+                        "P7787007418": "R"
+                    }
+                },
+                "dsNumberNumber1022": {
+                    "_t": "Number",
+                    "_p": {
+                        "P9622590383": "R",
+                        "P5835951802": "R",
+                        "P7787007418": "R"
+                    }
+                },
+                "dsNumberNumber1023": {
+                    "_t": "Number",
+                    "_p": {
+                        "P9622590383": "R",
+                        "P5835951802": "R",
+                        "P7787007418": "R"
+                    }
+                },
+                "dsNumberNumber1024": {
+                    "_t": "Number",
+                    "_p": {
+                        "P9622590383": "R",
+                        "P5835951802": "R",
+                        "P7787007418": "R"
+                    }
+                }
+            },
+            "dsGroupNumber2": {
+                "dsNumberCurrency1001": {
+                    "_t": "Number",
+                    "_p": {
+                        "P9622590383": "R",
+                        "P5835951802": "R",
+                        "P7787007418": "R"
+                    }
+                },
+                "dsNumberCurrency1002": {
+                    "_t": "Number",
+                    "_p": {
+                        "P9622590383": "R",
+                        "P5835951802": "R",
+                        "P7787007418": "R"
+                    }
+                },
+                "dsNumberCurrency1003": {
+                    "_t": "Number",
+                    "_p": {
+                        "P9622590383": "R",
+                        "P5835951802": "R",
+                        "P7787007418": "R"
+                    }
+                },
+                "dsNumberCurrency1004": {
+                    "_t": "Number",
+                    "_p": {
+                        "P9622590383": "R",
+                        "P5835951802": "R",
+                        "P7787007418": "R"
+                    }
+                },
+                "dsNumberCurrency1005": {
+                    "_t": "Number",
+                    "_p": {
+                        "P9622590383": "R",
+                        "P5835951802": "R",
+                        "P7787007418": "R"
+                    }
+                },
+                "dsNumberCurrency1006": {
+                    "_t": "Number",
+                    "_p": {
+                        "P9622590383": "R",
+                        "P5835951802": "R",
+                        "P7787007418": "R"
+                    }
+                },
+                "dsNumberCurrency1007": {
+                    "_t": "Number",
+                    "_p": {
+                        "P9622590383": "R",
+                        "P5835951802": "R",
+                        "P7787007418": "R"
+                    }
+                },
+                "dsNumberCurrency1008": {
+                    "_t": "Number",
+                    "_p": {
+                        "P9622590383": "R",
+                        "P5835951802": "R",
+                        "P7787007418": "R"
+                    }
+                },
+                "dsNumberCurrency1009": {
+                    "_t": "Number",
+                    "_p": {
+                        "P9622590383": "R",
+                        "P5835951802": "R",
+                        "P7787007418": "R"
+                    }
+                },
+                "dsNumberCurrency1010": {
+                    "_t": "Number",
+                    "_p": {
+                        "P9622590383": "R",
+                        "P5835951802": "R",
+                        "P7787007418": "R"
+                    }
+                },
+                "dsNumberCurrency1011": {
+                    "_t": "Number",
+                    "_p": {
+                        "P9622590383": "R",
+                        "P5835951802": "R",
+                        "P7787007418": "R"
+                    }
+                },
+                "dsNumberCurrency1012": {
+                    "_t": "Number",
+                    "_p": {
+                        "P9622590383": "R",
+                        "P5835951802": "R",
+                        "P7787007418": "R"
+                    }
+                },
+                "dsNumberCurrency1013": {
+                    "_t": "Number",
+                    "_p": {
+                        "P9622590383": "R",
+                        "P5835951802": "R",
+                        "P7787007418": "R"
+                    }
+                },
+                "dsNumberCurrency1014": {
+                    "_t": "Number",
+                    "_p": {
+                        "P9622590383": "R",
+                        "P5835951802": "R",
+                        "P7787007418": "R"
+                    }
+                },
+                "dsNumberCurrency1015": {
+                    "_t": "Number",
+                    "_p": {
+                        "P9622590383": "R",
+                        "P5835951802": "R",
+                        "P7787007418": "R"
+                    }
+                },
+                "dsNumberCurrency1016": {
+                    "_t": "Number",
+                    "_p": {
+                        "P9622590383": "R",
+                        "P5835951802": "R",
+                        "P7787007418": "R"
+                    }
+                },
+                "dsNumberCurrency1017": {
+                    "_t": "Number",
+                    "_p": {
+                        "P9622590383": "R",
+                        "P5835951802": "R",
+                        "P7787007418": "R"
+                    }
+                },
+                "dsNumberCurrency1018": {
+                    "_t": "Number",
+                    "_p": {
+                        "P9622590383": "R",
+                        "P5835951802": "R",
+                        "P7787007418": "R"
+                    }
+                },
+                "dsNumberCurrency1019": {
+                    "_t": "Number",
+                    "_p": {
+                        "P9622590383": "R",
+                        "P5835951802": "R",
+                        "P7787007418": "R"
+                    }
+                },
+                "dsNumberCurrency1020": {
+                    "_t": "Number",
+                    "_p": {
+                        "P9622590383": "R",
+                        "P5835951802": "R",
+                        "P7787007418": "R"
+                    }
+                },
+                "dsNumberCurrency1021": {
+                    "_t": "Number",
+                    "_p": {
+                        "P9622590383": "R",
+                        "P5835951802": "R",
+                        "P7787007418": "R"
+                    }
+                },
+                "dsNumberCurrency1022": {
+                    "_t": "Number",
+                    "_p": {
+                        "P9622590383": "R",
+                        "P5835951802": "R",
+                        "P7787007418": "R"
+                    }
+                },
+                "dsNumberCurrency1023": {
+                    "_t": "Number",
+                    "_p": {
+                        "P9622590383": "R",
+                        "P5835951802": "R",
+                        "P7787007418": "R"
+                    }
+                },
+                "dsNumberCurrency1024": {
+                    "_t": "Number",
+                    "_p": {
+                        "P9622590383": "R",
+                        "P5835951802": "R",
+                        "P7787007418": "R"
+                    }
+                }
+            },
+            "dsGroupNumber3": {
+                "dsNumberListOfValues1001": {
+                    "_t": "Number",
+                    "_p": {
+                        "P9622590383": "R",
+                        "P5835951802": "R",
+                        "P7787007418": "R"
+                    }
+                },
+                "dsNumberListOfValues1002": {
+                    "_t": "Number",
+                    "_p": {
+                        "P9622590383": "R",
+                        "P5835951802": "R",
+                        "P7787007418": "R"
+                    }
+                },
+                "dsNumberListOfValues1003": {
+                    "_t": "Number",
+                    "_p": {
+                        "P9622590383": "R",
+                        "P5835951802": "R",
+                        "P7787007418": "R"
+                    }
+                },
+                "dsNumberListOfValues1004": {
+                    "_t": "Number",
+                    "_p": {
+                        "P9622590383": "R",
+                        "P5835951802": "R",
+                        "P7787007418": "R"
+                    }
+                },
+                "dsNumberListOfValues1005": {
+                    "_t": "Number",
+                    "_p": {
+                        "P9622590383": "R",
+                        "P5835951802": "R",
+                        "P7787007418": "R"
+                    }
+                },
+                "dsNumberListOfValues1006": {
+                    "_t": "Number",
+                    "_p": {
+                        "P9622590383": "R",
+                        "P5835951802": "R",
+                        "P7787007418": "R"
+                    }
+                },
+                "dsNumberListOfValues1007": {
+                    "_t": "Number",
+                    "_p": {
+                        "P9622590383": "R",
+                        "P5835951802": "R",
+                        "P7787007418": "R"
+                    }
+                },
+                "dsNumberListOfValues1008": {
+                    "_t": "Number",
+                    "_p": {
+                        "P9622590383": "R",
+                        "P5835951802": "R",
+                        "P7787007418": "R"
+                    }
+                },
+                "dsNumberListOfValues1009": {
+                    "_t": "Number",
+                    "_p": {
+                        "P9622590383": "R",
+                        "P5835951802": "R",
+                        "P7787007418": "R"
+                    }
+                },
+                "dsNumberListOfValues1010": {
+                    "_t": "Number",
+                    "_p": {
+                        "P9622590383": "R",
+                        "P5835951802": "R",
+                        "P7787007418": "R"
+                    }
+                },
+                "dsNumberListOfValues1011": {
+                    "_t": "Number",
+                    "_p": {
+                        "P9622590383": "R",
+                        "P5835951802": "R",
+                        "P7787007418": "R"
+                    }
+                },
+                "dsNumberListOfValues1012": {
+                    "_t": "Number",
+                    "_p": {
+                        "P9622590383": "R",
+                        "P5835951802": "R",
+                        "P7787007418": "R"
+                    }
+                },
+                "dsNumberListOfValues1013": {
+                    "_t": "Number",
+                    "_p": {
+                        "P9622590383": "R",
+                        "P5835951802": "R",
+                        "P7787007418": "R"
+                    }
+                },
+                "dsNumberListOfValues1014": {
+                    "_t": "Number",
+                    "_p": {
+                        "P9622590383": "R",
+                        "P5835951802": "R",
+                        "P7787007418": "R"
+                    }
+                },
+                "dsNumberListOfValues1015": {
+                    "_t": "Number",
+                    "_p": {
+                        "P9622590383": "R",
+                        "P5835951802": "R",
+                        "P7787007418": "R"
+                    }
+                },
+                "dsNumberListOfValues1016": {
+                    "_t": "Number",
+                    "_p": {
+                        "P9622590383": "R",
+                        "P5835951802": "R",
+                        "P7787007418": "R"
+                    }
+                },
+                "dsNumberListOfValues1017": {
+                    "_t": "Number",
+                    "_p": {
+                        "P9622590383": "R",
+                        "P5835951802": "R",
+                        "P7787007418": "R"
+                    }
+                },
+                "dsNumberListOfValues1018": {
+                    "_t": "Number",
+                    "_p": {
+                        "P9622590383": "R",
+                        "P5835951802": "R",
+                        "P7787007418": "R"
+                    }
+                },
+                "dsNumberListOfValues1019": {
+                    "_t": "Number",
+                    "_p": {
+                        "P9622590383": "R",
+                        "P5835951802": "R",
+                        "P7787007418": "R"
+                    }
+                },
+                "dsNumberListOfValues1020": {
+                    "_t": "Number",
+                    "_p": {
+                        "P9622590383": "R",
+                        "P5835951802": "R",
+                        "P7787007418": "R"
+                    }
+                }
+            }
+        },
+        "__v": 0
+    },
+    "app": "harshi"
+}

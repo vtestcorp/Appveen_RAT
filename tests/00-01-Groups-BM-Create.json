@@ -1,0 +1,96 @@
+{
+    "testName": "00::Groups for Bookmark users",
+    "url": [
+        "https://bifrost.ds.appveen.com/api"
+    ],
+    "globals": [
+        "loginResponse","bm_blocked","bm_view","bm_manage"
+    ],
+    "tests": [{
+            "endpoint": "1",
+            "name": "Login",
+            "request": {
+                "method": "POST",
+                "url": "/a/rbac/login",
+                "payload": {
+                    "username": "test_appadmin@appveen.com",
+                    "password": "123123123"
+                },
+                "responseCode": 200,
+                "saveResponse": "loginResponse"
+            }
+        },
+        {
+            "endpoint": "1",
+            "delimiters": ["<%", "%>"],
+            "name": "Create Group: BM Blocked",
+            "request": {
+                "method": "POST",
+                "url": "/a/rbac/group",
+                "headers": {
+                    "Authorization": "JWT <%loginResponse.token%>"
+                },
+                "responseCode": 200,
+                "payload": {
+                    "name": "BM Blocked",
+                    "app": "TEST-API",
+                    "users": ["test_bm_blocked@appveen.com"]
+                },
+                "saveResponse": "bm_blocked"
+            }
+        },
+        {
+            "endpoint": "1",
+            "delimiters": ["<%", "%>"],
+            "name": "Create Group: BM View",
+            "request": {
+                "method": "POST",
+                "url": "/a/rbac/group",
+                "headers": {
+                    "Authorization": "JWT <%loginResponse.token%>"
+                },
+                "responseCode": 200,
+                "payload": {
+                    "name": "BM View",
+                    "app": "TEST-API",
+                    "users": ["test_bm_view@appveen.com"],
+                    "roles": [{
+                            "id": "PVBM",
+                            "app": "TEST-API",
+                            "entity": "BM",
+                            "type": "author"
+                        }
+
+                    ]
+                },
+                "saveResponse": "bm_view"
+            }
+        },
+        {
+            "endpoint": "1",
+            "delimiters": ["<%", "%>"],
+            "name": "Create Group: BM Manage",
+            "request": {
+                "method": "POST",
+                "url": "/a/rbac/group",
+                "headers": {
+                    "Authorization": "JWT <%loginResponse.token%>"
+                },
+                "responseCode": 200,
+                "payload": {
+                    "name": "BM Manage",
+                    "app": "TEST-API",
+                    "users": ["test_bm_manage@appveen.com"],
+                    "roles": [{
+                            "id": "PMBM",
+                            "app": "TEST-API",
+                            "entity": "BM",
+                            "type": "author"
+                        }
+                    ]
+                },
+                "saveResponse": "bm_manage"
+            }
+        }
+    ]
+}

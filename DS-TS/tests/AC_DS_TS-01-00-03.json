@@ -1,0 +1,79 @@
+{
+    "testName": "AppCenter API Tests",
+    "url": [
+        "https://qa.ds.appveen.com/api"
+    ],
+    "modules": [
+        "sampleFunction"
+    ],
+    "globals": [
+        "loginResponse",
+        "dataServiceData",
+        "recordTest",
+        "acLoginResponse"
+    ],
+    "tests": [
+        {
+            "endpoint": "1",
+            "name": "Login - Valid as test_appadmin in AC",
+            "request": {
+                "wait": 5,
+                "method": "POST",
+                "url": "/a/rbac/login",
+                "payload": {
+                    "username": "test_appadmin@appveen.com",
+                    "password": "123123123"
+                },
+                "responseCode": 200,
+                "saveResponse": "loginResponse"
+            },
+            "response": {
+                "body": {
+                    "token": "{{loginResponse.token}}"
+                }
+            }
+        },
+        {
+            "endpoint": "1",
+            "delimiters": [
+                "<%",
+                "%>"
+            ],
+            "name": "TS_01 Create testing1 data service",
+            "request": {
+                "method": "POST",
+                "url": "/a/sm/service",
+                "headers": {
+                    "Authorization": "JWT <%loginResponse.token%>"
+                },
+                "responseCode": 200,
+                "payload": {
+                    "name":"testing1",
+                    "description": null,
+                    "app":"TEST-API"
+                },
+                "saveResponse": "dataServiceData"
+            }
+        },
+        {
+            "endpoint": "1",
+            "delimiters": [
+                "<%",
+                "%>"
+            ],
+            "name": "TS_01 Edit testing1 data service",
+            "request": {
+                "wait":5,
+                "method": "PUT",
+                "url": "/a/sm/service/<%dataServiceData._id%>",
+                "headers": {
+                    "Authorization": "JWT <%loginResponse.token%>"
+                },
+                "responseCode": 200,
+                "payloadFile": "ds1Payload.json",
+                "saveResponse": "dataServiceData"
+            }
+        }
+       
+    ]
+}

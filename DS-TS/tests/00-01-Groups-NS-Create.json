@@ -1,0 +1,122 @@
+{
+    "testName": "00::Groups for NS users",
+    "url": [
+      "https://bifrost.ds.appveen.com/api"
+    ],
+    "globals": [
+      "loginResponse","ns_all_blocked","ns_basic_view","ns_basic_manage","ns_design_view","ns_design_manage"
+         
+    ],
+    "tests": [
+      {
+        "endpoint": "1",
+        "name": "Login",
+        "request": {
+          "method": "POST",
+          "url": "/a/rbac/login",
+          "payload": {
+            "username": "test_appadmin@appveen.com",
+            "password": "123123123"
+          },
+          "responseCode": 200,
+          "saveResponse": "loginResponse"
+        }
+      },
+      {
+        "endpoint": "1",
+        "delimiters": ["<%","%>"],
+        "name": "Create Group: NS All Blocked",
+        "request": {
+          "method": "POST",
+          "url": "/a/rbac/group",
+          "headers": {"Authorization": "JWT <%loginResponse.token%>"},
+          "responseCode": 200,
+          "payload": {
+              "name": "NS All Blocked", "app": "TEST-API", "users": ["test_ns_all_blocked@appveen.com"]
+          },
+          "saveResponse": "ns_all_blocked"
+        }},
+      {
+        "endpoint": "1",
+        "delimiters": ["<%","%>"],
+        "name": "Create Group: NS Basic View",
+        "request": {
+          "method": "POST",
+          "url": "/a/rbac/group",
+          "headers": {"Authorization": "JWT <%loginResponse.token%>"},
+          "responseCode": 200,
+          "payload": {
+            "name": "NS Basic View", "app": "TEST-API",
+            "users": ["test_ns_basic_view@appveen.com"],
+            "roles": [
+              {"id": "PVNSB", "app": "TEST-API", "entity": "NS", "type": "author"}
+            ]
+          },
+          "saveResponse": "ns_basic_view"
+        }
+      },
+      {
+        "endpoint": "1",
+        "delimiters": [ "<%", "%>" ],
+        "name": "Create Group: NS Basic Manage",
+        "request": {
+          "method": "POST",
+          "url": "/a/rbac/group",
+          "headers": {"Authorization": "JWT <%loginResponse.token%>"},
+          "responseCode": 200,
+          "payload": {
+            "name": "NS Basic Manage", "app": "TEST-API",
+            "users": ["test_ns_basic_manage@appveen.com"],
+            "roles": [
+                {"id": "PMNSBC", "app": "TEST-API", "entity": "NS", "type": "author"},
+                {"id": "PMNSBU", "app": "TEST-API", "entity": "NS", "type": "author"},
+                {"id": "PMNSBD", "app": "TEST-API", "entity": "NS", "type": "author"}
+            ]
+          },
+          "saveResponse": "ns_basic_manage"
+        }},
+      {
+        "endpoint": "1",
+        "delimiters": [ "<%", "%>" ],
+        "name": "Create Group: NS Design View",
+        "request": {
+          "method": "POST",
+          "url": "/a/rbac/group",
+          "headers": {"Authorization": "JWT <%loginResponse.token%>"},
+          "responseCode": 200,
+          "payload": {
+            "name": "NS Design View", "app": "TEST-API",
+            "users": ["test_ns_design_view@appveen.com"],
+            "roles": [
+                {"id": "PVNSB", "app": "TEST-API", "entity": "NS", "type": "author"},
+                {"id": "PVNSIO", "app": "TEST-API", "entity": "NS", "type": "author"},
+                {"id": "PVNSURL", "app": "TEST-API", "entity": "NS", "type": "author"},
+                {"id": "PVNSH", "app": "TEST-API", "entity": "NS", "type": "author"}
+            ]
+          },
+          "saveResponse": "ns_design_view"
+        }},
+      {
+        "endpoint": "1",
+        "delimiters": [ "<%", "%>" ],
+        "name": "Create Group: NS Design Manage",
+        "request": {
+          "method": "POST",
+          "url": "/a/rbac/group",
+          "headers": {"Authorization": "JWT <%loginResponse.token%>"},
+          "responseCode": 200,
+          "payload": {
+            "name": "NS Design Manage", "app": "TEST-API",
+            "users": ["test_ns_design_manage@appveen.com"],
+            "roles": [
+                {"id": "PVNSB", "app": "TEST-API", "entity": "NS", "type": "author"},
+                {"id": "PMNSIO", "app": "TEST-API", "entity": "NS", "type": "author"},
+                {"id": "PMNSURL", "app": "TEST-API", "entity": "NS", "type": "author"},
+                {"id": "PMNSH", "app": "TEST-API", "entity": "NS", "type": "author"}
+            ]
+          },
+          "saveResponse": "ns_design_manage"
+        }
+      }
+    ]
+  }

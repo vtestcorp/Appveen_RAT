@@ -1,0 +1,79 @@
+{
+    "testName": "AppCenter API Tests",
+    "url": [
+        "https://qa.ds.appveen.com/api"
+    ],
+    "modules": [
+        "sampleFunction"
+    ],
+    "globals": [
+        "loginResponse",
+        "dataServiceData",
+        "thirdDataService",
+        "recordTest",
+        "acLoginResponse"
+    ],
+    "tests": [
+        {
+            "endpoint": "1",
+            "name": "Login - Valid as test_appadmin in AC",
+            "request": {
+                "wait": 5,
+                "method": "POST",
+                "url": "/a/rbac/login",
+                "payload": {
+                    "username": "test_appadmin@appveen.com",
+                    "password": "123123123"
+                },
+                "responseCode": 200,
+                "saveResponse": "loginResponse"
+            },
+            "response": {
+                "body": {
+                    "token": "{{loginResponse.token}}"
+                }
+            }
+        }, 
+        {
+            "endpoint": "1",
+            "delimiters": [
+                "<%",
+                "%>"
+            ],
+            "name": "TS_01 Create testing3 data service",
+            "request": {
+                "method": "POST",
+                "url": "/a/sm/service",
+                "headers": {
+                    "Authorization": "JWT <%loginResponse.token%>"
+                },
+                "responseCode": 200,
+                "payload": {
+                    "name":"testing3",
+                    "description": null,
+                    "app":"TEST-API"
+                },
+                "saveResponse": "thirdDataService"
+            }
+        },
+        {
+                "endpoint": "1",
+                "delimiters": [
+                    "<%",
+                    "%>"
+                ],
+                "name": "TS_01 Edit testing3 data service",
+                "request": {
+                    "method": "PUT",
+                    "url": "/a/sm/service/<%thirdDataService._id%>",
+                    "headers": {
+                        "Authorization": "JWT <%loginResponse.token%>"
+                    },
+                    "responseCode": 200,
+                    "payloadFile": "ds3Payload.json",
+                    "saveResponse": "thirdDataService"
+                } 
+        }
+        
+    ]
+}

@@ -1,0 +1,250 @@
+{
+  "testName": "00::Groups for PM users",
+  "url": [
+    "https://bifrost.ds.appveen.com/api"
+  ],
+  "globals": [
+    "loginResponse",
+    "pm_all_blocked",
+    "pm_basic_view",
+    "pm_basic_manage",
+    "pm_flow_view",
+    "pm_flow_manage",
+    "pm_profile_view",
+    "pm_profile_manage",
+    "pm_headers_view",
+    "pm_headers_manage",
+    "pm_management_manage"
+  ],
+  "tests": [
+    {
+      "endpoint": "1",
+      "name": "Login",
+      "request": {
+        "method": "POST",
+        "url": "/a/rbac/login",
+        "payload": {
+          "username": "test_appadmin@appveen.com",
+          "password": "123123123"
+        },
+        "responseCode": 200,
+        "saveResponse": "loginResponse"
+      },
+      "response": {
+        "body": {
+          "token": null
+        }
+      }
+    },
+    {
+      "endpoint": "1",
+      "delimiters": ["<%","%>"],
+      "name": "Create Group: PM All Blocked",
+      "request": {
+        "method": "POST",
+        "url": "/a/rbac/group",
+        "headers": {"Authorization": "JWT <%loginResponse.token%>"},
+        "responseCode": 200,
+        "payload": {
+        	"name": "PM All Blocked", "app": "TEST-API", "users": ["test_pm_all_blocked@appveen.com"]
+        },
+        "saveResponse": "pm_all_blocked"
+      },
+      "response": {"body": {"name": "PM All Blocked","app": "TEST-API"}}
+    },
+    {
+      "endpoint": "1",
+      "delimiters": ["<%","%>"],
+      "name": "Create Group: PM Basic View",
+      "request": {
+        "method": "POST",
+        "url": "/a/rbac/group",
+        "headers": {"Authorization": "JWT <%loginResponse.token%>"},
+        "responseCode": 200,
+        "payload": {
+          "name": "PM Basic View", "app": "TEST-API",
+          "users": ["test_pm_basic_view@appveen.com"],
+          "roles": [
+            {"id": "PVPB", "app": "TEST-API", "entity": "PM", "type": "author"}
+          ]
+        },
+        "saveResponse": "pm_basic_view"
+      },
+      "response": {"body": {"name": "PM Basic View","app": "TEST-API"}}
+    },
+    {
+      "endpoint": "1",
+      "delimiters": [ "<%", "%>" ],
+      "name": "Create Group: PM Basic Manage",
+      "request": {
+        "method": "POST",
+        "url": "/a/rbac/group",
+        "headers": {"Authorization": "JWT <%loginResponse.token%>"},
+        "responseCode": 200,
+        "payload": {
+          "name": "PM Basic Manage", "app": "TEST-API",
+          "users": ["test_pm_basic_manage@appveen.com"],
+          "roles": [
+          	{"id": "PMPBC", "app": "TEST-API", "entity": "PM", "type": "author"},
+          	{"id": "PMPBU", "app": "TEST-API", "entity": "PM", "type": "author"},
+          	{"id": "PMPBD", "app": "TEST-API", "entity": "PM", "type": "author"}
+          ]
+        },
+        "saveResponse": "pm_basic_manage"
+      },
+      "response": {"body": {"name": "PM Basic Manage","app": "TEST-API"}}
+    },
+    {
+      "endpoint": "1",
+      "delimiters": [ "<%", "%>" ],
+      "name": "Create Group: PM Flow View",
+      "request": {
+        "method": "POST",
+        "url": "/a/rbac/group",
+        "headers": {"Authorization": "JWT <%loginResponse.token%>"},
+        "responseCode": 200,
+        "payload": {
+          "name": "PM Flow View", "app": "TEST-API",
+          "users": ["test_pm_flow_view@appveen.com"],
+          "roles": [
+          	{"id": "PVPB", "app": "TEST-API", "entity": "PM", "type": "author"},
+          	{"id": "PVPFMB", "app": "TEST-API", "entity": "PM", "type": "author"}
+          ]
+        },
+        "saveResponse": "pm_flow_view"
+      },
+      "response": {"body": {"name": "PM Flow View","app": "TEST-API"}}
+    },
+    {
+      "endpoint": "1",
+      "delimiters": [ "<%", "%>" ],
+      "name": "Create Group: PM Flow Manage",
+      "request": {
+        "method": "POST",
+        "url": "/a/rbac/group",
+        "headers": {"Authorization": "JWT <%loginResponse.token%>"},
+        "responseCode": 200,
+        "payload": {
+          "name": "PM Flow Manage", "app": "TEST-API",
+          "users": ["test_pm_flow_manage@appveen.com"],
+          "roles": [
+          	{"id": "PVPB", "app": "TEST-API", "entity": "PM", "type": "author"},
+          	{"id": "PMPFMBC", "app": "TEST-API", "entity": "PM", "type": "author"},
+          	{"id": "PMPFMBU", "app": "TEST-API", "entity": "PM", "type": "author"},
+          	{"id": "PMPFMBD", "app": "TEST-API", "entity": "PM", "type": "author"},
+          	{"id": "PMPFPD", "app": "TEST-API", "entity": "PM", "type": "author"},
+          	{"id": "PMPFPS", "app": "TEST-API", "entity": "PM", "type": "author"}
+          ]
+        },
+        "saveResponse": "pm_flow_manage"
+      },
+      "response": {"body": {"name": "PM Flow Manage","app": "TEST-API"}}
+    },
+    {
+      "endpoint": "1",
+      "delimiters": [ "<%", "%>" ],
+      "name": "Create Group: PM Profile View",
+      "request": {
+        "method": "POST",
+        "url": "/a/rbac/group",
+        "headers": {"Authorization": "JWT <%loginResponse.token%>"},
+        "responseCode": 200,
+        "payload": {
+          "name": "PM Profile View", "app": "TEST-API",
+          "users": ["test_pm_profile_view@appveen.com"],
+          "roles": [
+          	{"id": "PVPB", "app": "TEST-API", "entity": "PM", "type": "author"},
+          	{"id": "PVPP", "app": "TEST-API", "entity": "PM", "type": "author"}
+          ]
+        },
+        "saveResponse": "pm_profile_view"
+      },
+      "response": {"body": {"name": "PM Profile View","app": "TEST-API"}}
+    },
+    {
+      "endpoint": "1",
+      "delimiters": [ "<%", "%>" ],
+      "name": "Create Group: PM Profile Manage",
+      "request": {
+        "method": "POST",
+        "url": "/a/rbac/group",
+        "headers": {"Authorization": "JWT <%loginResponse.token%>"},
+        "responseCode": 200,
+        "payload": {
+          "name": "PM Profile Manage", "app": "TEST-API",
+          "users": ["test_pm_profile_manage@appveen.com"],
+          "roles": [
+          	{"id": "PVPB", "app": "TEST-API", "entity": "PM", "type": "author"},
+          	{"id": "PMPPC", "app": "TEST-API", "entity": "PM", "type": "author"},
+          	{"id": "PMPPD", "app": "TEST-API", "entity": "PM", "type": "author"}
+          ]
+        },
+        "saveResponse": "pm_profile_manage"
+      },
+      "response": {"body": {"name": "PM Profile Manage","app": "TEST-API"}}
+    },
+    {
+      "endpoint": "1",
+      "delimiters": [ "<%", "%>" ],
+      "name": "Create Group: PM Headers View",
+      "request": {
+        "method": "POST",
+        "url": "/a/rbac/group",
+        "headers": {"Authorization": "JWT <%loginResponse.token%>"},
+        "responseCode": 200,
+        "payload": {
+          "name": "PM Headers View", "app": "TEST-API",
+          "users": ["test_pm_headers_view@appveen.com"],
+          "roles": [
+          	{"id": "PVPB", "app": "TEST-API", "entity": "PM", "type": "author"},
+          	{"id": "PVPH", "app": "TEST-API", "entity": "PM", "type": "author"}
+          ]
+        },
+        "saveResponse": "pm_headers_view"
+      },
+      "response": {"body": {"name": "PM Headers View","app": "TEST-API"}}
+    },
+    {
+      "endpoint": "1",
+      "delimiters": [ "<%", "%>" ],
+      "name": "Create Group: PM Headers Manage",
+      "request": {
+        "method": "POST",
+        "url": "/a/rbac/group",
+        "headers": {"Authorization": "JWT <%loginResponse.token%>"},
+        "responseCode": 200,
+        "payload": {
+          "name": "PM Headers Manage", "app": "TEST-API",
+          "users": ["test_pm_headers_manage@appveen.com"],
+          "roles": [
+          	{"id": "PVPB", "app": "TEST-API", "entity": "PM", "type": "author"},
+          	{"id": "PMPH", "app": "TEST-API", "entity": "PM", "type": "author"}
+          ]
+        },
+        "saveResponse": "pm_headers_manage"
+      },
+      "response": {"body": {"name": "PM Headers Manage","app": "TEST-API"}}
+    },
+    {
+      "endpoint": "1",
+      "delimiters": [ "<%", "%>" ],
+      "name": "Create Group: PM Management Manage",
+      "request": {
+        "method": "POST",
+        "url": "/a/rbac/group",
+        "headers": {"Authorization": "JWT <%loginResponse.token%>"},
+        "responseCode": 200,
+        "payload": {
+          "name": "PM Management Manage", "app": "TEST-API",
+          "users": ["test_pm_management_manage@appveen.com"],
+          "roles": [
+          	{"id": "PVPB", "app": "TEST-API", "entity": "PM", "type": "author"},
+          	{"id": "PMPM", "app": "TEST-API", "entity": "PM", "type": "author"}
+          ]
+        },
+        "saveResponse": "pm_management_manage"
+      },
+      "response": {"body": {"name": "PM Management Manage","app": "TEST-API"}}
+    }
+  ]
+}

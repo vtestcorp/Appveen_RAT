@@ -1,0 +1,143 @@
+{
+    "_id": null,
+    "collectionVal": [
+        "val"
+    ],
+    "collectionLong": [
+        "longlonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglonglong"
+    ],
+    "collectionRich": null,
+    "collectionEmail": [
+        "long@mail.com"
+    ],
+    "collectionSecure": [
+        {
+            "value": "long"
+        }
+    ],
+    "collectionList": [
+        "long",
+        "long"
+    ],
+    "collectionNum": [
+        12423,
+        21323
+    ],
+    "collectionNumList": [
+        345,
+        756
+    ],
+    "collectionCurrency": [
+        456
+    ],
+    "collectionBool": [
+        true
+    ],
+    "collectionDate": [
+        "2020-02-24T00:00:00.000Z"
+    ],
+    "collectionGroup": null,
+    "collectionLoc": [
+        {
+            "userInput": null,
+            "formattedAddress": "111 Foley Square, New York, NY 10013, USA",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -74.0021445,
+                    40.71507419999999
+                ]
+            },
+            "town": "Manhattan",
+            "district": "New York County",
+            "state": "New York",
+            "pincode": "10013",
+            "country": "United States"
+        }
+    ],
+    "collectionFile": [
+        {
+            "_id": "5e5790f50a589619e2d7ff4f",
+            "length": 120807,
+            "chunkSize": 261120,
+            "uploadDate": "2020-02-27T09:50:45.426Z",
+            "filename": "4761d51cc1c10e68fddf62167edb0734",
+            "md5": "ea50d3bdd05afe1a021ead7a1a2c6e03",
+            "contentType": "image/png",
+            "metadata": {
+                "filename": "Screenshot from 2020-02-27 11-52-32.png"
+            }
+        }
+    ],
+    "collectionDef": [
+        "0"
+    ],
+    "locVal": {
+        "userInput": null,
+        "formattedAddress": "111 Foley Square, New York, NY 10013, USA",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                -74.0021445,
+                40.71507419999999
+            ]
+        },
+        "town": "Manhattan",
+        "district": "New York County",
+        "state": "New York",
+        "pincode": "10013",
+        "country": "United States"
+    },
+    "locReq": {
+        "userInput": null,
+        "formattedAddress": "27-30 166th St, Flushing, NY 11358, USA",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                -73.798991,
+                40.77151699999999
+            ]
+        },
+        "town": "Queens",
+        "district": "Queens County",
+        "state": "New York",
+        "pincode": "11358",
+        "country": "United States"
+    },
+    "fileVal": {
+        "_id": "5e5791170a5896482ed7ff55",
+        "length": 205250,
+        "chunkSize": 261120,
+        "uploadDate": "2020-02-27T09:51:19.493Z",
+        "filename": "8f23d775f2e46dbcc9b57576c2451449",
+        "md5": "85e7b125a0d07a584cd0c3e97b108338",
+        "contentType": "image/png",
+        "metadata": {
+            "filename": "Screenshot from 2020-02-27 15-04-12.png"
+        }
+    },
+    "fileReq": {
+        "_id": "5e57910b0a5896347cd7ff51",
+        "length": 205250,
+        "chunkSize": 261120,
+        "uploadDate": "2020-02-27T09:51:07.736Z",
+        "filename": "a994ecfa8309cb664bba9fc88b5c5ba3",
+        "md5": "85e7b125a0d07a584cd0c3e97b108338",
+        "contentType": "image/png",
+        "metadata": {
+            "filename": "Screenshot from 2020-02-27 15-04-12.png"
+        }
+    },
+    "fileCreate": {
+        "_id": "5e5791120a5896d3add7ff53",
+        "length": 205250,
+        "chunkSize": 261120,
+        "uploadDate": "2020-02-27T09:51:14.224Z",
+        "filename": "6d70d9751ca4904af45a38b518eba3d0",
+        "md5": "85e7b125a0d07a584cd0c3e97b108338",
+        "contentType": "image/png",
+        "metadata": {
+            "filename": "Screenshot from 2020-02-27 15-04-12.png"
+        }
+    }
+}

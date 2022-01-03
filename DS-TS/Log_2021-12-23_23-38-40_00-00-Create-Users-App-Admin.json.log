@@ -1,0 +1,26 @@
+[2021-12-23T23:38:40.367] [INFO] [00-00-Create-Users-App-Admin.json] - dataFile :: data\00-00-Create-Users-App-Admin.json
+[2021-12-23T23:38:40.897] [INFO] [00-00-Create-Users-App-Admin.json] - Title: Login as superAdmin
+[2021-12-23T23:38:40.898] [INFO] [00-00-Create-Users-App-Admin.json] - Request METHOD :: POST
+[2021-12-23T23:38:40.898] [INFO] [00-00-Create-Users-App-Admin.json] - Request URL :: https://qa.ds.appveen.com/api/a/rbac/login
+[2021-12-23T23:38:40.898] [INFO] [00-00-Create-Users-App-Admin.json] - Request HEADERS :: {}
+[2021-12-23T23:38:40.898] [INFO] [00-00-Create-Users-App-Admin.json] - Request BODY :: {"username":"admin","password":"u?5k167v13w5"}
+[2021-12-23T23:38:42.904] [INFO] [00-00-Create-Users-App-Admin.json] - Title: Create a superAdmin
+[2021-12-23T23:38:42.904] [INFO] [00-00-Create-Users-App-Admin.json] - Request METHOD :: POST
+[2021-12-23T23:38:42.904] [INFO] [00-00-Create-Users-App-Admin.json] - Request URL :: https://qa.ds.appveen.com/api/a/rbac/usr
+[2021-12-23T23:38:42.905] [INFO] [00-00-Create-Users-App-Admin.json] - Request HEADERS :: {"Authorization":"JWT undefined","content-type":"application/json"}
+[2021-12-23T23:38:42.905] [INFO] [00-00-Create-Users-App-Admin.json] - Request BODY :: {"username":"test_superadmin@appveen.com","password":"123123123","cpassword":"123123123","isSuperAdmin":true,"attributes":{},"basicDetails":{"name":"test_superadmin@appveen.com","phone":null},"accessControl":{"accessLevel":"Selected","apps":[]},"roles":null}
+[2021-12-23T23:38:44.909] [INFO] [00-00-Create-Users-App-Admin.json] - Title: Create an app
+[2021-12-23T23:38:44.909] [INFO] [00-00-Create-Users-App-Admin.json] - Request METHOD :: POST
+[2021-12-23T23:38:44.909] [INFO] [00-00-Create-Users-App-Admin.json] - Request URL :: https://qa.ds.appveen.com/api/a/rbac/app
+[2021-12-23T23:38:44.909] [INFO] [00-00-Create-Users-App-Admin.json] - Request HEADERS :: {"Authorization":"JWT undefined","content-type":"application/json"}
+[2021-12-23T23:38:44.909] [INFO] [00-00-Create-Users-App-Admin.json] - Request BODY :: {"_id":"TEST-API"}
+[2021-12-23T23:38:46.931] [INFO] [00-00-Create-Users-App-Admin.json] - Title: Create a user
+[2021-12-23T23:38:46.931] [INFO] [00-00-Create-Users-App-Admin.json] - Request METHOD :: POST
+[2021-12-23T23:38:46.932] [INFO] [00-00-Create-Users-App-Admin.json] - Request URL :: https://qa.ds.appveen.com/api/a/rbac/usr/app/TEST-API/create
+[2021-12-23T23:38:46.932] [INFO] [00-00-Create-Users-App-Admin.json] - Request HEADERS :: {"Authorization":"JWT undefined","content-type":"application/json"}
+[2021-12-23T23:38:46.932] [INFO] [00-00-Create-Users-App-Admin.json] - Request BODY :: {"user":{"username":"test_appadmin@appveen.com","password":"123123123","cpassword":"123123123","isSuperAdmin":false,"attributes":{},"basicDetails":{"name":"test_appadmin@appveen.com","phone":null},"accessControl":{"accessLevel":"Selected","apps":["TEST-API"]},"roles":null},"groups":[]}
+[2021-12-23T23:38:48.937] [INFO] [00-00-Create-Users-App-Admin.json] - Title: Make user app admin
+[2021-12-23T23:38:48.938] [INFO] [00-00-Create-Users-App-Admin.json] - Request METHOD :: PUT
+[2021-12-23T23:38:48.938] [INFO] [00-00-Create-Users-App-Admin.json] - Request URL :: https://qa.ds.appveen.com/api/a/rbac/usr/test_appadmin@appveen.com/appAdmin/grant
+[2021-12-23T23:38:48.938] [INFO] [00-00-Create-Users-App-Admin.json] - Request HEADERS :: {"Authorization":"JWT undefined","content-type":"application/json"}
+[2021-12-23T23:38:48.938] [INFO] [00-00-Create-Users-App-Admin.json] - Request BODY :: {"apps":["TEST-API"]}

@@ -1,0 +1,522 @@
+{
+    "name": "DS-STRING-LIST-OF-VALUES",
+    "description": null,
+    "api": "/dsStringListOfValues",
+    "permanentDeleteData": true,
+    "wizard": [],
+    "definition": [{
+        "key": "_id",
+        "type": "String",
+        "prefix": "DS",
+        "suffix": null,
+        "padding": null,
+        "counter": 1001,
+        "properties": {
+            "label": null,
+            "readonly": false,
+            "errorMessage": null,
+            "name": "ID",
+            "required": false,
+            "fieldLength": 10,
+            "_description": null,
+            "_typeChanged": "id",
+            "_isParrentArray": null,
+            "_isGrpParentArray": null,
+            "dataPath": "_id",
+            "_detailedType": "",
+            "dataKey": "_id"
+        }
+    }, {
+        "type": "String",
+        "key": "dsStringListOfValues1001",
+        "properties": {
+            "name": "DS STRING LIST OF VALUES 1001",
+            "fieldLength": 10,
+            "_typeChanged": "String",
+            "dataKey": "dsStringListOfValues1001",
+            "dataPath": "dsStringListOfValues1001"
+        }
+    }, {
+        "type": "String",
+        "key": "dsStringListOfValues1002",
+        "properties": {
+            "label": "Custom DS STRING LIST OF VALUES 1002",
+            "errorMessage": "Error DS STRING LIST OF VALUES 1002",
+            "name": "DS STRING LIST OF VALUES 1002",
+            "required": true,
+            "fieldLength": 10,
+            "_typeChanged": "String",
+            "createOnly": true,
+            "unique": true,
+            "enum": ["test", "test value", "test sample"],
+            "dataKey": "dsStringListOfValues1002",
+            "dataPath": "dsStringListOfValues1002"
+        }
+    }, {
+        "type": "String",
+        "key": "dsStringListOfValues1003",
+        "properties": {
+            "name": "DS STRING LIST OF VALUES 1003",
+            "required": true,
+            "fieldLength": 10,
+            "_typeChanged": "String",
+            "dataKey": "dsStringListOfValues1003",
+            "dataPath": "dsStringListOfValues1003"
+        }
+    }, {
+        "type": "String",
+        "key": "dsStringListOfValues1004",
+        "properties": {
+            "name": "DS STRING LIST OF VALUES 1004",
+            "fieldLength": 10,
+            "_typeChanged": "String",
+            "createOnly": true,
+            "dataKey": "dsStringListOfValues1004",
+            "dataPath": "dsStringListOfValues1004"
+        }
+    }, {
+        "type": "String",
+        "key": "dsStringListOfValues1005",
+        "properties": {
+            "name": "DS STRING LIST OF VALUES 1005",
+            "fieldLength": 10,
+            "_typeChanged": "String",
+            "unique": true,
+            "dataKey": "dsStringListOfValues1005",
+            "dataPath": "dsStringListOfValues1005"
+        }
+    }, {
+        "type": "String",
+        "key": "dsStringListOfValues1006",
+        "properties": {
+            "readonly": true,
+            "name": "DS STRING LIST OF VALUES 1006",
+            "fieldLength": 10,
+            "_typeChanged": "String",
+            "enum": ["test"],
+            "dataKey": "dsStringListOfValues1006",
+            "dataPath": "dsStringListOfValues1006"
+        }
+    }, {
+        "type": "String",
+        "key": "dsStringListOfValues1007",
+        "properties": {
+            "name": "DS STRING LIST OF VALUES 1007",
+            "required": true,
+            "fieldLength": 10,
+            "_typeChanged": "String",
+            "createOnly": true,
+            "enum": ["test"],
+            "dataKey": "dsStringListOfValues1007",
+            "dataPath": "dsStringListOfValues1007"
+        }
+    }, {
+        "type": "String",
+        "key": "dsStringListOfValues1008",
+        "properties": {
+            "name": "DS STRING LIST OF VALUES 1008",
+            "required": true,
+            "fieldLength": 10,
+            "_typeChanged": "String",
+            "unique": true,
+            "enum": ["test"],
+            "dataKey": "dsStringListOfValues1008",
+            "dataPath": "dsStringListOfValues1008"
+        }
+    }, {
+        "type": "String",
+        "key": "dsStringListOfValues1009",
+        "properties": {
+            "readonly": true,
+            "name": "DS STRING LIST OF VALUES 1009",
+            "required": true,
+            "fieldLength": 10,
+            "_typeChanged": "String",
+            "enum": ["test"],
+            "dataKey": "dsStringListOfValues1009",
+            "dataPath": "dsStringListOfValues1009"
+        }
+    }, {
+        "type": "String",
+        "key": "dsStringListOfValues1010",
+        "properties": {
+            "name": "DS STRING LIST OF VALUES 1010",
+            "fieldLength": 10,
+            "_typeChanged": "String",
+            "createOnly": true,
+            "unique": true,
+            "enum": ["test"],
+            "dataKey": "dsStringListOfValues1010",
+            "dataPath": "dsStringListOfValues1010"
+        }
+    }, {
+        "type": "String",
+        "key": "dsStringListOfValues1011",
+        "properties": {
+            "readonly": true,
+            "name": "DS STRING LIST OF VALUES 1011",
+            "fieldLength": 10,
+            "_typeChanged": "String",
+            "createOnly": true,
+            "enum": ["test"],
+            "dataKey": "dsStringListOfValues1011",
+            "dataPath": "dsStringListOfValues1011"
+        }
+    }, {
+        "type": "String",
+        "key": "dsStringListOfValues1012",
+        "properties": {
+            "readonly": true,
+            "name": "DS STRING LIST OF VALUES 1012",
+            "fieldLength": 10,
+            "_typeChanged": "String",
+            "unique": true,
+            "enum": ["test"],
+            "dataKey": "dsStringListOfValues1012",
+            "dataPath": "dsStringListOfValues1012"
+        }
+    }, {
+        "type": "String",
+        "key": "dsStringListOfValues1013",
+        "properties": {
+            "label": "Custom DS STRING LIST OF VALUES 1013",
+            "name": "DS STRING LIST OF VALUES 1013",
+            "fieldLength": 10,
+            "_typeChanged": "String",
+            "enum": ["test"],
+            "dataKey": "dsStringListOfValues1013",
+            "dataPath": "dsStringListOfValues1013"
+        }
+    }, {
+        "type": "String",
+        "key": "dsStringListOfValues1014",
+        "properties": {
+            "errorMessage": "Error DS STRING LIST OF VALUES 1014",
+            "name": "DS STRING LIST OF VALUES 1014",
+            "fieldLength": 10,
+            "_typeChanged": "String",
+            "enum": ["test"],
+            "dataKey": "dsStringListOfValues1014",
+            "dataPath": "dsStringListOfValues1014"
+        }
+    }, {
+        "type": "String",
+        "key": "dsStringListOfValues1015",
+        "properties": {
+            "label": "Custom DS STRING LIST OF VALUES 1015",
+            "errorMessage": "Error DS STRING LIST OF VALUES 1015",
+            "name": "DS STRING LIST OF VALUES 1015",
+            "fieldLength": 10,
+            "_typeChanged": "String",
+            "enum": ["test"],
+            "dataKey": "dsStringListOfValues1015",
+            "dataPath": "dsStringListOfValues1015"
+        }
+    }, {
+        "type": "String",
+        "key": "dsStringListOfValues1016",
+        "properties": {
+            "label": "Custom DS STRING LIST OF VALUES 1016",
+            "readonly": true,
+            "name": "DS STRING LIST OF VALUES 1016",
+            "fieldLength": 10,
+            "_typeChanged": "String",
+            "enum": ["test"],
+            "dataKey": "dsStringListOfValues1016",
+            "dataPath": "dsStringListOfValues1016"
+        }
+    }, {
+        "type": "String",
+        "key": "dsStringListOfValues1017",
+        "properties": {
+            "readonly": true,
+            "errorMessage": "Error DS STRING LIST OF VALUES 1017",
+            "name": "DS STRING LIST OF VALUES 1017",
+            "fieldLength": 10,
+            "_typeChanged": "String",
+            "enum": ["test"],
+            "dataKey": "dsStringListOfValues1017",
+            "dataPath": "dsStringListOfValues1017"
+        }
+    }, {
+        "type": "String",
+        "key": "dsStringListOfValues1018",
+        "properties": {
+            "name": "DS STRING LIST OF VALUES 1018",
+            "fieldLength": 10,
+            "_typeChanged": "String",
+            "default": "test value",
+            "enum": ["test", "test value"],
+            "dataKey": "dsStringListOfValues1018",
+            "dataPath": "dsStringListOfValues1018"
+        }
+    }, {
+        "type": "String",
+        "key": "dsStringListOfValues1019",
+        "properties": {
+            "readonly": true,
+            "name": "DS STRING LIST OF VALUES 1019",
+            "fieldLength": 10,
+            "_typeChanged": "String",
+            "default": "test",
+            "enum": ["test", "test value"],
+            "dataKey": "dsStringListOfValues1019",
+            "dataPath": "dsStringListOfValues1019"
+        }
+    }, {
+        "type": "String",
+        "key": "dsStringListOfValues1020",
+        "properties": {
+            "name": "DS STRING LIST OF VALUES 1020",
+            "fieldLength": 10,
+            "_description": "test desscription",
+            "_typeChanged": "String",
+            "enum": ["test", "test value"],
+            "dataKey": "dsStringListOfValues1020",
+            "dataPath": "dsStringListOfValues1020"
+        }
+    }],
+    "webHooks": [],
+    "preHooks": [],
+    "workflowHooks": {
+        "postHooks": {
+            "submit": [],
+            "rework": [],
+            "discard": [],
+            "approve": [],
+            "reject": []
+        }
+    },
+    "versionValidity": {
+        "validityType": "count",
+        "validityValue": -1
+    },
+    "disableInsights": false,
+    "headers": [],
+    "enableSearchIndex": false,
+    "role": {
+        "_id": "SRVC2106",
+        "_metadata": {
+            "version": {
+                "document": 1,
+                "release": "1.0"
+            },
+            "deleted": false,
+            "lastUpdated": "2021-01-27T12:43:30.938Z",
+            "createdAt": "2021-01-27T12:43:30.933Z"
+        },
+        "app": "harshi",
+        "entity": "SRVC2106",
+        "entityName": "DS-STRING-LIST-OF-VALUES",
+        "roles": [{
+            "skipReviewRole": true,
+            "id": "P3008389980",
+            "name": "Skip Review",
+            "operations": [{
+                "method": "SKIP_REVIEW"
+            }, {
+                "method": "POST"
+            }, {
+                "method": "PUT"
+            }, {
+                "method": "DELETE"
+            }],
+            "description": "This role entitles an authorized user to create, update or delete a record and without any approval"
+        }, {
+            "manageRole": true,
+            "id": "P5482734635",
+            "name": "Manage",
+            "operations": [{
+                "method": "POST"
+            }, {
+                "method": "PUT"
+            }, {
+                "method": "DELETE"
+            }, {
+                "method": "GET"
+            }],
+            "description": "This role entitles an authorized user to create, update or delete a record"
+        }, {
+            "viewRole": true,
+            "id": "P4554740345",
+            "name": "View",
+            "operations": [{
+                "method": "GET"
+            }],
+            "description": "This role entitles an authorized user to view the record"
+        }],
+        "type": "appcenter",
+        "fields": {
+            "_id": {
+                "_t": "String",
+                "_p": {
+                    "P3008389980": "R",
+                    "P5482734635": "R",
+                    "P4554740345": "R"
+                }
+            },
+            "dsStringListOfValues1001": {
+                "_t": "String",
+                "_p": {
+                    "P3008389980": "R",
+                    "P5482734635": "R",
+                    "P4554740345": "R"
+                }
+            },
+            "dsStringListOfValues1002": {
+                "_t": "String",
+                "_p": {
+                    "P3008389980": "R",
+                    "P5482734635": "R",
+                    "P4554740345": "R"
+                }
+            },
+            "dsStringListOfValues1003": {
+                "_t": "String",
+                "_p": {
+                    "P3008389980": "R",
+                    "P5482734635": "R",
+                    "P4554740345": "R"
+                }
+            },
+            "dsStringListOfValues1004": {
+                "_t": "String",
+                "_p": {
+                    "P3008389980": "R",
+                    "P5482734635": "R",
+                    "P4554740345": "R"
+                }
+            },
+            "dsStringListOfValues1005": {
+                "_t": "String",
+                "_p": {
+                    "P3008389980": "R",
+                    "P5482734635": "R",
+                    "P4554740345": "R"
+                }
+            },
+            "dsStringListOfValues1006": {
+                "_t": "String",
+                "_p": {
+                    "P3008389980": "R",
+                    "P5482734635": "R",
+                    "P4554740345": "R"
+                }
+            },
+            "dsStringListOfValues1007": {
+                "_t": "String",
+                "_p": {
+                    "P3008389980": "R",
+                    "P5482734635": "R",
+                    "P4554740345": "R"
+                }
+            },
+            "dsStringListOfValues1008": {
+                "_t": "String",
+                "_p": {
+                    "P3008389980": "R",
+                    "P5482734635": "R",
+                    "P4554740345": "R"
+                }
+            },
+            "dsStringListOfValues1009": {
+                "_t": "String",
+                "_p": {
+                    "P3008389980": "R",
+                    "P5482734635": "R",
+                    "P4554740345": "R"
+                }
+            },
+            "dsStringListOfValues1010": {
+                "_t": "String",
+                "_p": {
+                    "P3008389980": "R",
+                    "P5482734635": "R",
+                    "P4554740345": "R"
+                }
+            },
+            "dsStringListOfValues1011": {
+                "_t": "String",
+                "_p": {
+                    "P3008389980": "R",
+                    "P5482734635": "R",
+                    "P4554740345": "R"
+                }
+            },
+            "dsStringListOfValues1012": {
+                "_t": "String",
+                "_p": {
+                    "P3008389980": "R",
+                    "P5482734635": "R",
+                    "P4554740345": "R"
+                }
+            },
+            "dsStringListOfValues1013": {
+                "_t": "String",
+                "_p": {
+                    "P3008389980": "R",
+                    "P5482734635": "R",
+                    "P4554740345": "R"
+                }
+            },
+            "dsStringListOfValues1014": {
+                "_t": "String",
+                "_p": {
+                    "P3008389980": "R",
+                    "P5482734635": "R",
+                    "P4554740345": "R"
+                }
+            },
+            "dsStringListOfValues1015": {
+                "_t": "String",
+                "_p": {
+                    "P3008389980": "R",
+                    "P5482734635": "R",
+                    "P4554740345": "R"
+                }
+            },
+            "dsStringListOfValues1016": {
+                "_t": "String",
+                "_p": {
+                    "P3008389980": "R",
+                    "P5482734635": "R",
+                    "P4554740345": "R"
+                }
+            },
+            "dsStringListOfValues1017": {
+                "_t": "String",
+                "_p": {
+                    "P3008389980": "R",
+                    "P5482734635": "R",
+                    "P4554740345": "R"
+                }
+            },
+            "dsStringListOfValues1018": {
+                "_t": "String",
+                "_p": {
+                    "P3008389980": "R",
+                    "P5482734635": "R",
+                    "P4554740345": "R"
+                }
+            },
+            "dsStringListOfValues1019": {
+                "_t": "String",
+                "_p": {
+                    "P3008389980": "R",
+                    "P5482734635": "R",
+                    "P4554740345": "R"
+                }
+            },
+            "dsStringListOfValues1020": {
+                "_t": "String",
+                "_p": {
+                    "P3008389980": "R",
+                    "P5482734635": "R",
+                    "P4554740345": "R"
+                }
+            }
+        },
+        "__v": 0
+    },
+    "app": "harshi"
+}

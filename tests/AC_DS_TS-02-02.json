@@ -1,0 +1,190 @@
+{
+    "testName": "AC API Tests",
+    "url": [
+        "https://qa.ds.appveen.com/api"
+    ],
+    "modules": [
+        "sampleFunction"
+    ],
+    "globals": [
+        "loginResponse",
+        "thirdDataService",
+        "secondDataService",
+        "groupTest",
+        "dataServiceData",
+        "acLoginResponse"
+    ],
+    "tests": [
+        {
+            "endpoint": "1",
+            "name": "Login - Valid as apptest_group_appcenter_manage in AC",
+            "delimiters":["<%","%>"],
+            "request": {
+                "wait": 1000,
+                "method": "POST",
+                "url": "/a/rbac/login",
+                "payload": {
+                    "username": "test_group_appcenter_manage@appveen.com",
+                    "password": "123123123"
+                },
+                "responseCode": 200,
+                "saveResponse": "acLoginResponse"
+            },
+            "response": {
+                "body": {
+                    "token": "<%acLoginResponse.token%>"
+                }
+            }
+        },
+        
+        {
+            "endpoint": "1",
+            "name": "TS_02 View record in testing3 DS",
+            "delimiters":["<%","%>"],
+            "request": {
+                "wait": 100,
+
+                "method": "GET",
+                "url": "/a/sm/service/<%dataPipe.read('AC_DS_TS-01-00-01.json').thirdDataService._id%>",
+                "headers": {
+                    "Authorization": "JWT <%acLoginResponse.token%>"
+                },
+                "responseCode": 200,
+                "saveResponse": "thirdDataService"
+            }
+        },
+        {
+            "endpoint": "1",
+            "name": "TS_02 View record in testing2 DS",
+            "delimiters":["<%","%>"],
+            "request": {
+                "wait": 100,
+
+                "method": "GET",
+                "url": "/a/sm/service/<%dataPipe.read('AC_DS_TS-01-00-02.json').secondDataService._id%>",
+                "headers": {
+                    "Authorization": "JWT <%acLoginResponse.token%>"
+                },
+                "responseCode": 200,
+                "saveResponse": "secondDataService"
+            }
+        },
+        {
+            "endpoint": "1",
+            "name": "TS_02 View record in testing1 DS",
+            "delimiters":["<%","%>"],
+            "request": {
+                "wait": 100,
+
+                "method": "GET",
+                "url": "/a/sm/service/<%dataPipe.read('AC_DS_TS-01-00-03.json').dataServiceData._id%>",
+                "headers": {
+                    "Authorization": "JWT <%acLoginResponse.token%>"
+                },
+                "responseCode": 200,
+                "saveResponse": "dataServiceData"
+            }
+        },
+        {
+            "endpoint": "1",
+            "name": "TS_02 Edit record in testing3 DS",
+            "delimiters":["<%","%>"],
+            "request": {
+                "wait": 100,
+
+                "method": "PUT",
+                "url": "/c/TEST-API<%dataPipe.read('AC_DS_TS-01-00-01.json').thirdDataService.api%>/<%dataPipe.read('AC_DS_TS-02-01.json').testing3Record._id%>",
+                "headers": {
+                    "Authorization": "JWT <%acLoginResponse.token%>"
+                },
+                "responseCode": 200,
+                "payloadFile":"editTesting3RecordPayload.json",
+                "saveResponse": "thirdDataService"
+            }
+        },
+        {
+            "endpoint": "1",
+            "name": "TS_02 Edit record in testing2 DS",
+            "delimiters":["<%","%>"],
+            "request": {
+                "wait": 100,
+
+                "method": "PUT",
+                "url": "/c/TEST-API<%dataPipe.read('AC_DS_TS-01-00-02.json').secondDataService.api%>/<%dataPipe.read('AC_DS_TS-02-01.json').testing2Record._id%>",
+                "headers": {
+                    "Authorization": "JWT <%acLoginResponse.token%>"
+                },
+                "responseCode": 200,
+                "payloadFile":"editTesting2RecordPayload.json",
+                "saveResponse": "secondDataService"
+            }
+        },{
+            "endpoint": "1",
+            "name": "TS_02 Edit record in testing1 DS",
+            "delimiters":["<%","%>"],
+            "request": {
+                "wait": 100,
+
+                "method": "PUT",
+                "url": "/c/TEST-API<%dataPipe.read('AC_DS_TS-01-00-03.json').dataServiceData.api%>/<%dataPipe.read('AC_DS_TS-02-01.json').testing1Record._id%>",
+                "headers": {
+                    "Authorization": "JWT <%acLoginResponse.token%>"
+                },
+                "responseCode": 200,
+                "payloadFile":"editTesting1RecordPayload.json",
+                "saveResponse": "dataServiceData"
+            }
+        },
+        {
+            "endpoint": "1",
+            "name": "TS_01 Delete record in testing1 DS",
+            "delimiters":["<%","%>"],
+            "request": {
+                "wait": 50,
+
+                "method": "DELETE",
+                "url": "/c/TEST-API<%dataPipe.read('AC_DS_TS-01-00-03.json').dataServiceData.api%>/bulkDelete",
+                "headers": {
+                    "Authorization": "JWT <%acLoginResponse.token%>"
+                },
+                "responseCode": 200,
+                "payload": {"ids":["<%dataPipe.read('AC_DS_TS-02-01.json').testing1Record._id%>"]},
+                "saveResponse": "dataServiceData"
+            }
+        },
+        {
+            "endpoint": "1",
+            "name": "TS_01 Delete record in testing2 DS",
+            "delimiters":["<%","%>"],
+            "request": {
+                "wait": 50,
+
+                "method": "DELETE",
+                "url": "/c/TEST-API<%dataPipe.read('AC_DS_TS-01-00-02.json').secondDataService.api%>/bulkDelete",
+                "headers": {
+                    "Authorization": "JWT <%acLoginResponse.token%>"
+                },
+                "responseCode": 200,
+                "payload": {"ids":["<%dataPipe.read('AC_DS_TS-02-01.json').testing2Record._id%>"]},
+                "saveResponse": "secondDataService"
+            }
+        },
+        {
+            "endpoint": "1",
+            "name": "TS_01 Delete record in testing3 DS",
+            "delimiters":["<%","%>"],
+            "request": {
+                "wait": 50,
+
+                "method": "DELETE",
+                "url": "/c/TEST-API<%dataPipe.read('AC_DS_TS-01-00-01.json').thirdDataService.api%>/bulkDelete",
+                "headers": {
+                    "Authorization": "JWT <%acLoginResponse.token%>"
+                },
+                "responseCode": 200,
+                "payload": {"ids":["<%dataPipe.read('AC_DS_TS-02-01.json').testing3Record._id%>"]},
+                "saveResponse": "thirdDataService"
+            }
+        }
+    ]
+}

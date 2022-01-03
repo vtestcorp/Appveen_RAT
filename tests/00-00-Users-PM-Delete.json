@@ -1,0 +1,150 @@
+{
+  "testName": "00::Delete partner management users",
+  "url": [
+    "https://bifrost.ds.appveen.com/api"
+  ],
+  "globals": [
+    "loginResponse"
+  ],
+  "tests": [
+    {
+      "endpoint": "1",
+      "name": "Login",
+      "request": {
+        "method": "POST",
+        "url": "/a/rbac/login",
+        "payload": {
+          "username": "test_superadmin@appveen.com",
+          "password": "123123123"
+        },
+        "responseCode": 200,
+        "saveResponse": "loginResponse"
+      },
+      "response": {
+        "body": {
+          "token": null
+        }
+      }
+    },
+    {
+      "endpoint": "1",
+      "name": "Delete user test_pm_all_blocked@appveen.com",
+      "request": {
+        "method": "DELETE",
+        "url": "/a/rbac/usr/test_pm_all_blocked@appveen.com",
+        "headers": {
+          "Authorization": "JWT {{loginResponse.token}}"
+        },
+        "responseCode": 200
+      }
+    },
+    {
+      "endpoint": "1",
+      "name": "Delete user test_pm_basic_view@appveen.com",
+      "request": {
+        "method": "DELETE",
+        "url": "/a/rbac/usr/test_pm_basic_view@appveen.com",
+        "headers": {
+          "Authorization": "JWT {{loginResponse.token}}"
+        },
+        "responseCode": 200
+      }
+    },
+    {
+      "endpoint": "1",
+      "name": "Delete user test_pm_basic_manage@appveen.com",
+      "request": {
+        "method": "DELETE",
+        "url": "/a/rbac/usr/test_pm_basic_manage@appveen.com",
+        "headers": {
+          "Authorization": "JWT {{loginResponse.token}}"
+        },
+        "responseCode": 200
+      }
+    },
+    {
+      "endpoint": "1",
+      "name": "Delete user test_pm_flow_view@appveen.com",
+      "request": {
+        "method": "DELETE",
+        "url": "/a/rbac/usr/test_pm_flow_view@appveen.com",
+        "headers": {
+          "Authorization": "JWT {{loginResponse.token}}"
+        },
+        "responseCode": 200
+      }
+    },
+    {
+      "endpoint": "1",
+      "name": "Delete user test_pm_flow_manage@appveen.com",
+      "request": {
+        "method": "DELETE",
+        "url": "/a/rbac/usr/test_pm_flow_manage@appveen.com",
+        "headers": {
+          "Authorization": "JWT {{loginResponse.token}}"
+        },
+        "responseCode": 200
+      }
+    },
+    {
+      "endpoint": "1",
+      "name": "Delete user test_pm_profile_view@appveen.com",
+      "request": {
+        "method": "DELETE",
+        "url": "/a/rbac/usr/test_pm_profile_view@appveen.com",
+        "headers": {
+          "Authorization": "JWT {{loginResponse.token}}"
+        },
+        "responseCode": 200
+      }
+    },
+    {
+      "endpoint": "1",
+      "name": "Delete user test_pm_profile_manage@appveen.com",
+      "request": {
+        "method": "DELETE",
+        "url": "/a/rbac/usr/test_pm_profile_manage@appveen.com",
+        "headers": {
+          "Authorization": "JWT {{loginResponse.token}}"
+        },
+        "responseCode": 200
+      }
+    },
+    {
+      "endpoint": "1",
+      "name": "Delete user test_pm_headers_view@appveen.com",
+      "request": {
+        "method": "DELETE",
+        "url": "/a/rbac/usr/test_pm_headers_view@appveen.com",
+        "headers": {
+          "Authorization": "JWT {{loginResponse.token}}"
+        },
+        "responseCode": 200
+      }
+    },
+    {
+      "endpoint": "1",
+      "name": "Delete user test_pm_headers_manage@appveen.com",
+      "request": {
+        "method": "DELETE",
+        "url": "/a/rbac/usr/test_pm_headers_manage@appveen.com",
+        "headers": {
+          "Authorization": "JWT {{loginResponse.token}}"
+        },
+        "responseCode": 200
+      }
+    },
+    {
+      "endpoint": "1",
+      "name": "Delete user test_pm_management_manage@appveen.com",
+      "request": {
+        "method": "DELETE",
+        "url": "/a/rbac/usr/test_pm_management_manage@appveen.com",
+        "headers": {
+          "Authorization": "JWT {{loginResponse.token}}"
+        },
+        "responseCode": 200
+      }
+    }
+  ]
+}

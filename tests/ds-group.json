@@ -1,0 +1,283 @@
+{
+    "testName": "Create a Data Service with attributes of type Group ",
+    "url": [
+        "https://bifrost.ds.appveen.com/api"
+    ],
+    "modules": [],
+    "globals": ["loginResponse", "dataServiceResponse","DS_GROUP_STRING","DS_GROUP_NUMBER","DS_GROUP_BOOLEAN","DS_GROUP_LOCATION","DS_GROUP_FILE","DS_GROUP_USER"],
+    "tests": [{
+            "endpoint": "1",
+            "name": "Login as superAdmin",
+            "request": {
+                "method": "POST",
+                "url": "/a/rbac/login",
+                "payload": {"username":"admin","password":"u?5k167v13w5"},
+                "wait": 5,
+                "responseCode": 200,
+                "saveResponse": "loginResponse"
+            }
+        },
+        {
+            "endpoint": "1",
+            "name": "Create a DS DS_GROUP_STRING",
+            "request": {
+                "method": "POST",
+                "url": "/a/sm/service",
+                "payload": {"name": "DS-GROUP", "description": null, "app": "harshi"},
+                "headers": {
+                    "Authorization": "JWT {{loginResponse.token}}",
+                    "content-type": "application/json"
+                },
+                "wait": 10,
+                "responseCode": 200,
+                "saveResponse": "DS_GROUP_STRING"
+            }
+        },
+        {
+            "endpoint": "1",
+            "name": "Create Design for DS_GROUP_STRING",
+            "request": {
+                "method": "PUT",
+                "url": "/a/sm/service/{{DS_GROUP_STRING._id}}",
+                "payloadFile": "ds_group_string_payload.json",
+                "headers": {
+                    "Authorization": "JWT {{loginResponse.token}}",
+                    "content-type": "application/json"
+                },
+                "wait": 10,
+                "responseCode": 200
+            }
+        },{
+            "endpoint": "1",
+            "name": "Deploy DS_GROUP_STRING",
+            "request": {
+                "method": "PUT",
+                "url": "/a/sm/{{DS_GROUP_STRING._id}}/deploy",
+                "headers": {
+                    "Authorization": "JWT {{loginResponse.token}}",
+                    "content-type": "application/json"
+                },
+                "wait": 10,
+                "responseCode": 202
+            }
+        },
+        {
+            "endpoint": "1",
+            "name": "Create a DS DS_GROUP_NUMBER",
+            "request": {
+                "method": "POST",
+                "url": "/a/sm/service",
+                "payload": {"name": "DS-GROUP-NUMBER", "description": null, "app": "harshi"},
+                "headers": {
+                    "Authorization": "JWT {{loginResponse.token}}",
+                    "content-type": "application/json"
+                },
+                "wait": 10,
+                "responseCode": 200,
+                "saveResponse": "DS_GROUP_NUMBER"
+            }
+        },
+        {
+            "endpoint": "1",
+            "name": "Create Design for DS_GROUP_NUMBER",
+            "request": {
+                "method": "PUT",
+                "url": "/a/sm/service/{{DS_GROUP_NUMBER._id}}",
+                "payloadFile": "ds_group_number_payload.json",
+                "headers": {
+                    "Authorization": "JWT {{loginResponse.token}}",
+                    "content-type": "application/json"
+                },
+                "wait": 10,
+                "responseCode": 200
+            }
+        },{
+            "endpoint": "1",
+            "name": "Deploy DS_GROUP_NUMBER",
+            "request": {
+                "method": "PUT",
+                "url": "/a/sm/{{DS_GROUP_NUMBER._id}}/deploy",
+                "headers": {
+                    "Authorization": "JWT {{loginResponse.token}}",
+                    "content-type": "application/json"
+                },
+                "wait": 10,
+                "responseCode": 202
+            }
+        },
+        {
+            "endpoint": "1",
+            "name": "Create a DS DS_GROUP_BOOLEAN",
+            "request": {
+                "method": "POST",
+                "url": "/a/sm/service",
+                "payload": {"name": "DS-GROUP-BOOLEAN", "description": null, "app": "harshi"},
+                "headers": {
+                    "Authorization": "JWT {{loginResponse.token}}",
+                    "content-type": "application/json"
+                },
+                "wait": 10,
+                "responseCode": 200,
+                "saveResponse": "DS_GROUP_BOOLEAN"
+            }
+        },
+        {
+            "endpoint": "1",
+            "name": "Create Design for DS_GROUP_BOOLEAN",
+            "request": {
+                "method": "PUT",
+                "url": "/a/sm/service/{{DS_GROUP_BOOLEAN._id}}",
+                "payloadFile": "ds_group_boolean_payload.json",
+                "headers": {
+                    "Authorization": "JWT {{loginResponse.token}}",
+                    "content-type": "application/json"
+                },
+                "wait": 10,
+                "responseCode": 200
+            }
+        },{
+            "endpoint": "1",
+            "name": "Deploy DS_GROUP_BOOLEAN",
+            "request": {
+                "method": "PUT",
+                "url": "/a/sm/{{DS_GROUP_BOOLEAN._id}}/deploy",
+                "headers": {
+                    "Authorization": "JWT {{loginResponse.token}}",
+                    "content-type": "application/json"
+                },
+                "wait": 10,
+                "responseCode": 202
+            }
+        },
+        {
+            "endpoint": "1",
+            "name": "Create a DS DS_GROUP_LOCATION",
+            "request": {
+                "method": "POST",
+                "url": "/a/sm/service",
+                "payload": {"name": "DS-GROUP-LOCATION", "description": null, "app": "harshi"},
+                "headers": {
+                    "Authorization": "JWT {{loginResponse.token}}",
+                    "content-type": "application/json"
+                },
+                "wait": 10,
+                "responseCode": 200,
+                "saveResponse": "DS_GROUP_LOCATION"
+            }
+        },
+        {
+            "endpoint": "1",
+            "name": "Create Design for DS_GROUP_LOCATION",
+            "request": {
+                "method": "PUT",
+                "url": "/a/sm/service/{{DS_GROUP_LOCATION._id}}",
+                "payloadFile": "ds_group_location_payload.json",
+                "headers": {
+                    "Authorization": "JWT {{loginResponse.token}}",
+                    "content-type": "application/json"
+                },
+                "wait": 10,
+                "responseCode": 200
+            }
+        },{
+            "endpoint": "1",
+            "name": "Deploy DS_GROUP_LOCATION",
+            "request": {
+                "method": "PUT",
+                "url": "/a/sm/{{DS_GROUP_LOCATION._id}}/deploy",
+                "headers": {
+                    "Authorization": "JWT {{loginResponse.token}}",
+                    "content-type": "application/json"
+                },
+                "wait": 10,
+                "responseCode": 202
+            }
+        },
+        {
+            "endpoint": "1",
+            "name": "Create a DS DS_GROUP_FILE",
+            "request": {
+                "method": "POST",
+                "url": "/a/sm/service",
+                "payload": {"name": "DS-GROUP-FILE", "description": null, "app": "harshi"},
+                "headers": {
+                    "Authorization": "JWT {{loginResponse.token}}",
+                    "content-type": "application/json"
+                },
+                "wait": 10,
+                "responseCode": 200,
+                "saveResponse": "DS_GROUP_FILE"
+            }
+        },
+        {
+            "endpoint": "1",
+            "name": "Create Design for DS_GROUP_FILE",
+            "request": {
+                "method": "PUT",
+                "url": "/a/sm/service/{{DS_GROUP_FILE._id}}",
+                "payloadFile": "ds_group_file_payload.json",
+                "headers": {
+                    "Authorization": "JWT {{loginResponse.token}}",
+                    "content-type": "application/json"
+                },
+                "wait": 10,
+                "responseCode": 200
+            }
+        },{
+            "endpoint": "1",
+            "name": "Deploy DS_GROUP_FILE",
+            "request": {
+                "method": "PUT",
+                "url": "/a/sm/{{DS_GROUP_FILE._id}}/deploy",
+                "headers": {
+                    "Authorization": "JWT {{loginResponse.token}}",
+                    "content-type": "application/json"
+                },
+                "wait": 10,
+                "responseCode": 202
+            }
+        },{
+            "endpoint": "1",
+            "name": "Create a DS DS_GROUP_USER",
+            "request": {
+                "method": "POST",
+                "url": "/a/sm/service",
+                "payload": {"name": "DS-GROUP-USER", "description": null, "app": "harshi"},
+                "headers": {
+                    "Authorization": "JWT {{loginResponse.token}}",
+                    "content-type": "application/json"
+                },
+                "wait": 10,
+                "responseCode": 200,
+                "saveResponse": "DS_GROUP_USER"
+            }
+        },
+        {
+            "endpoint": "1",
+            "name": "Create Design for DS_GROUP_USER",
+            "request": {
+                "method": "PUT",
+                "url": "/a/sm/service/{{DS_GROUP_USER._id}}",
+                "payloadFile": "ds_group_user_payload.json",
+                "headers": {
+                    "Authorization": "JWT {{loginResponse.token}}",
+                    "content-type": "application/json"
+                },
+                "wait": 10,
+                "responseCode": 200
+            }
+        },{
+            "endpoint": "1",
+            "name": "Deploy DS_GROUP_USER",
+            "request": {
+                "method": "PUT",
+                "url": "/a/sm/{{DS_GROUP_USER._id}}/deploy",
+                "headers": {
+                    "Authorization": "JWT {{loginResponse.token}}",
+                    "content-type": "application/json"
+                },
+                "wait": 10,
+                "responseCode": 202
+            }
+        }
+    ]}

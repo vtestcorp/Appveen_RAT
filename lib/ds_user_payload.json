@@ -1,0 +1,646 @@
+{
+    "name": "DS-USER",
+    "description": null,
+    "api": "/dsUser",
+    "permanentDeleteData": true,
+    "wizard": [],
+    "definition": [{
+        "key": "_id",
+        "type": "String",
+        "prefix": "DS",
+        "suffix": null,
+        "padding": null,
+        "counter": 1001,
+        "properties": {
+            "label": null,
+            "readonly": false,
+            "errorMessage": null,
+            "name": "ID",
+            "required": false,
+            "fieldLength": 10,
+            "_description": null,
+            "_typeChanged": "id",
+            "_isParrentArray": null,
+            "_isGrpParentArray": null,
+            "dataPath": "_id",
+            "_detailedType": "",
+            "dataKey": "_id"
+        }
+    }, {
+        "type": "User",
+        "key": "dsUser1001",
+        "properties": {
+            "name": "DS USER 1001",
+            "fieldLength": 10,
+            "_typeChanged": "User",
+            "deleteAction": "restrict",
+            "relatedSearchField": "_id",
+            "relatedViewFields": [],
+            "dataKey": "dsUser1001",
+            "dataPath": "dsUser1001"
+        }
+    }, {
+        "type": "User",
+        "key": "dsUser1002",
+        "properties": {
+            "label": "Custom DS USER 1002",
+            "readonly": true,
+            "errorMessage": "Error DS USER 1002",
+            "name": "DS USER 1002",
+            "required": true,
+            "fieldLength": 10,
+            "_description": "test description",
+            "_typeChanged": "User",
+            "createOnly": true,
+            "unique": true,
+            "deleteAction": "restrict",
+            "relatedSearchField": "_id",
+            "relatedViewFields": [{
+                "key": "_id",
+                "name": "ID"
+            }],
+            "dataKey": "dsUser1002",
+            "dataPath": "dsUser1002"
+        }
+    }, {
+        "type": "User",
+        "key": "dsUser1003",
+        "properties": {
+            "name": "DS USER 1003",
+            "required": true,
+            "fieldLength": 10,
+            "_typeChanged": "User",
+            "deleteAction": "restrict",
+            "relatedSearchField": "_id",
+            "relatedViewFields": [],
+            "dataKey": "dsUser1003",
+            "dataPath": "dsUser1003"
+        }
+    }, {
+        "type": "User",
+        "key": "dsUser1004",
+        "properties": {
+            "name": "DS USER 1004",
+            "fieldLength": 10,
+            "_typeChanged": "User",
+            "createOnly": true,
+            "deleteAction": "restrict",
+            "relatedSearchField": "_id",
+            "relatedViewFields": [],
+            "dataKey": "dsUser1004",
+            "dataPath": "dsUser1004"
+        }
+    }, {
+        "type": "User",
+        "key": "dsUser1005",
+        "properties": {
+            "name": "DS USER 1005",
+            "fieldLength": 10,
+            "_typeChanged": "User",
+            "unique": true,
+            "deleteAction": "restrict",
+            "relatedSearchField": "_id",
+            "relatedViewFields": [],
+            "dataKey": "dsUser1005",
+            "dataPath": "dsUser1005"
+        }
+    }, {
+        "type": "User",
+        "key": "dsUser1006",
+        "properties": {
+            "readonly": true,
+            "name": "DS USER 1006",
+            "fieldLength": 10,
+            "_typeChanged": "User",
+            "deleteAction": "restrict",
+            "relatedSearchField": "_id",
+            "relatedViewFields": [],
+            "dataKey": "dsUser1006",
+            "dataPath": "dsUser1006"
+        }
+    }, {
+        "type": "User",
+        "key": "dsUser1007",
+        "properties": {
+            "name": "DS USER 1007",
+            "required": true,
+            "fieldLength": 10,
+            "_typeChanged": "User",
+            "createOnly": true,
+            "deleteAction": "restrict",
+            "relatedSearchField": "_id",
+            "relatedViewFields": [],
+            "dataKey": "dsUser1007",
+            "dataPath": "dsUser1007"
+        }
+    }, {
+        "type": "User",
+        "key": "dsUser1008",
+        "properties": {
+            "name": "DS USER 1008",
+            "required": true,
+            "fieldLength": 10,
+            "_typeChanged": "User",
+            "unique": true,
+            "deleteAction": "restrict",
+            "relatedSearchField": "_id",
+            "relatedViewFields": [],
+            "dataKey": "dsUser1008",
+            "dataPath": "dsUser1008"
+        }
+    }, {
+        "type": "User",
+        "key": "dsUser1009",
+        "properties": {
+            "readonly": true,
+            "name": "DS USER 1009",
+            "required": true,
+            "fieldLength": 10,
+            "_typeChanged": "User",
+            "deleteAction": "restrict",
+            "relatedSearchField": "_id",
+            "relatedViewFields": [],
+            "dataKey": "dsUser1009",
+            "dataPath": "dsUser1009"
+        }
+    }, {
+        "type": "User",
+        "key": "dsUser1010",
+        "properties": {
+            "name": "DS USER 1010",
+            "fieldLength": 10,
+            "_typeChanged": "User",
+            "createOnly": true,
+            "unique": true,
+            "deleteAction": "restrict",
+            "relatedSearchField": "_id",
+            "relatedViewFields": [],
+            "dataKey": "dsUser1010",
+            "dataPath": "dsUser1010"
+        }
+    }, {
+        "type": "User",
+        "key": "dsUser1011",
+        "properties": {
+            "readonly": true,
+            "name": "DS USER 1011",
+            "fieldLength": 10,
+            "_typeChanged": "User",
+            "createOnly": true,
+            "deleteAction": "restrict",
+            "relatedSearchField": "_id",
+            "relatedViewFields": [],
+            "dataKey": "dsUser1011",
+            "dataPath": "dsUser1011"
+        }
+    }, {
+        "type": "User",
+        "key": "dsUser1012",
+        "properties": {
+            "readonly": true,
+            "name": "DS USER 1012",
+            "fieldLength": 10,
+            "_typeChanged": "User",
+            "unique": true,
+            "deleteAction": "restrict",
+            "relatedSearchField": "_id",
+            "relatedViewFields": [],
+            "dataKey": "dsUser1012",
+            "dataPath": "dsUser1012"
+        }
+    }, {
+        "type": "User",
+        "key": "dsUser1013",
+        "properties": {
+            "label": "Custom DS USER 1013",
+            "errorMessage": "Error DS USER 1013",
+            "name": "DS USER 1013",
+            "fieldLength": 10,
+            "_typeChanged": "User",
+            "deleteAction": "restrict",
+            "relatedSearchField": "_id",
+            "relatedViewFields": [],
+            "dataKey": "dsUser1013",
+            "dataPath": "dsUser1013"
+        }
+    }, {
+        "type": "User",
+        "key": "dsUser1014",
+        "properties": {
+            "errorMessage": "Error DS USER 1014",
+            "name": "DS USER 1014",
+            "fieldLength": 10,
+            "_typeChanged": "User",
+            "deleteAction": "restrict",
+            "relatedSearchField": "_id",
+            "relatedViewFields": [],
+            "dataKey": "dsUser1014",
+            "dataPath": "dsUser1014"
+        }
+    }, {
+        "type": "User",
+        "key": "dsUser1015",
+        "properties": {
+            "label": "Custom DS USER 1015",
+            "name": "DS USER 1015",
+            "fieldLength": 10,
+            "_typeChanged": "User",
+            "deleteAction": "restrict",
+            "relatedSearchField": "_id",
+            "relatedViewFields": [],
+            "dataKey": "dsUser1015",
+            "dataPath": "dsUser1015"
+        }
+    }, {
+        "type": "User",
+        "key": "dsUser1016",
+        "properties": {
+            "name": "DS USER 1016",
+            "fieldLength": 10,
+            "_typeChanged": "User",
+            "default": "admin",
+            "deleteAction": "restrict",
+            "relatedSearchField": "_id",
+            "relatedViewFields": [{
+                "key": "_id",
+                "name": "ID"
+            }],
+            "dataKey": "dsUser1016",
+            "dataPath": "dsUser1016"
+        }
+    }, {
+        "type": "User",
+        "key": "dsUser1017",
+        "properties": {
+            "readonly": true,
+            "name": "DS USER 1017",
+            "fieldLength": 10,
+            "_typeChanged": "User",
+            "default": "admin",
+            "deleteAction": "restrict",
+            "relatedSearchField": "_id",
+            "relatedViewFields": [{
+                "key": "_id",
+                "name": "ID"
+            }],
+            "dataKey": "dsUser1017",
+            "dataPath": "dsUser1017"
+        }
+    }, {
+        "type": "User",
+        "key": "dsUser1018",
+        "properties": {
+            "name": "DS USER 1018",
+            "fieldLength": 10,
+            "_typeChanged": "User",
+            "deleteAction": "restrict",
+            "relatedSearchField": "_id",
+            "relatedViewFields": [],
+            "dataKey": "dsUser1018",
+            "dataPath": "dsUser1018"
+        }
+    }, {
+        "type": "User",
+        "key": "dsUser1019",
+        "properties": {
+            "name": "DS USER 1019",
+            "fieldLength": 10,
+            "_typeChanged": "User",
+            "deleteAction": "restrict",
+            "relatedSearchField": "_id",
+            "relatedViewFields": [{
+                "key": "_id",
+                "name": "ID"
+            }],
+            "dataKey": "dsUser1019",
+            "dataPath": "dsUser1019"
+        }
+    }, {
+        "type": "User",
+        "key": "dsUser1020",
+        "properties": {
+            "name": "DS USER 1020",
+            "fieldLength": 10,
+            "_typeChanged": "User",
+            "default": "admin",
+            "deleteAction": "restrict",
+            "relatedSearchField": "_id",
+            "relatedViewFields": [],
+            "dataKey": "dsUser1020",
+            "dataPath": "dsUser1020"
+        }
+    }, {
+        "type": "User",
+        "key": "dsUser1021",
+        "properties": {
+            "name": "DS USER 1021",
+            "fieldLength": 10,
+            "_typeChanged": "User",
+            "deleteAction": "restrict",
+            "relatedSearchField": "_id",
+            "relatedViewFields": [{
+                "key": "_id",
+                "name": "ID"
+            }],
+            "dataKey": "dsUser1021",
+            "dataPath": "dsUser1021"
+        }
+    }, {
+        "type": "User",
+        "key": "dsUser1022",
+        "properties": {
+            "name": "DS USER 1022",
+            "fieldLength": 10,
+            "_typeChanged": "User",
+            "deleteAction": "setnull",
+            "relatedSearchField": "_id",
+            "relatedViewFields": [],
+            "dataKey": "dsUser1022",
+            "dataPath": "dsUser1022"
+        }
+    }, {
+        "type": "User",
+        "key": "dsUser1023",
+        "properties": {
+            "name": "DS USER 1023",
+            "fieldLength": 10,
+            "_typeChanged": "User",
+            "default": "admin",
+            "deleteAction": "setnull",
+            "relatedSearchField": "_id",
+            "relatedViewFields": [{
+                "key": "_id",
+                "name": "ID"
+            }],
+            "dataKey": "dsUser1023",
+            "dataPath": "dsUser1023"
+        }
+    }],
+    "webHooks": [],
+    "preHooks": [],
+    "workflowHooks": {
+        "postHooks": {
+            "submit": [],
+            "rework": [],
+            "discard": [],
+            "approve": [],
+            "reject": []
+        }
+    },
+    "versionValidity": {
+        "validityType": "count",
+        "validityValue": -1
+    },
+    "disableInsights": false,
+    "headers": [],
+    "enableSearchIndex": false,
+    "role": {
+        "_id": "SRVC2145",
+        "_metadata": {
+            "version": {
+                "document": 1,
+                "release": "1.0"
+            },
+            "deleted": false,
+            "lastUpdated": "2021-01-29T04:53:43.769Z",
+            "createdAt": "2021-01-29T04:53:43.767Z"
+        },
+        "app": "harshi",
+        "entity": "SRVC2145",
+        "entityName": "DS-USER",
+        "roles": [{
+            "skipReviewRole": true,
+            "id": "P7497547472",
+            "name": "Skip Review",
+            "operations": [{
+                "method": "SKIP_REVIEW"
+            }, {
+                "method": "POST"
+            }, {
+                "method": "PUT"
+            }, {
+                "method": "DELETE"
+            }],
+            "description": "This role entitles an authorized user to create, update or delete a record and without any approval"
+        }, {
+            "manageRole": true,
+            "id": "P3628070612",
+            "name": "Manage",
+            "operations": [{
+                "method": "POST"
+            }, {
+                "method": "PUT"
+            }, {
+                "method": "DELETE"
+            }, {
+                "method": "GET"
+            }],
+            "description": "This role entitles an authorized user to create, update or delete a record"
+        }, {
+            "viewRole": true,
+            "id": "P7840949660",
+            "name": "View",
+            "operations": [{
+                "method": "GET"
+            }],
+            "description": "This role entitles an authorized user to view the record"
+        }],
+        "type": "appcenter",
+        "fields": {
+            "_id": {
+                "_t": "String",
+                "_p": {
+                    "P7497547472": "R",
+                    "P3628070612": "R",
+                    "P7840949660": "R"
+                }
+            },
+            "dsUser1001": {
+                "_t": "String",
+                "_p": {
+                    "P7497547472": "R",
+                    "P3628070612": "R",
+                    "P7840949660": "R"
+                }
+            },
+            "dsUser1002": {
+                "_t": "String",
+                "_p": {
+                    "P7497547472": "R",
+                    "P3628070612": "R",
+                    "P7840949660": "R"
+                }
+            },
+            "dsUser1003": {
+                "_t": "String",
+                "_p": {
+                    "P7497547472": "R",
+                    "P3628070612": "R",
+                    "P7840949660": "R"
+                }
+            },
+            "dsUser1004": {
+                "_t": "String",
+                "_p": {
+                    "P7497547472": "R",
+                    "P3628070612": "R",
+                    "P7840949660": "R"
+                }
+            },
+            "dsUser1005": {
+                "_t": "String",
+                "_p": {
+                    "P7497547472": "R",
+                    "P3628070612": "R",
+                    "P7840949660": "R"
+                }
+            },
+            "dsUser1006": {
+                "_t": "String",
+                "_p": {
+                    "P7497547472": "R",
+                    "P3628070612": "R",
+                    "P7840949660": "R"
+                }
+            },
+            "dsUser1007": {
+                "_t": "String",
+                "_p": {
+                    "P7497547472": "R",
+                    "P3628070612": "R",
+                    "P7840949660": "R"
+                }
+            },
+            "dsUser1008": {
+                "_t": "String",
+                "_p": {
+                    "P7497547472": "R",
+                    "P3628070612": "R",
+                    "P7840949660": "R"
+                }
+            },
+            "dsUser1009": {
+                "_t": "String",
+                "_p": {
+                    "P7497547472": "R",
+                    "P3628070612": "R",
+                    "P7840949660": "R"
+                }
+            },
+            "dsUser1010": {
+                "_t": "String",
+                "_p": {
+                    "P7497547472": "R",
+                    "P3628070612": "R",
+                    "P7840949660": "R"
+                }
+            },
+            "dsUser1011": {
+                "_t": "String",
+                "_p": {
+                    "P7497547472": "R",
+                    "P3628070612": "R",
+                    "P7840949660": "R"
+                }
+            },
+            "dsUser1012": {
+                "_t": "String",
+                "_p": {
+                    "P7497547472": "R",
+                    "P3628070612": "R",
+                    "P7840949660": "R"
+                }
+            },
+            "dsUser1013": {
+                "_t": "String",
+                "_p": {
+                    "P7497547472": "R",
+                    "P3628070612": "R",
+                    "P7840949660": "R"
+                }
+            },
+            "dsUser1014": {
+                "_t": "String",
+                "_p": {
+                    "P7497547472": "R",
+                    "P3628070612": "R",
+                    "P7840949660": "R"
+                }
+            },
+            "dsUser1015": {
+                "_t": "String",
+                "_p": {
+                    "P7497547472": "R",
+                    "P3628070612": "R",
+                    "P7840949660": "R"
+                }
+            },
+            "dsUser1016": {
+                "_t": "String",
+                "_p": {
+                    "P7497547472": "R",
+                    "P3628070612": "R",
+                    "P7840949660": "R"
+                }
+            },
+            "dsUser1017": {
+                "_t": "String",
+                "_p": {
+                    "P7497547472": "R",
+                    "P3628070612": "R",
+                    "P7840949660": "R"
+                }
+            },
+            "dsUser1018": {
+                "_t": "String",
+                "_p": {
+                    "P7497547472": "R",
+                    "P3628070612": "R",
+                    "P7840949660": "R"
+                }
+            },
+            "dsUser1019": {
+                "_t": "String",
+                "_p": {
+                    "P7497547472": "R",
+                    "P3628070612": "R",
+                    "P7840949660": "R"
+                }
+            },
+            "dsUser1020": {
+                "_t": "String",
+                "_p": {
+                    "P7497547472": "R",
+                    "P3628070612": "R",
+                    "P7840949660": "R"
+                }
+            },
+            "dsUser1021": {
+                "_t": "String",
+                "_p": {
+                    "P7497547472": "R",
+                    "P3628070612": "R",
+                    "P7840949660": "R"
+                }
+            },
+            "dsUser1022": {
+                "_t": "String",
+                "_p": {
+                    "P7497547472": "R",
+                    "P3628070612": "R",
+                    "P7840949660": "R"
+                }
+            },
+            "dsUser1023": {
+                "_t": "String",
+                "_p": {
+                    "P7497547472": "R",
+                    "P3628070612": "R",
+                    "P7840949660": "R"
+                }
+            }
+        },
+        "__v": 0
+    },
+    "app": "harshi"
+}

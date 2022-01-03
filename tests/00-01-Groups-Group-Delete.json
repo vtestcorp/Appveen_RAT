@@ -1,0 +1,123 @@
+{
+    "testName": "01::Delete Group of groups",
+    "url": ["https://bifrost.ds.appveen.com/api"],
+    "globals": [
+        "loginResponse"
+    ],
+    "tests": [{
+            "endpoint": "1",
+            "name": "Login",
+            "request": {
+                "method": "POST",
+                "url": "/a/rbac/login",
+                "payload": {
+                    "username": "test_appadmin@appveen.com",
+                    "password": "123123123"
+                },
+                "responseCode": 200,
+                "saveResponse": "loginResponse"
+            },
+            "response": {
+                "body": {
+                    "token": null
+                }
+            }
+        },
+        {
+            "endpoint": "1",
+            "name": "Delete Group: Group all Blocked",
+            "request": {
+                "method": "DELETE",
+                "url": "/a/rbac/group/{{dataPipe.read('00-01-Groups-Group-Create.json').group_all_blocked._id}}",
+                "headers": {
+                    "Authorization": "JWT {{loginResponse.token}}"
+                },
+                "responseCode": 200
+            }
+        },
+        {
+            "endpoint": "1",
+            "name": "Delete Group: Group basic View",
+            "request": {
+                "method": "DELETE",
+                "url": "/a/rbac/group/{{dataPipe.read('00-01-Groups-Group-Create.json').group_basic_view._id}}",
+                "headers": {
+                    "Authorization": "JWT {{loginResponse.token}}"
+                },
+                "responseCode": 200
+            }
+        },
+        {
+            "endpoint": "1",
+            "name": "Delete Group: Group member view",
+            "request": {
+                "method": "DELETE",
+                "url": "/a/rbac/group/{{dataPipe.read('00-01-Groups-Group-Create.json').group_member_view._id}}",
+                "headers": {
+                    "Authorization": "JWT {{loginResponse.token}}"
+                },
+                "responseCode": 200
+            }
+        },
+        {
+            "endpoint": "1",
+            "name": "Delete Group: Group Member Manage",
+            "request": {
+                "method": "DELETE",
+                "url": "/a/rbac/group/{{dataPipe.read('00-01-Groups-Group-Create.json').group_member_manage._id}}",
+                "headers": {
+                    "Authorization": "JWT {{loginResponse.token}}"
+                },
+                "responseCode": 200
+            }
+        },
+        {
+            "endpoint": "1",
+            "name": "Delete Group:  Group author view",
+            "request": {
+                "method": "DELETE",
+                "url": "/a/rbac/group/{{dataPipe.read('00-01-Groups-Group-Create.json').group_author_view._id}}",
+                "headers": {
+                    "Authorization": "JWT {{loginResponse.token}}"
+                },
+                "responseCode": 200
+            }
+        },
+        {
+            "endpoint": "1",
+            "name": "Delete Group: Group author Manage",
+            "request": {
+                "method": "DELETE",
+                "url": "/a/rbac/group/{{dataPipe.read('00-01-Groups-Group-Create.json').group_author_manage._id}}",
+                "headers": {
+                    "Authorization": "JWT {{loginResponse.token}}"
+                },
+                "responseCode": 200
+            }
+        },
+        {
+            "endpoint": "1",
+            "name": "Delete Group: Group Appcenter view",
+            "request": {
+                "method": "DELETE",
+                "url": "/a/rbac/group/{{dataPipe.read('00-01-Groups-Group-Create.json').group_appcenter_view._id}}",
+                "headers": {
+                    "Authorization": "JWT {{loginResponse.token}}"
+                },
+                "responseCode": 200
+            }
+        },
+        {
+            "endpoint": "1",
+            "name": "Delete Group: Group appcenter Manage",
+            "request": {
+                "method": "DELETE",
+                "url": "/a/rbac/group/{{dataPipe.read('00-01-Groups-Group-Create.json').group_appcenter_manage._id}}",
+                "headers": {
+                    "Authorization": "JWT {{loginResponse.token}}"
+                },
+                "responseCode": 200
+            }
+        }
+    ]
+}

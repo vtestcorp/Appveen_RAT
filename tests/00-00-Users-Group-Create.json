@@ -1,0 +1,268 @@
+{
+    "testName": "00::Create users for Group",
+    "url": [
+        "https://bifrost.ds.appveen.com/api"
+    ],
+    "globals": [
+        "loginResponse"
+    ],
+    "tests": [{
+            "endpoint": "1",
+            "name": "Login",
+            "request": {
+                "method": "POST",
+                "url": "/a/rbac/login",
+                "payload": {
+                    "username": "test_appadmin@appveen.com",
+                    "password": "123123123"
+                },
+                "responseCode": 200,
+                "saveResponse": "loginResponse"
+            }
+        },
+        {
+            "endpoint": "1",
+            "delimiters": [
+                "<%",
+                "%>"
+            ],
+            "name": "Create user test_group_all_blocked@appveen.com",
+            "request": {
+                "method": "POST",
+                "url": "/a/rbac/usr/app/TEST-API/create",
+                "headers": {
+                    "Authorization": "JWT <%loginResponse.token%>"
+                },
+                "payload": {
+                    "user": {
+                        "username": "test_group_all_blocked@appveen.com",
+                        "password": "123123123",
+                        "cpassword": "123123123",
+                        "isSuperAdmin": false,
+                        "basicDetails": {
+                            "name": "test_group_all_blocked@appveen.com"
+                        },
+                        "roles": null
+                    }
+                },
+                "responseCode": 200
+            }
+        }, {
+            "endpoint": "1",
+            "delimiters": [
+                "<%",
+                "%>"
+            ],
+            "name": "Create user test_group_basic_view@appveen.com",
+            "request": {
+                "method": "POST",
+                "url": "/a/rbac/usr/app/TEST-API/create",
+                "headers": {
+                    "Authorization": "JWT <%loginResponse.token%>"
+                },
+                "payload": {
+                    "user": {
+                        "username": "test_group_basic_view@appveen.com",
+                        "password": "123123123",
+                        "cpassword": "123123123",
+                        "isSuperAdmin": false,
+                        "basicDetails": {
+                            "name": "test_group_basic_view@appveen.com"
+                        },
+                        "roles": null
+                    }
+                },
+                "responseCode": 200
+            }
+        }, {
+            "endpoint": "1",
+            "delimiters": [
+                "<%",
+                "%>"
+            ],
+            "name": "Create user test_group_basic_manage@appveen.com",
+            "request": {
+                "method": "POST",
+                "url": "/a/rbac/usr/app/TEST-API/create",
+                "headers": {
+                    "Authorization": "JWT <%loginResponse.token%>"
+                },
+                "payload": {
+                    "user": {
+                        "username": "test_group_basic_manage@appveen.com",
+                        "password": "123123123",
+                        "cpassword": "123123123",
+                        "isSuperAdmin": false,
+                        "basicDetails": {
+                            "name": "test_group_basic_manage@appveen.com"
+                        },
+                        "roles": null
+                    }
+                },
+                "responseCode": 200
+            }
+        }, {
+            "endpoint": "1",
+            "delimiters": [
+                "<%",
+                "%>"
+            ],
+            "name": "Create user test_group_member_view@appveen.com",
+            "request": {
+                "method": "POST",
+                "url": "/a/rbac/usr/app/TEST-API/create",
+                "headers": {
+                    "Authorization": "JWT <%loginResponse.token%>"
+                },
+                "payload": {
+                    "user": {
+                        "username": "test_group_member_view@appveen.com",
+                        "password": "123123123",
+                        "cpassword": "123123123",
+                        "isSuperAdmin": false,
+                        "basicDetails": {
+                            "name": "test_group_member_view@appveen.com"
+                        },
+                        "roles": null
+                    }
+                },
+                "responseCode": 200
+            }
+        }, {
+            "endpoint": "1",
+            "delimiters": [
+                "<%",
+                "%>"
+            ],
+            "name": "Create user test_group_member_manage@appveen.com",
+            "request": {
+                "method": "POST",
+                "url": "/a/rbac/usr/app/TEST-API/create",
+                "headers": {
+                    "Authorization": "JWT <%loginResponse.token%>"
+                },
+                "payload": {
+                    "user": {
+                        "username": "test_group_member_manage@appveen.com",
+                        "password": "123123123",
+                        "cpassword": "123123123",
+                        "isSuperAdmin": false,
+                        "basicDetails": {
+                            "name": "test_group_member_manage@appveen.com"
+                        },
+                        "roles": null
+                    }
+                },
+                "responseCode": 200
+            }
+        }, {
+            "endpoint": "1",
+            "delimiters": [
+                "<%",
+                "%>"
+            ],
+            "name": "Create user test_group_author_view@appveen.com",
+            "request": {
+                "method": "POST",
+                "url": "/a/rbac/usr/app/TEST-API/create",
+                "headers": {
+                    "Authorization": "JWT <%loginResponse.token%>"
+                },
+                "payload": {
+                    "user": {
+                        "username": "test_group_author_view@appveen.com",
+                        "password": "123123123",
+                        "cpassword": "123123123",
+                        "isSuperAdmin": false,
+                        "basicDetails": {
+                            "name": "test_group_author_view@appveen.com"
+                        },
+                        "roles": null
+                    }
+                },
+                "responseCode": 200
+            }
+        }, {
+            "endpoint": "1",
+            "delimiters": [
+                "<%",
+                "%>"
+            ],
+            "name": "Create user test_group_author_manage@appveen.com",
+            "request": {
+                "method": "POST",
+                "url": "/a/rbac/usr/app/TEST-API/create",
+                "headers": {
+                    "Authorization": "JWT <%loginResponse.token%>"
+                },
+                "payload": {
+                    "user": {
+                        "username": "test_group_author_manage@appveen.com",
+                        "password": "123123123",
+                        "cpassword": "123123123",
+                        "isSuperAdmin": false,
+                        "basicDetails": {
+                            "name": "test_group_author_manage@appveen.com"
+                        },
+                        "roles": null
+                    }
+                },
+                "responseCode": 200
+            }
+        }, {
+            "endpoint": "1",
+            "delimiters": [
+                "<%",
+                "%>"
+            ],
+            "name": "Create user test_group_appcenter_view@appveen.com",
+            "request": {
+                "method": "POST",
+                "url": "/a/rbac/usr/app/TEST-API/create",
+                "headers": {
+                    "Authorization": "JWT <%loginResponse.token%>"
+                },
+                "payload": {
+                    "user": {
+                        "username": "test_group_appcenter_view@appveen.com",
+                        "password": "123123123",
+                        "cpassword": "123123123",
+                        "isSuperAdmin": false,
+                        "basicDetails": {
+                            "name": "test_group_appcenter_view@appveen.com"
+                        },
+                        "roles": null
+                    }
+                },
+                "responseCode": 200
+            }
+        }, {
+            "endpoint": "1",
+            "delimiters": [
+                "<%",
+                "%>"
+            ],
+            "name": "Create user test_group_appcenter_manage@appveen.com",
+            "request": {
+                "method": "POST",
+                "url": "/a/rbac/usr/app/TEST-API/create",
+                "headers": {
+                    "Authorization": "JWT <%loginResponse.token%>"
+                },
+                "payload": {
+                    "user": {
+                        "username": "test_group_appcenter_manage@appveen.com",
+                        "password": "123123123",
+                        "cpassword": "123123123",
+                        "isSuperAdmin": false,
+                        "basicDetails": {
+                            "name": "test_group_appcenter_manage@appveen.com"
+                        },
+                        "roles": null
+                    }
+                },
+                "responseCode": 200
+            }
+        }
+    ]
+}

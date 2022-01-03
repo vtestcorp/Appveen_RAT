@@ -1,0 +1,96 @@
+{
+    "testName": "00::Groups for Library users",
+    "url": [
+        "https://bifrost.ds.appveen.com/api"
+    ],
+    "globals": [
+        "loginResponse", "library_blocked", "library_view", "library_manage"
+    ],
+    "tests": [{
+            "endpoint": "1",
+            "name": "Login",
+            "request": {
+                "method": "POST",
+                "url": "/a/rbac/login",
+                "payload": {
+                    "username": "test_appadmin@appveen.com",
+                    "password": "123123123"
+                },
+                "responseCode": 200,
+                "saveResponse": "loginResponse"
+            }
+        },
+        {
+            "endpoint": "1",
+            "delimiters": ["<%", "%>"],
+            "name": "Create Group: Library Blocked",
+            "request": {
+                "method": "POST",
+                "url": "/a/rbac/group",
+                "headers": {
+                    "Authorization": "JWT <%loginResponse.token%>"
+                },
+                "responseCode": 200,
+                "payload": {
+                    "name": "Library Blocked",
+                    "app": "TEST-API",
+                    "users": ["test_library_blocked@appveen.com"]
+                },
+                "saveResponse": "library_blocked"
+            }
+        },
+        {
+            "endpoint": "1",
+            "delimiters": ["<%", "%>"],
+            "name": "Create Group: Library View",
+            "request": {
+                "method": "POST",
+                "url": "/a/rbac/group",
+                "headers": {
+                    "Authorization": "JWT <%loginResponse.token%>"
+                },
+                "responseCode": 200,
+                "payload": {
+                    "name": "Library View",
+                    "app": "TEST-API",
+                    "users": ["test_library_view@appveen.com"],
+                    "roles": [{
+                            "id": "PVL",
+                            "app": "TEST-API",
+                            "entity": "GS",
+                            "type": "author"
+                        }
+
+                    ]
+                },
+                "saveResponse": "library_view"
+            }
+        },
+        {
+            "endpoint": "1",
+            "delimiters": ["<%", "%>"],
+            "name": "Create Group: Library Manage",
+            "request": {
+                "method": "POST",
+                "url": "/a/rbac/group",
+                "headers": {
+                    "Authorization": "JWT <%loginResponse.token%>"
+                },
+                "responseCode": 200,
+                "payload": {
+                    "name": "Library Manage",
+                    "app": "TEST-API",
+                    "users": ["test_library_manage@appveen.com"],
+                    "roles": [{
+                            "id": "PML",
+                            "app": "TEST-API",
+                            "entity": "GS",
+                            "type": "author"
+                        }
+                    ]
+                },
+                "saveResponse": "library_manage"
+            }
+        }
+    ]
+}

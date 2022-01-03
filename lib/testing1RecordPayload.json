@@ -1,0 +1,234 @@
+{
+    "_id": null,
+    "textVal": "text_val",
+    "textReq": "text_req",
+    "textCreate": "text_create",
+    "textUnique": "text_unique",
+    "textLong": "sefffffffffffffffffffffffffffffawr3q22222222224rfbfdjhzcssssssssssssssssssssssssGBFNXXXXXXXXBBBBBBBWAESXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXZFWFGXZZZZZZZZZES",
+    "textRich": "<!DOCTYPE html>\n<html>\n<head>\n</head>\n<body>\n<p>sfeczzzzzzzzzzzzzzzzzzzaWVAESRWWWWWWWWWWWWV XCZESR REEASV</p>\n</body>\n</html>",
+    "textEmail": "text_email@fcsz.rdfgr",
+    "textSecure": {
+        "value": "vdswf"
+    },
+    "textList": "text_list",
+    "textDef": "default",
+    "numVal": 324432,
+    "numReq": 5667,
+    "numCreate": 78,
+    "numUnique": 3456,
+    "numList": 1,
+    "numCurrency": 42342,
+    "numDef": 556,
+    "boolVal": false,
+    "boolReq": true,
+    "boolCreate": false,
+    "boolDef": true,
+    "dateVal": "2020-05-04T00:00:00.000Z",
+    "dateReq": "2020-05-11T00:00:00.000Z",
+    "dateCreate": "2020-05-01T00:00:00.000Z",
+    "dateDef": "2020-02-01",
+    "groupVal": {
+        "groupText": "group_text",
+        "groupLong": "saFEAWGGGGGGGGGGGGGZV XWEGAVG                   SDFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFQET4444R",
+        "groupRich": "<!DOCTYPE html>\n<html>\n<head>\n</head>\n<body>\n<p>EWRQAAAAAAAAAAAAAAAAAAAAAAAAAAAAA TV TRRRRRRRRRRQEWWWWWWWWWA34TMKKKKKKKKKKKKKKKKKKKKKKCGFYU</p>\n</body>\n</html>",
+        "groupEmail": "group_email@fvd.fse",
+        "groupSecure": {
+            "value": "wfefewgre"
+        },
+        "groupList": "r5ehrs",
+        "groupNum": null,
+        "groupNumList": null,
+        "groupCurrency": 5667,
+        "groupBool": true,
+        "groupDate": "2020-05-17T00:00:00.000Z",
+        "groupLoc": {
+            "userInput": null,
+            "formattedAddress": "27-35 167th St, Flushing, NY 11358, USA",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -73.7975079,
+                    40.771215
+                ]
+            },
+            "town": "Queens",
+            "district": "Queens County",
+            "state": "New York",
+            "pincode": "11358",
+            "country": "United States"
+        },
+        "groupFile": {
+            "_id": "5eb564725b54a83ad042ba08",
+            "length": 759684,
+            "chunkSize": 261120,
+            "uploadDate": "2020-05-08T13:53:54.687Z",
+            "filename": "d49654de32c6f9f8e2dace97367c1951",
+            "md5": "1ed1783ec0985cfccc881af139da0cda",
+            "contentType": "image/png",
+            "metadata": {
+                "filename": "Screenshot from 2020-05-08 17-53-02.png"
+            }
+        },
+        "groupReq": "group_req",
+        "groupCreate": "group_create",
+        "groupUnique": "group_unique"
+    },
+    "collectionVal": [
+        "collection_val"
+    ],
+    "collectionLong": [
+        "ozfhwoBHFSBEFZZZXVNOL JPFWAAAAAAAAAAANVBRVREUIOY854YSB                84351384UBFHHHHHHHHHHHHHHHHZSV"
+    ],
+    "collectionRich": null,
+    "collectionEmail": [
+        "collection_email@Njnc.bdk"
+    ],
+    "collectionSecure": [
+        {
+            "value": "bkcsbjk"
+        }
+    ],
+    "collectionList": [
+        "iuhdewudw"
+    ],
+    "collectionNum": null,
+    "collectionNumList": [
+        879432879
+    ],
+    "collectionCurrency": [
+        89438
+    ],
+    "collectionBool": [
+        true
+    ],
+    "collectionDate": [
+        "2020-05-10T00:00:00.000Z"
+    ],
+    "collectionGroup": null,
+    "collectionLoc": [
+        {
+            "userInput": null,
+            "formattedAddress": "111 Foley Square, New York, NY 10013, USA",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -74.0021445,
+                    40.71507419999999
+                ]
+            },
+            "town": "Manhattan",
+            "district": "New York County",
+            "state": "New York",
+            "pincode": "10013",
+            "country": "United States"
+        }
+    ],
+    "collectionFile": [
+        {
+            "_id": "5eb5652b5b54a827c642ba0c",
+            "length": 592805,
+            "chunkSize": 261120,
+            "uploadDate": "2020-05-08T13:56:59.891Z",
+            "filename": "a8c390fbea937b38f0632db60267cc85",
+            "md5": "26c6eaeb399f7b5a6643510fb3429718",
+            "contentType": "image/png",
+            "metadata": {
+                "filename": "Screenshot from 2020-05-08 14-07-23.png"
+            }
+        }
+    ],
+    "collectionDef": [
+        "0"
+    ],
+    "locVal": {
+        "userInput": null,
+        "formattedAddress": "111 Foley Square, New York, NY 10013, USA",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                -74.0021445,
+                40.71507419999999
+            ]
+        },
+        "town": "Manhattan",
+        "district": "New York County",
+        "state": "New York",
+        "pincode": "10013",
+        "country": "United States"
+    },
+    "locReq": {
+        "userInput": null,
+        "formattedAddress": "111 Foley Square, New York, NY 10013, USA",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                -74.0021445,
+                40.71507419999999
+            ]
+        },
+        "town": "Manhattan",
+        "district": "New York County",
+        "state": "New York",
+        "pincode": "10013",
+        "country": "United States"
+    },
+    "fileVal": {
+        "_id": "5eb565365b54a8365242ba10",
+        "length": 276855,
+        "chunkSize": 261120,
+        "uploadDate": "2020-05-08T13:57:10.131Z",
+        "filename": "99ac5748930d1485c49f2659d0e3bf37",
+        "md5": "66346638f84e521d04cfb0fd4efd424a",
+        "contentType": "image/png",
+        "metadata": {
+            "filename": "Screenshot from 2020-05-08 19-25-14.png"
+        }
+    },
+    "fileReq": {
+        "_id": "5eb5653f5b54a8368842ba16",
+        "length": 303778,
+        "chunkSize": 261120,
+        "uploadDate": "2020-05-08T13:57:19.472Z",
+        "filename": "5d587de12e55a6fedda30e1d06357237",
+        "md5": "97ed674d56c4efc70bb7158707c769b5",
+        "contentType": "image/png",
+        "metadata": {
+            "filename": "Screenshot from 2020-05-08 19-11-51.png"
+        }
+    },
+    "fileCreate": {
+        "_id": "5eb5653a5b54a81cfb42ba13",
+        "length": 303778,
+        "chunkSize": 261120,
+        "uploadDate": "2020-05-08T13:57:14.905Z",
+        "filename": "8e8f30cbe17ddf923c334bd1fd39f44a",
+        "md5": "97ed674d56c4efc70bb7158707c769b5",
+        "contentType": "image/png",
+        "metadata": {
+            "filename": "Screenshot from 2020-05-08 19-11-51.png"
+        }
+    },
+    "groupUser": {
+        "_id": "admin"
+    },
+    "collectionUser": [
+        {
+            "_id": "admin"
+        }
+    ],
+    "userVal": {
+        "_id": "admin"
+    },
+    "userReq": {
+        "_id": "admin"
+    },
+    "userCreate": {
+        "_id": "admin"
+    },
+    "userUnique": {
+        "_id": "test_appadmin@appveen.com"
+    },
+    "relationDs2": {
+        "_id" : "<%testing2Record._id%>"
+    }
+}

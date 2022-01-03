@@ -1,0 +1,796 @@
+{
+    "name": "testing3",
+    "description": null,
+    "api": "/testing3",
+    "permanentDeleteData": true,
+    "wizard": [],
+    "stateModel": {
+        "attribute": "",
+        "initialStates": [],
+        "states": {},
+        "enabled": false
+    },
+    "definition": [
+        {
+            "key": "_id",
+            "type": "String",
+            "prefix": "TES",
+            "suffix": null,
+            "padding": null,
+            "counter": 1001,
+            "properties": {
+                "label": null,
+                "readonly": false,
+                "errorMessage": null,
+                "name": "ID",
+                "required": false,
+                "fieldLength": 10,
+                "_description": null,
+                "_typeChanged": "id",
+                "_isParrentArray": null,
+                "_isGrpParentArray": null,
+                "dataPath": "_id",
+                "_detailedType": "",
+                "dataKey": "_id"
+            }
+        },
+        {
+            "type": "Array",
+            "key": "collectionVal",
+            "properties": {
+                "name": "Collection_Val",
+                "fieldLength": 10,
+                "_typeChanged": "Array",
+                "dataKey": "collectionVal[#]",
+                "dataPath": "collectionVal[#]"
+            },
+            "definition": [
+                {
+                    "type": "String",
+                    "key": "_self",
+                    "properties": {
+                        "fieldLength": 10,
+                        "_typeChanged": "String"
+                    }
+                }
+            ]
+        },
+        {
+            "type": "Array",
+            "key": "collectionLong",
+            "properties": {
+                "name": "Collection_Long",
+                "fieldLength": 10,
+                "_typeChanged": "Array",
+                "dataKey": "collectionLong[#]",
+                "dataPath": "collectionLong[#]"
+            },
+            "definition": [
+                {
+                    "type": "String",
+                    "key": "_self",
+                    "properties": {
+                        "fieldLength": 10,
+                        "_typeChanged": "String",
+                        "longText": true
+                    }
+                }
+            ]
+        },
+        {
+            "type": "Array",
+            "key": "collectionRich",
+            "properties": {
+                "name": "Collection _Rich",
+                "fieldLength": 10,
+                "_typeChanged": "Array",
+                "dataKey": "collectionRich[#]",
+                "dataPath": "collectionRich[#]"
+            },
+            "definition": [
+                {
+                    "type": "String",
+                    "key": "_self",
+                    "properties": {
+                        "fieldLength": 10,
+                        "_typeChanged": "String",
+                        "richText": true
+                    }
+                }
+            ]
+        },
+        {
+            "type": "Array",
+            "key": "collectionEmail",
+            "properties": {
+                "name": "Collection_Email",
+                "fieldLength": 10,
+                "_typeChanged": "Array",
+                "dataKey": "collectionEmail[#]",
+                "dataPath": "collectionEmail[#]"
+            },
+            "definition": [
+                {
+                    "type": "String",
+                    "key": "_self",
+                    "properties": {
+                        "fieldLength": 10,
+                        "_typeChanged": "String",
+                        "email": true
+                    }
+                }
+            ]
+        },
+        {
+            "type": "Array",
+            "key": "collectionSecure",
+            "properties": {
+                "name": "Collection_Secure",
+                "fieldLength": 10,
+                "_typeChanged": "Array",
+                "dataKey": "collectionSecure[#]",
+                "dataPath": "collectionSecure[#]"
+            },
+            "definition": [
+                {
+                    "type": "String",
+                    "key": "_self",
+                    "properties": {
+                        "fieldLength": 10,
+                        "_typeChanged": "String",
+                        "password": true
+                    }
+                }
+            ]
+        },
+        {
+            "type": "Array",
+            "key": "collectionList",
+            "properties": {
+                "name": "Collection_List",
+                "fieldLength": 10,
+                "_typeChanged": "Array",
+                "dataKey": "collectionList[#]",
+                "dataPath": "collectionList[#]"
+            },
+            "definition": [
+                {
+                    "type": "String",
+                    "key": "_self",
+                    "properties": {
+                        "fieldLength": 10,
+                        "_typeChanged": "String"
+                    }
+                }
+            ]
+        },
+        {
+            "type": "Array",
+            "key": "collectionNum",
+            "properties": {
+                "name": "Collection_Num",
+                "fieldLength": 10,
+                "_typeChanged": "Array",
+                "dataKey": "collectionNum[#]",
+                "dataPath": "collectionNum[#]"
+            },
+            "definition": [
+                {
+                    "type": "Number",
+                    "key": "_self",
+                    "properties": {
+                        "fieldLength": 10,
+                        "_typeChanged": "Number",
+                        "precision": 2
+                    }
+                }
+            ]
+        },
+        {
+            "type": "Array",
+            "key": "collectionNumList",
+            "properties": {
+                "name": "Collection_NumList",
+                "fieldLength": 10,
+                "_typeChanged": "Array",
+                "dataKey": "collectionNumList[#]",
+                "dataPath": "collectionNumList[#]"
+            },
+            "definition": [
+                {
+                    "type": "Number",
+                    "key": "_self",
+                    "properties": {
+                        "fieldLength": 10,
+                        "_typeChanged": "Number",
+                        "precision": 2
+                    }
+                }
+            ]
+        },
+        {
+            "type": "Array",
+            "key": "collectionCurrency",
+            "properties": {
+                "name": "Collection_Currency",
+                "fieldLength": 10,
+                "_typeChanged": "Array",
+                "dataKey": "collectionCurrency[#]",
+                "dataPath": "collectionCurrency[#]"
+            },
+            "definition": [
+                {
+                    "type": "Number",
+                    "key": "_self",
+                    "properties": {
+                        "fieldLength": 10,
+                        "_typeChanged": "Number",
+                        "currency": "INR",
+                        "precision": 2
+                    }
+                }
+            ]
+        },
+        {
+            "type": "Array",
+            "key": "collectionBool",
+            "properties": {
+                "name": "Collection_Bool",
+                "fieldLength": 10,
+                "_typeChanged": "Array",
+                "dataKey": "collectionBool[#]",
+                "dataPath": "collectionBool[#]"
+            },
+            "definition": [
+                {
+                    "type": "Boolean",
+                    "key": "_self",
+                    "properties": {
+                        "fieldLength": 10,
+                        "_typeChanged": "Boolean"
+                    }
+                }
+            ]
+        },
+        {
+            "type": "Array",
+            "key": "collectionDate",
+            "properties": {
+                "name": "Collection_Date",
+                "fieldLength": 10,
+                "_typeChanged": "Array",
+                "dataKey": "collectionDate[#]",
+                "dataPath": "collectionDate[#]"
+            },
+            "definition": [
+                {
+                    "type": "Date",
+                    "key": "_self",
+                    "properties": {
+                        "fieldLength": 10,
+                        "_typeChanged": "Date",
+                        "dateType": "date",
+                        "defaultTimezone": "Zulu",
+                        "supportedTimezones": []
+                    }
+                }
+            ]
+        },
+        {
+            "type": "Array",
+            "key": "collectionGroup",
+            "properties": {
+                "name": "Collection_Group",
+                "fieldLength": 10,
+                "_typeChanged": "Array",
+                "dataKey": "collectionGroup[#]",
+                "dataPath": "collectionGroup[#]"
+            },
+            "definition": [
+                {
+                    "type": "Object",
+                    "key": "_self",
+                    "properties": {
+                        "fieldLength": 10,
+                        "_typeChanged": "Object"
+                    },
+                    "definition": [
+                        {
+                            "type": "String",
+                            "key": "val",
+                            "properties": {
+                                "name": "Val",
+                                "fieldLength": 10,
+                                "_typeChanged": "String",
+                                "dataKey": "val",
+                                "dataPath": "collectionGroup[#].val"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Array",
+            "key": "collectionLoc",
+            "properties": {
+                "name": "Collection_Loc",
+                "fieldLength": 10,
+                "_typeChanged": "Array",
+                "dataKey": "collectionLoc[#]",
+                "dataPath": "collectionLoc[#]"
+            },
+            "definition": [
+                {
+                    "type": "Geojson",
+                    "key": "_self",
+                    "properties": {
+                        "fieldLength": 10,
+                        "_typeChanged": "Geojson",
+                        "geoType": "point"
+                    }
+                }
+            ]
+        },
+        {
+            "type": "Array",
+            "key": "collectionFile",
+            "properties": {
+                "name": "Collection_File",
+                "fieldLength": 10,
+                "_typeChanged": "Array",
+                "dataKey": "collectionFile[#]",
+                "dataPath": "collectionFile[#]"
+            },
+            "definition": [
+                {
+                    "type": "File",
+                    "key": "_self",
+                    "properties": {
+                        "fieldLength": 10,
+                        "_typeChanged": "File",
+                        "fileType": "All"
+                    }
+                }
+            ]
+        },
+        {
+            "type": "Array",
+            "key": "collectionUser",
+            "properties": {
+                "name": "Collection_User",
+                "fieldLength": 10,
+                "_typeChanged": "Array",
+                "dataKey": "collectionUser[#]",
+                "dataPath": "collectionUser[#]"
+            },
+            "definition": [
+                {
+                    "type": "User",
+                    "key": "_self",
+                    "properties": {
+                        "fieldLength": 10,
+                        "_typeChanged": "User",
+                        "deleteAction": "restrict",
+                        "relatedSearchField": "_id",
+                        "relatedViewFields": []
+                    }
+                }
+            ]
+        },
+        {
+            "type": "User",
+            "key": "userValu",
+            "properties": {
+                "name": "user_valu",
+                "fieldLength": 10,
+                "_typeChanged": "User",
+                "deleteAction": "restrict",
+                "relatedSearchField": "_id",
+                "relatedViewFields": [],
+                "dataKey": "userValu",
+                "dataPath": "userValu"
+            }
+        },
+        {
+            "type": "User",
+            "key": "userCreate",
+            "properties": {
+                "name": "User_Create",
+                "fieldLength": 10,
+                "_typeChanged": "User",
+                "deleteAction": "restrict",
+                "relatedSearchField": "_id",
+                "relatedViewFields": [],
+                "dataKey": "userCreate",
+                "dataPath": "userCreate"
+            }
+        },
+        {
+            "type": "User",
+            "key": "userUnique",
+            "properties": {
+                "name": "User_Unique",
+                "fieldLength": 10,
+                "_typeChanged": "User",
+                "deleteAction": "restrict",
+                "relatedSearchField": "_id",
+                "relatedViewFields": [],
+                "dataKey": "userUnique",
+                "dataPath": "userUnique"
+            }
+        },
+        {
+            "type": "Array",
+            "key": "collectionDef",
+            "properties": {
+                "name": "Collection_Def",
+                "fieldLength": 10,
+                "_typeChanged": "Array",
+                "dataKey": "collectionDef[#]",
+                "dataPath": "collectionDef[#]"
+            },
+            "definition": [
+                {
+                    "type": "String",
+                    "key": "_self",
+                    "properties": {
+                        "fieldLength": 10,
+                        "_typeChanged": "String"
+                    }
+                }
+            ]
+        },
+        {
+            "type": "Geojson",
+            "key": "locVal",
+            "properties": {
+                "name": "Loc_Val",
+                "fieldLength": 10,
+                "_typeChanged": "Geojson",
+                "geoType": "point",
+                "dataKey": "locVal",
+                "dataPath": "locVal"
+            }
+        },
+        {
+            "type": "Geojson",
+            "key": "locReq",
+            "properties": {
+                "name": "Loc_Req",
+                "fieldLength": 10,
+                "_typeChanged": "Geojson",
+                "geoType": "point",
+                "dataKey": "locReq",
+                "dataPath": "locReq"
+            }
+        },
+        {
+            "type": "File",
+            "key": "fileVal",
+            "properties": {
+                "name": "File_Val",
+                "fieldLength": 10,
+                "_typeChanged": "File",
+                "fileType": "All",
+                "dataKey": "fileVal",
+                "dataPath": "fileVal"
+            }
+        },
+        {
+            "type": "File",
+            "key": "fileReq",
+            "properties": {
+                "name": "File_Req",
+                "fieldLength": 10,
+                "_typeChanged": "File",
+                "fileType": "All",
+                "dataKey": "fileReq",
+                "dataPath": "fileReq"
+            }
+        },
+        {
+            "type": "File",
+            "key": "fileCreate",
+            "properties": {
+                "name": "File_Create",
+                "fieldLength": 10,
+                "_typeChanged": "File",
+                "fileType": "All",
+                "dataKey": "fileCreate",
+                "dataPath": "fileCreate"
+            }
+        }
+    ],
+    "webHooks": [],
+    "preHooks": [],
+    "workflowHooks": {
+        "postHooks": {
+            "submit": [],
+            "rework": [],
+            "discard": [],
+            "approve": [],
+            "reject": []
+        }
+    },
+    "versionValidity": {
+        "validityType": "count",
+        "validityValue": -1
+    },
+    "disableInsights": false,
+    "headers": [],
+    "enableSearchIndex": false,
+    "role": {
+       
+        "_metadata": {
+            "version": {
+                "document": 1,
+                "release": "1.1.2"
+            },
+            "deleted": false,
+            "lastUpdated": "2021-10-21T09:26:29.964Z",
+            "createdAt": "2021-10-21T09:26:29.962Z"
+        },
+        "app": "TEST-API",
+       
+        "entityName": "testing3",
+        "roles": [
+            {
+                "skipReviewRole": true,
+                "id": "P7077054979",
+                "name": "Skip Review",
+                "operations": [
+                    {
+                        "method": "SKIP_REVIEW"
+                    },
+                    {
+                        "method": "POST"
+                    },
+                    {
+                        "method": "PUT"
+                    },
+                    {
+                        "method": "DELETE"
+                    }
+                ],
+                "description": "This role entitles an authorized user to create, update or delete a record and without any approval"
+            },
+            {
+                "manageRole": true,
+                "id": "P1210468136",
+                "name": "Manage",
+                "operations": [
+                    {
+                        "method": "POST"
+                    },
+                    {
+                        "method": "PUT"
+                    },
+                    {
+                        "method": "DELETE"
+                    },
+                    {
+                        "method": "GET"
+                    }
+                ],
+                "description": "This role entitles an authorized user to create, update or delete a record"
+            },
+            {
+                "viewRole": true,
+                "id": "P4886380880",
+                "name": "View",
+                "operations": [
+                    {
+                        "method": "GET"
+                    }
+                ],
+                "description": "This role entitles an authorized user to view the record"
+            }
+        ],
+        "type": "appcenter",
+        "fields": {
+            "_id": {
+                "_t": "String",
+                "_p": {
+                    "P7077054979": "R",
+                    "P1210468136": "R",
+                    "P4886380880": "R"
+                }
+            },
+            "collectionVal": {
+                "_t": "Array",
+                "_p": {
+                    "P7077054979": "R",
+                    "P1210468136": "R",
+                    "P4886380880": "R"
+                }
+            },
+            "collectionLong": {
+                "_t": "Array",
+                "_p": {
+                    "P7077054979": "R",
+                    "P1210468136": "R",
+                    "P4886380880": "R"
+                }
+            },
+            "collectionRich": {
+                "_t": "Array",
+                "_p": {
+                    "P7077054979": "R",
+                    "P1210468136": "R",
+                    "P4886380880": "R"
+                }
+            },
+            "collectionEmail": {
+                "_t": "Array",
+                "_p": {
+                    "P7077054979": "R",
+                    "P1210468136": "R",
+                    "P4886380880": "R"
+                }
+            },
+            "collectionSecure": {
+                "_t": "Array",
+                "_p": {
+                    "P7077054979": "R",
+                    "P1210468136": "R",
+                    "P4886380880": "R"
+                }
+            },
+            "collectionList": {
+                "_t": "Array",
+                "_p": {
+                    "P7077054979": "R",
+                    "P1210468136": "R",
+                    "P4886380880": "R"
+                }
+            },
+            "collectionNum": {
+                "_t": "Array",
+                "_p": {
+                    "P7077054979": "R",
+                    "P1210468136": "R",
+                    "P4886380880": "R"
+                }
+            },
+            "collectionNumList": {
+                "_t": "Array",
+                "_p": {
+                    "P7077054979": "R",
+                    "P1210468136": "R",
+                    "P4886380880": "R"
+                }
+            },
+            "collectionCurrency": {
+                "_t": "Array",
+                "_p": {
+                    "P7077054979": "R",
+                    "P1210468136": "R",
+                    "P4886380880": "R"
+                }
+            },
+            "collectionBool": {
+                "_t": "Array",
+                "_p": {
+                    "P7077054979": "R",
+                    "P1210468136": "R",
+                    "P4886380880": "R"
+                }
+            },
+            "collectionDate": {
+                "_t": "Array",
+                "_p": {
+                    "P7077054979": "R",
+                    "P1210468136": "R",
+                    "P4886380880": "R"
+                }
+            },
+            "collectionGroup": {
+                "_t": "Array",
+                "_p": {
+                    "P7077054979": "R",
+                    "P1210468136": "R",
+                    "P4886380880": "R"
+                }
+            },
+            "collectionLoc": {
+                "_t": "Array",
+                "_p": {
+                    "P7077054979": "R",
+                    "P1210468136": "R",
+                    "P4886380880": "R"
+                }
+            },
+            "collectionFile": {
+                "_t": "Array",
+                "_p": {
+                    "P7077054979": "R",
+                    "P1210468136": "R",
+                    "P4886380880": "R"
+                }
+            },
+            "collectionUser": {
+                "_t": "Array",
+                "_p": {
+                    "P7077054979": "R",
+                    "P1210468136": "R",
+                    "P4886380880": "R"
+                }
+            },
+            "userValu": {
+                "_t": "String",
+                "_p": {
+                    "P7077054979": "R",
+                    "P1210468136": "R",
+                    "P4886380880": "R"
+                }
+            },
+            "userCreate": {
+                "_t": "String",
+                "_p": {
+                    "P7077054979": "R",
+                    "P1210468136": "R",
+                    "P4886380880": "R"
+                }
+            },
+            "userUnique": {
+                "_t": "String",
+                "_p": {
+                    "P7077054979": "R",
+                    "P1210468136": "R",
+                    "P4886380880": "R"
+                }
+            },
+            "collectionDef": {
+                "_t": "Array",
+                "_p": {
+                    "P7077054979": "R",
+                    "P1210468136": "R",
+                    "P4886380880": "R"
+                }
+            },
+            "locVal": {
+                "_t": "String",
+                "_p": {
+                    "P7077054979": "R",
+                    "P1210468136": "R",
+                    "P4886380880": "R"
+                }
+            },
+            "locReq": {
+                "_t": "String",
+                "_p": {
+                    "P7077054979": "R",
+                    "P1210468136": "R",
+                    "P4886380880": "R"
+                }
+            },
+            "fileVal": {
+                "_t": "String",
+                "_p": {
+                    "P7077054979": "R",
+                    "P1210468136": "R",
+                    "P4886380880": "R"
+                }
+            },
+            "fileReq": {
+                "_t": "String",
+                "_p": {
+                    "P7077054979": "R",
+                    "P1210468136": "R",
+                    "P4886380880": "R"
+                }
+            },
+            "fileCreate": {
+                "_t": "String",
+                "_p": {
+                    "P7077054979": "R",
+                    "P1210468136": "R",
+                    "P4886380880": "R"
+                }
+            }
+        },
+        "__v": 0
+    },
+    "app": "TEST-API"
+}

@@ -1,0 +1,86 @@
+{
+    "testName": "01::Delete Agents groups",
+    "url": ["https://bifrost.ds.appveen.com/api"],
+    "globals": [
+        "loginResponse"
+    ],
+    "tests": [{
+            "endpoint": "1",
+            "name": "Login",
+            "request": {
+                "method": "POST",
+                "url": "/a/rbac/login",
+                "payload": {
+                    "username": "test_appadmin@appveen.com",
+                    "password": "123123123"
+                },
+                "responseCode": 200,
+                "saveResponse": "loginResponse"
+            },
+            "response": {
+                "body": {
+                    "token": null
+                }
+            }
+        },
+        {
+            "endpoint": "1",
+            "name": "Delete Group: Agent ALL Blocked",
+            "request": {
+                "method": "DELETE",
+                "url": "/a/rbac/group/{{dataPipe.read('00-01-Groups-Agent-Create.json').agent_all_blocked._id}}",
+                "headers": {
+                    "Authorization": "JWT {{loginResponse.token}}"
+                },
+                "responseCode": 200
+            }
+        },
+        {
+            "endpoint": "1",
+            "name": "Delete Group: Agent basic View",
+            "request": {
+                "method": "DELETE",
+                "url": "/a/rbac/group/{{dataPipe.read('00-01-Groups-Agent-Create.json').agent_basic_view._id}}",
+                "headers": {
+                    "Authorization": "JWT {{loginResponse.token}}"
+                },
+                "responseCode": 200
+            }
+        },
+        {
+            "endpoint": "1",
+            "name": "Delete Group: Agent Basic Manage",
+            "request": {
+                "method": "DELETE",
+                "url": "/a/rbac/group/{{dataPipe.read('00-01-Groups-Agent-Create.json').agent_basic_manage._id}}",
+                "headers": {
+                    "Authorization": "JWT {{loginResponse.token}}"
+                },
+                "responseCode": 200
+            }
+        }, {
+            "endpoint": "1",
+            "name": "Delete Group: Agent power Manage",
+            "request": {
+                "method": "DELETE",
+                "url": "/a/rbac/group/{{dataPipe.read('00-01-Groups-Agent-Create.json').agent_power_manage._id}}",
+                "headers": {
+                    "Authorization": "JWT {{loginResponse.token}}"
+                },
+                "responseCode": 200
+            }
+        },
+        {
+            "endpoint": "1",
+            "name": "Delete Group: Agent view password",
+            "request": {
+                "method": "DELETE",
+                "url": "/a/rbac/group/{{dataPipe.read('00-01-Groups-Agent-Create.json').agent_view_password._id}}",
+                "headers": {
+                    "Authorization": "JWT {{loginResponse.token}}"
+                },
+                "responseCode": 200
+            }
+        }
+    ]
+}

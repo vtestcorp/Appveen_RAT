@@ -1,0 +1,159 @@
+{
+    "testName": "AppCenter API Tests",
+    "url": [
+        "https://qa.ds.appveen.com/api"
+    ],
+    "modules": [
+        "sampleFunction"
+    ],  
+    "globals": [
+        "loginResponse",
+        "dataServiceData",
+        "secondDataService",
+        "recordTest",
+        "acLoginResponse",
+        "manageGroupResponse"
+    ],
+    "tests": [
+        {
+            "endpoint": "1",
+            "name": "Login - Valid as appAdmin in AC",
+            "request": {
+                "wait": 5,
+                "method": "POST",
+                "url": "/a/rbac/login",
+                "payload": {
+                    "username": "test_appadmin@appveen.com",
+                    "password": "123123123"
+                },
+                "responseCode": 200,
+                "saveResponse": "loginResponse"
+            },
+            "response": {
+                "body": {
+                    "token": "{{loginResponse.token}}"
+                }
+            }
+        },
+        {
+            "delimiters": [ "<%", "%>" ],
+            "endpoint": "1",
+            "name": "TS_01 Deploy testing3 data service",
+            "wait": 50,
+            "request": {
+                "method": "PUT",
+                "url": "/a/sm/<%dataPipe.read('AC_DS_TS-01-00-01.json').thirdDataService._id%>/deploy",
+                "headers": {
+                    "Authorization": "JWT <%loginResponse.token%>",
+                    "Content-Type": "application/json"
+                },
+                "responseCode": 202
+            }
+        },
+        {
+            "delimiters": [ "<%", "%>" ],
+            "endpoint": "1",
+            "name": "TS_01 Deploy testing2 data service",
+            "wait": 50,
+            "request": {
+                "method": "PUT",
+                "url": "/a/sm/<%dataPipe.read('AC_DS_TS-01-00-02.json').secondDataService._id%>/deploy",
+                "headers": {
+                    "Authorization": "JWT <%loginResponse.token%>",
+                    "Content-Type": "application/json"
+                },
+                "responseCode": 202
+            }
+        },
+        {
+            "delimiters": [ "<%", "%>" ],
+            "endpoint": "1",
+            "name": "TS_01 Deploy testing1 data service",
+            "wait": 50,
+            "request": {
+                "method": "PUT",
+                "url": "/a/sm/<%dataPipe.read('AC_DS_TS-01-00-03.json').dataServiceData._id%>/deploy",
+                "headers": {
+                    "Authorization": "JWT <%loginResponse.token%>",
+                    "Content-Type": "application/json"
+                },
+                "responseCode": 202
+            }
+        },
+        {
+          "endpoint": "1",
+          "delimiters": [ "<%", "%>" ],
+          "name": "TS_01 Create Group DS Testing3 Manage",
+          "request": {
+            "method": "POST",
+            "url": "/a/rbac/group",
+            "headers": {"Authorization": "JWT <%loginResponse.token%>"},
+            "responseCode": 200,
+            "payload": {
+              "name": "DS Testing3 Manage", "app": "TEST-API",
+              "users": ["test_group_appcenter_manage@appveen.com"],
+              "roles": [
+                {
+                    "id": "P1827724851",
+                    "entity": "<%dataPipe.read('AC_DS_TS-01-00-01.json').thirdDataService._id%>",
+                    "app": "TEST-API",
+                    "type": "appcenter"
+                },
+                {
+                    "id": "P1827724851",
+                    "entity": "<%dataPipe.read('AC_DS_TS-01-00-02.json').secondDataService._id%>",
+                    "app": "TEST-API",
+                    "type": "appcenter"
+                },
+                {
+                    "id": "P1827724851",
+                    "entity": "<%dataPipe.read('AC_DS_TS-01-00-03.json').dataServiceData._id%>",
+                    "app": "TEST-API",
+                    "type": "appcenter"
+                }
+            ]
+            },
+            "saveResponse": "manageGroupResponse"
+        },
+          "response": {"body": {"name": "DS Testing3 Manage","app": "TEST-API"}}
+        },
+        {
+          "endpoint": "1",
+          "delimiters": [ "<%", "%>" ],
+          "name": "TS_01 Create Group DS Testing3 View",
+          "request": {
+            "method": "POST",
+            "url": "/a/rbac/group",
+            "headers": {"Authorization": "JWT <%loginResponse.token%>"},
+            "responseCode": 200,
+            "payload": {
+              "name": "DS Testing3 View", "app": "TEST-API",
+              "users": ["test_group_appcenter_view@appveen.com"],
+              "roles": [
+                {
+                    "id": "P6788668262",
+                    "entity": "<%dataPipe.read('AC_DS_TS-01-00-01.json').thirdDataService._id%>",
+                    "app": "TEST-API",
+                    "type": "appcenter"
+                },
+                {
+                    "id": "P6788668262",
+                    "entity": "<%dataPipe.read('AC_DS_TS-01-00-02.json').secondDataService._id%>",
+                    "app": "TEST-API",
+                    "type": "appcenter"
+                },
+                {
+                    "id": "P6788668262",
+                    "entity": "<%dataPipe.read('AC_DS_TS-01-00-03.json').dataServiceData._id%>",
+                    "app": "TEST-API",
+                    "type": "appcenter"
+                }
+            ]
+            },
+            "saveResponse": "manageGroupResponse"
+        },
+          "response": {"body": {"name": "DS Testing3 View","app": "TEST-API"}}
+        }
+       
+    ]
+}

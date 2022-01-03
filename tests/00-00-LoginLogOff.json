@@ -1,0 +1,100 @@
+{
+    "testName": "00::Login-Logoff test for Author and App Center",
+    "url": ["https://bifrost.ds.appveen.com/api"],
+    "globals": ["loginResponse"],
+    "tests": [{
+        "endpoint": 1,
+        "name": "Check API: Should Fail",
+        "request": {
+            "method": "GET",
+            "url": "/a/rbac/check",
+            "responseCode": 401,
+            "headers": {
+                "Authorization": "JWT asdasdasd"
+            }
+        }
+    }, {
+        "endpoint": 1,
+        "name": "Auth type check",
+        "request": {
+            "method": "GET",
+            "url": "/a/rbac/authType/admin",
+            "responseCode": 200
+        },
+        "response": {
+            "bodyFile": "00-LoginLogOff/authTypeResponse.json"
+        }
+    }, {
+        "endpoint": "1",
+        "name": "Login",
+        "request": {
+            "method": "POST",
+            "url": "/a/rbac/login",
+            "payload": {
+                "username": "admin",
+                "password": "u?5k167v13w5"
+            },
+            "responseCode": 200,
+            "saveResponse": "loginResponse"
+        },
+        "response": {
+            "bodyFile": "00-LoginLogOff/adminLoginResponse.json"
+        }
+    }, {
+        "endpoint": 1,
+        "name": "Check API: Should Pass",
+        "request": {
+            "method": "GET",
+            "url": "/a/rbac/check",
+            "responseCode": 200,
+            "headers": {
+                "Authorization": "JWT {{loginResponse.token}}"
+            }
+        }
+    }, {
+        "endpoint": "1",
+        "name": "Check login : PASS",
+        "request": {
+            "method": "GET",
+            "url": "/a/sm/service?page=1&count=-1&filter=%7B%22domain%22:%22Adam%22%7D",
+            "headers": {
+                "Authorization": "JWT {{loginResponse.token}}"
+            },
+            "responseCode": 200
+        }
+    }, {
+        "endpoint": "1",
+        "name": "Check login : Should Fail",
+        "continueOnError": true,
+        "request": {
+            "method": "GET",
+            "url": "/a/sm/service?page=1&count=-1&filter=%7B%22domain%22:%22Adam%22%7D",
+            "headers": {
+                "Authorization": "JWT {{loginResponse.token}} 123123"
+            },
+            "responseCode": 401
+        }
+    }, {
+        "endpoint": "1",
+        "name": "Logoff",
+        "request": {
+            "method": "DELETE",
+            "url": "/a/rbac/logout",
+            "headers": {
+                "Authorization": "JWT {{loginResponse.token}}"
+            },
+            "responseCode": 200
+        }
+    }, {
+        "endpoint": "1",
+        "name": "Logoff with incorrect token",
+        "request": {
+            "method": "DELETE",
+            "url": "/a/rbac/logout",
+            "headers": {
+                "Authorization": "JWT {{loginResponse.token}} 123123"
+            },
+            "responseCode": 200
+        }
+    }]
+}

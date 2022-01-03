@@ -1,0 +1,222 @@
+{
+  "testName": "00::Delete data service users",
+  "url": [
+    "https://bifrost.ds.appveen.com/api"
+  ],
+  "globals": [
+    "loginResponse"
+  ],
+  "tests": [
+    {
+      "endpoint": "1",
+      "name": "Login",
+      "request": {
+        "method": "POST",
+        "url": "/a/rbac/login",
+        "payload": {
+          "username": "test_superadmin@appveen.com",
+          "password": "123123123"
+        },
+        "responseCode": 200,
+        "saveResponse": "loginResponse"
+      },
+      "response": {
+        "body": {
+          "token": null
+        }
+      }
+    },
+    {
+      "endpoint": "1",
+      "name": "Delete user test_ds_all_blocked@appveen.com",
+      "request": {
+        "method": "DELETE",
+        "url": "/a/rbac/usr/test_ds_all_blocked@appveen.com",
+        "headers": {
+          "Authorization": "JWT {{loginResponse.token}}"
+        },
+        "responseCode": 200
+      }
+    },
+    {
+      "endpoint": "1",
+      "name": "Delete user test_ds_basic_view@appveen.com",
+      "request": {
+        "method": "DELETE",
+        "url": "/a/rbac/usr/test_ds_basic_view@appveen.com",
+        "headers": {
+          "Authorization": "JWT {{loginResponse.token}}"
+        },
+        "responseCode": 200
+      }
+    },
+    {
+      "endpoint": "1",
+      "name": "Delete user test_ds_basic_manage@appveen.com",
+      "request": {
+        "method": "DELETE",
+        "url": "/a/rbac/usr/test_ds_basic_manage@appveen.com",
+        "headers": {
+          "Authorization": "JWT {{loginResponse.token}}"
+        },
+        "responseCode": 200
+      }
+    },
+    {
+      "endpoint": "1",
+      "name": "Delete user test_ds_deployment_manage@appveen.com",
+      "request": {
+        "method": "DELETE",
+        "url": "/a/rbac/usr/test_ds_deployment_manage@appveen.com",
+        "headers": {
+          "Authorization": "JWT {{loginResponse.token}}"
+        },
+        "responseCode": 200
+      }
+    },
+    {
+      "endpoint": "1",
+      "name": "Delete user test_ds_start_stop_manage@appveen.com",
+      "request": {
+        "method": "DELETE",
+        "url": "/a/rbac/usr/test_ds_start_stop_manage@appveen.com",
+        "headers": {
+          "Authorization": "JWT {{loginResponse.token}}"
+        },
+        "responseCode": 200
+      }
+    },
+    {
+      "endpoint": "1",
+      "name": "Delete user test_ds_design_view@appveen.com",
+      "request": {
+        "method": "DELETE",
+        "url": "/a/rbac/usr/test_ds_design_view@appveen.com",
+        "headers": {
+          "Authorization": "JWT {{loginResponse.token}}"
+        },
+        "responseCode": 200
+      }
+    },
+    {
+      "endpoint": "1",
+      "name": "Delete user test_ds_design_manage@appveen.com",
+      "request": {
+        "method": "DELETE",
+        "url": "/a/rbac/usr/test_ds_design_manage@appveen.com",
+        "headers": {
+          "Authorization": "JWT {{loginResponse.token}}"
+        },
+        "responseCode": 200
+      }
+    },
+    {
+      "endpoint": "1",
+      "name": "Delete user test_ds_integration_view@appveen.com",
+      "request": {
+        "method": "DELETE",
+        "url": "/a/rbac/usr/test_ds_integration_view@appveen.com",
+        "headers": {
+          "Authorization": "JWT {{loginResponse.token}}"
+        },
+        "responseCode": 200
+      }
+    },
+    {
+      "endpoint": "1",
+      "name": "Delete user test_ds_integration_manage@appveen.com",
+      "request": {
+        "method": "DELETE",
+        "url": "/a/rbac/usr/test_ds_integration_manage@appveen.com",
+        "headers": {
+          "Authorization": "JWT {{loginResponse.token}}"
+        },
+        "responseCode": 200
+      }
+    },
+    {
+      "endpoint": "1",
+      "name": "Delete user test_ds_experience_view@appveen.com",
+      "request": {
+        "method": "DELETE",
+        "url": "/a/rbac/usr/test_ds_experience_view@appveen.com",
+        "headers": {
+          "Authorization": "JWT {{loginResponse.token}}"
+        },
+        "responseCode": 200
+      }
+    },
+    {
+      "endpoint": "1",
+      "name": "Delete user test_ds_experience_manage@appveen.com",
+      "request": {
+        "method": "DELETE",
+        "url": "/a/rbac/usr/test_ds_experience_manage@appveen.com",
+        "headers": {
+          "Authorization": "JWT {{loginResponse.token}}"
+        },
+        "responseCode": 200
+      }
+    },
+    {
+      "endpoint": "1",
+      "name": "Delete user test_ds_role_view@appveen.com",
+      "request": {
+        "method": "DELETE",
+        "url": "/a/rbac/usr/test_ds_role_view@appveen.com",
+        "headers": {
+          "Authorization": "JWT {{loginResponse.token}}"
+        },
+        "responseCode": 200
+      }
+    },
+    {
+      "endpoint": "1",
+      "name": "Delete user test_ds_role_manage@appveen.com",
+      "request": {
+        "method": "DELETE",
+        "url": "/a/rbac/usr/test_ds_role_manage@appveen.com",
+        "headers": {
+          "Authorization": "JWT {{loginResponse.token}}"
+        },
+        "responseCode": 200
+      }
+    },
+    {
+      "endpoint": "1",
+      "name": "Delete user test_ds_settings_view@appveen.com",
+      "request": {
+        "method": "DELETE",
+        "url": "/a/rbac/usr/test_ds_settings_view@appveen.com",
+        "headers": {
+          "Authorization": "JWT {{loginResponse.token}}"
+        },
+        "responseCode": 200
+      }
+    },
+    {
+      "endpoint": "1",
+      "name": "Delete user test_ds_settings_manage@appveen.com",
+      "request": {
+        "method": "DELETE",
+        "url": "/a/rbac/usr/test_ds_settings_manage@appveen.com",
+        "headers": {
+          "Authorization": "JWT {{loginResponse.token}}"
+        },
+        "responseCode": 200
+      }
+    },
+    {
+      "endpoint": "1",
+      "name": "Delete user test_ds_audit_view@appveen.com",
+      "request": {
+        "method": "DELETE",
+        "url": "/a/rbac/usr/test_ds_audit_view@appveen.com",
+        "headers": {
+          "Authorization": "JWT {{loginResponse.token}}"
+        },
+        "responseCode": 200
+      }
+    }
+  ]
+}

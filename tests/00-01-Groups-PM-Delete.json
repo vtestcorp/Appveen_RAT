@@ -1,0 +1,128 @@
+{
+    "testName": "01::Delete PM groups",
+    "url": ["https://bifrost.ds.appveen.com/api"],
+    "globals": [
+    	"loginResponse"
+    ],
+    "tests": [
+    	{
+        "endpoint": "1",
+        "name": "Login",
+        "request": {
+            "method": "POST",
+            "url": "/a/rbac/login",
+            "payload": {
+                "username": "test_appadmin@appveen.com",
+                "password": "123123123"
+            },
+            "responseCode": 200,
+            "saveResponse": "loginResponse"
+        },
+        "response": {
+            "body": {
+            	"token": null
+            }
+        }
+  		},
+  		{
+        "endpoint": "1",
+        "name": "Delete Group: PM All Blocked",
+        "request": {
+            "method": "DELETE",
+            "url": "/a/rbac/group/{{dataPipe.read('00-01-Groups-PM-Create.json').pm_all_blocked._id}}",
+            "headers": {"Authorization": "JWT {{loginResponse.token}}"},
+            "responseCode": 200
+        }
+  		},
+  		{
+        "endpoint": "1",
+        "name": "Delete Group: PM Basic View",
+        "request": {
+            "method": "DELETE",
+            "url": "/a/rbac/group/{{dataPipe.read('00-01-Groups-PM-Create.json').pm_basic_view._id}}",
+            "headers": {"Authorization": "JWT {{loginResponse.token}}"},
+            "responseCode": 200
+        }
+  		},
+  		{
+        "endpoint": "1",
+        "name": "Delete Group: PM Basic Manage",
+        "request": {
+            "method": "DELETE",
+            "url": "/a/rbac/group/{{dataPipe.read('00-01-Groups-PM-Create.json').pm_basic_manage._id}}",
+            "headers": {"Authorization": "JWT {{loginResponse.token}}"},
+            "responseCode": 200
+        }
+  		},
+  		{
+        "endpoint": "1",
+        "name": "Delete Group: PM Flow View",
+        "request": {
+            "method": "DELETE",
+            "url": "/a/rbac/group/{{dataPipe.read('00-01-Groups-PM-Create.json').pm_flow_view._id}}",
+            "headers": {"Authorization": "JWT {{loginResponse.token}}"},
+            "responseCode": 200
+        }
+  		},
+  		{
+        "endpoint": "1",
+        "name": "Delete Group: PM Flow Manage",
+        "request": {
+            "method": "DELETE",
+            "url": "/a/rbac/group/{{dataPipe.read('00-01-Groups-PM-Create.json').pm_flow_manage._id}}",
+            "headers": {"Authorization": "JWT {{loginResponse.token}}"},
+            "responseCode": 200
+        }
+  		},
+  		{
+        "endpoint": "1",
+        "name": "Delete Group: PM Profile View",
+        "request": {
+            "method": "DELETE",
+            "url": "/a/rbac/group/{{dataPipe.read('00-01-Groups-PM-Create.json').pm_profile_view._id}}",
+            "headers": {"Authorization": "JWT {{loginResponse.token}}"},
+            "responseCode": 200
+        }
+  		},
+  		{
+        "endpoint": "1",
+        "name": "Delete Group: PM Profile Manage",
+        "request": {
+            "method": "DELETE",
+            "url": "/a/rbac/group/{{dataPipe.read('00-01-Groups-PM-Create.json').pm_profile_manage._id}}",
+            "headers": {"Authorization": "JWT {{loginResponse.token}}"},
+            "responseCode": 200
+        }
+  		},
+  		{
+        "endpoint": "1",
+        "name": "Delete Group: PM Headers View",
+        "request": {
+            "method": "DELETE",
+            "url": "/a/rbac/group/{{dataPipe.read('00-01-Groups-PM-Create.json').pm_headers_view._id}}",
+            "headers": {"Authorization": "JWT {{loginResponse.token}}"},
+            "responseCode": 200
+        }
+  		},
+  		{
+        "endpoint": "1",
+        "name": "Delete Group: PM Headers Manage",
+        "request": {
+            "method": "DELETE",
+            "url": "/a/rbac/group/{{dataPipe.read('00-01-Groups-PM-Create.json').pm_headers_manage._id}}",
+            "headers": {"Authorization": "JWT {{loginResponse.token}}"},
+            "responseCode": 200
+        }
+  		},
+  		{
+        "endpoint": "1",
+        "name": "Delete Group: PM Management Manage",
+        "request": {
+            "method": "DELETE",
+            "url": "/a/rbac/group/{{dataPipe.read('00-01-Groups-PM-Create.json').pm_management_manage._id}}",
+            "headers": {"Authorization": "JWT {{loginResponse.token}}"},
+            "responseCode": 200
+        }
+  		}
+  	]
+}

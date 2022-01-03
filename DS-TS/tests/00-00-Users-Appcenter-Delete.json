@@ -1,0 +1,86 @@
+{
+    "testName": "Delete Appcenter users",
+    "url": [
+        "https://bifrost.ds.appveen.com/api"
+    ],
+    "globals": [
+        "loginResponse"
+    ],
+    "tests": [{
+            "endpoint": "1",
+            "name": "Login",
+            "request": {
+                "method": "POST",
+                "url": "/a/rbac/login",
+                "payload": {
+                    "username": "test_superadmin@appveen.com",
+                    "password": "123123123"
+                },
+                "responseCode": 200,
+                "saveResponse": "loginResponse"
+            },
+            "response": {
+                "body": {
+                    "token": null
+                }
+            }
+        },
+        {
+            "endpoint": "1",
+            "name": "Delete user test_ac_ds_manage@appveen.com",
+            "request": {
+                "method": "DELETE",
+                "url": "/a/rbac/usr/test_ac_ds_manage@appveen.com",
+                "headers": {
+                    "Authorization": "JWT {{loginResponse.token}}"
+                },
+                "responseCode": 200
+            }
+        },
+        {
+            "endpoint": "1",
+            "name": "Delete user test_ac_ds_view@appveen.com.com",
+            "request": {
+                "method": "DELETE",
+                "url": "/a/rbac/usr/test_ac_ds_view@appveen.com.com",
+                "headers": {
+                    "Authorization": "JWT {{loginResponse.token}}"
+                },
+                "responseCode": 200
+            }
+        }, {
+            "endpoint": "1",
+            "name": "Delete user test_ac_ds_skipreview@appveen.com",
+            "request": {
+                "method": "DELETE",
+                "url": "/a/rbac/usr/test_ac_ds_skipreview@appveen.com",
+                "headers": {
+                    "Authorization": "JWT {{loginResponse.token}}"
+                },
+                "responseCode": 200
+            }
+        }, {
+            "endpoint": "1",
+            "name": "Delete user test_ac_integration@appveen.com",
+            "request": {
+                "method": "DELETE",
+                "url": "/a/rbac/usr/test_ac_integration@appveen.com",
+                "headers": {
+                    "Authorization": "JWT {{loginResponse.token}}"
+                },
+                "responseCode": 200
+            }
+        }, {
+            "endpoint": "1",
+            "name": "Delete user test_ac_bookmark@appveen.com",
+            "request": {
+                "method": "DELETE",
+                "url": "/a/rbac/usr/test_ac_bookmark@appveen.com",
+                "headers": {
+                    "Authorization": "JWT {{loginResponse.token}}"
+                },
+                "responseCode": 200
+            }
+        }
+    ]
+}

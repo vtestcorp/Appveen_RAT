@@ -1,0 +1,396 @@
+{
+    "name": "DS-GROUP-FILE",
+    "description": null,
+    "api": "/dsGroupFile",
+    "permanentDeleteData": true,
+    "wizard": [],
+    "definition": [{
+        "key": "_id",
+        "type": "String",
+        "prefix": "DS",
+        "suffix": null,
+        "padding": null,
+        "counter": 1001,
+        "properties": {
+            "label": null,
+            "readonly": false,
+            "errorMessage": null,
+            "name": "ID",
+            "required": false,
+            "fieldLength": 10,
+            "_description": null,
+            "_typeChanged": "id",
+            "_isParrentArray": null,
+            "_isGrpParentArray": null,
+            "dataPath": "_id",
+            "_detailedType": "",
+            "dataKey": "_id"
+        }
+    }, {
+        "type": "Object",
+        "key": "groupFile",
+        "properties": {
+            "name": "GROUP-FILE",
+            "fieldLength": 10,
+            "_typeChanged": "Object",
+            "dataKey": "groupFile",
+            "dataPath": "groupFile"
+        },
+        "definition": [{
+            "type": "File",
+            "key": "dsFile1001",
+            "properties": {
+                "name": "DS FILE 1001",
+                "fieldLength": 10,
+                "_typeChanged": "File",
+                "fileType": "All",
+                "dataKey": "dsFile1001",
+                "dataPath": "groupFile.dsFile1001"
+            }
+        }, {
+            "type": "File",
+            "key": "dsFile1002",
+            "properties": {
+                "label": "Custom DS FILE 1002",
+                "readonly": true,
+                "errorMessage": "Error DS FILE 1002",
+                "name": "DS FILE 1002",
+                "required": true,
+                "fieldLength": 10,
+                "_description": "test description",
+                "_typeChanged": "File",
+                "createOnly": true,
+                "fileType": "All",
+                "dataKey": "dsFile1002",
+                "dataPath": "groupFile.dsFile1002"
+            }
+        }, {
+            "type": "File",
+            "key": "dsFile1003",
+            "properties": {
+                "name": "DS FILE 1003",
+                "required": true,
+                "fieldLength": 10,
+                "_typeChanged": "File",
+                "fileType": "All",
+                "dataKey": "dsFile1003",
+                "dataPath": "groupFile.dsFile1003"
+            }
+        }, {
+            "type": "File",
+            "key": "dsFile1004",
+            "properties": {
+                "name": "DS FILE 1004",
+                "fieldLength": 10,
+                "_typeChanged": "File",
+                "createOnly": true,
+                "fileType": "All",
+                "dataKey": "dsFile1004",
+                "dataPath": "groupFile.dsFile1004"
+            }
+        }, {
+            "type": "File",
+            "key": "dsFile1005",
+            "properties": {
+                "readonly": true,
+                "name": "DS FILE 1005",
+                "fieldLength": 10,
+                "_typeChanged": "File",
+                "fileType": "All",
+                "dataKey": "dsFile1005",
+                "dataPath": "groupFile.dsFile1005"
+            }
+        }, {
+            "type": "File",
+            "key": "dsFile1006",
+            "properties": {
+                "name": "DS FILE 1006",
+                "required": true,
+                "fieldLength": 10,
+                "_typeChanged": "File",
+                "createOnly": true,
+                "fileType": "All",
+                "dataKey": "dsFile1006",
+                "dataPath": "groupFile.dsFile1006"
+            }
+        }, {
+            "type": "File",
+            "key": "dsFile1007",
+            "properties": {
+                "readonly": true,
+                "name": "DS FILE 1007",
+                "required": true,
+                "fieldLength": 10,
+                "_typeChanged": "File",
+                "fileType": "All",
+                "dataKey": "dsFile1007",
+                "dataPath": "groupFile.dsFile1007"
+            }
+        }, {
+            "type": "File",
+            "key": "dsFile1008",
+            "properties": {
+                "readonly": true,
+                "name": "DS FILE 1008",
+                "fieldLength": 10,
+                "_typeChanged": "File",
+                "createOnly": true,
+                "fileType": "All",
+                "dataKey": "dsFile1008",
+                "dataPath": "groupFile.dsFile1008"
+            }
+        }, {
+            "type": "File",
+            "key": "dsFile1009",
+            "properties": {
+                "readonly": true,
+                "name": "DS FILE 1009",
+                "required": true,
+                "fieldLength": 10,
+                "_typeChanged": "File",
+                "createOnly": true,
+                "fileType": "All",
+                "dataKey": "dsFile1009",
+                "dataPath": "groupFile.dsFile1009"
+            }
+        }, {
+            "type": "File",
+            "key": "dsFile1010",
+            "properties": {
+                "label": "Custom DS FILE 1010",
+                "name": "DS FILE 1010",
+                "fieldLength": 10,
+                "_typeChanged": "File",
+                "fileType": "All",
+                "dataKey": "dsFile1010",
+                "dataPath": "groupFile.dsFile1010"
+            }
+        }, {
+            "type": "File",
+            "key": "dsFile1011",
+            "properties": {
+                "errorMessage": "Error DS FILE 1010",
+                "name": "DS FILE 1011",
+                "fieldLength": 10,
+                "_typeChanged": "File",
+                "fileType": "All",
+                "dataKey": "dsFile1011",
+                "dataPath": "groupFile.dsFile1011"
+            }
+        }, {
+            "type": "File",
+            "key": "dsFile1012",
+            "properties": {
+                "label": "Custom DS FILE 1012",
+                "errorMessage": "Error DS FILE 1012",
+                "name": "DS FILE 1012",
+                "fieldLength": 10,
+                "_typeChanged": "File",
+                "fileType": "All",
+                "dataKey": "dsFile1012",
+                "dataPath": "groupFile.dsFile1012"
+            }
+        }, {
+            "type": "File",
+            "key": "dsFile1013",
+            "properties": {
+                "name": "DS FILE 1013",
+                "fieldLength": 10,
+                "_description": "test description",
+                "_typeChanged": "File",
+                "fileType": "All",
+                "dataKey": "dsFile1013",
+                "dataPath": "groupFile.dsFile1013"
+            }
+        }]
+    }],
+    "webHooks": [],
+    "preHooks": [],
+    "workflowHooks": {
+        "postHooks": {
+            "submit": [],
+            "rework": [],
+            "discard": [],
+            "approve": [],
+            "reject": []
+        }
+    },
+    "versionValidity": {
+        "validityType": "count",
+        "validityValue": -1
+    },
+    "disableInsights": false,
+    "headers": [],
+    "enableSearchIndex": false,
+    "role": {
+        "_id": "SRVC2051",
+        "_metadata": {
+            "version": {
+                "document": 1,
+                "release": "1.0"
+            },
+            "deleted": false,
+            "lastUpdated": "2021-02-02T07:27:58.485Z",
+            "createdAt": "2021-02-02T07:27:58.484Z"
+        },
+        "app": "harshi",
+        "entity": "SRVC2051",
+        "entityName": "DS-GROUP-FILE",
+        "roles": [{
+            "skipReviewRole": true,
+            "id": "P7941200538",
+            "name": "Skip Review",
+            "operations": [{
+                "method": "SKIP_REVIEW"
+            }, {
+                "method": "POST"
+            }, {
+                "method": "PUT"
+            }, {
+                "method": "DELETE"
+            }],
+            "description": "This role entitles an authorized user to create, update or delete a record and without any approval"
+        }, {
+            "manageRole": true,
+            "id": "P9553486828",
+            "name": "Manage",
+            "operations": [{
+                "method": "POST"
+            }, {
+                "method": "PUT"
+            }, {
+                "method": "DELETE"
+            }, {
+                "method": "GET"
+            }],
+            "description": "This role entitles an authorized user to create, update or delete a record"
+        }, {
+            "viewRole": true,
+            "id": "P9146896710",
+            "name": "View",
+            "operations": [{
+                "method": "GET"
+            }],
+            "description": "This role entitles an authorized user to view the record"
+        }],
+        "type": "appcenter",
+        "fields": {
+            "_id": {
+                "_t": "String",
+                "_p": {
+                    "P7941200538": "R",
+                    "P9553486828": "R",
+                    "P9146896710": "R"
+                }
+            },
+            "groupFile": {
+                "dsFile1001": {
+                    "_t": "String",
+                    "_p": {
+                        "P7941200538": "R",
+                        "P9553486828": "R",
+                        "P9146896710": "R"
+                    }
+                },
+                "dsFile1002": {
+                    "_t": "String",
+                    "_p": {
+                        "P7941200538": "R",
+                        "P9553486828": "R",
+                        "P9146896710": "R"
+                    }
+                },
+                "dsFile1003": {
+                    "_t": "String",
+                    "_p": {
+                        "P7941200538": "R",
+                        "P9553486828": "R",
+                        "P9146896710": "R"
+                    }
+                },
+                "dsFile1004": {
+                    "_t": "String",
+                    "_p": {
+                        "P7941200538": "R",
+                        "P9553486828": "R",
+                        "P9146896710": "R"
+                    }
+                },
+                "dsFile1005": {
+                    "_t": "String",
+                    "_p": {
+                        "P7941200538": "R",
+                        "P9553486828": "R",
+                        "P9146896710": "R"
+                    }
+                },
+                "dsFile1006": {
+                    "_t": "String",
+                    "_p": {
+                        "P7941200538": "R",
+                        "P9553486828": "R",
+                        "P9146896710": "R"
+                    }
+                },
+                "dsFile1007": {
+                    "_t": "String",
+                    "_p": {
+                        "P7941200538": "R",
+                        "P9553486828": "R",
+                        "P9146896710": "R"
+                    }
+                },
+                "dsFile1008": {
+                    "_t": "String",
+                    "_p": {
+                        "P7941200538": "R",
+                        "P9553486828": "R",
+                        "P9146896710": "R"
+                    }
+                },
+                "dsFile1009": {
+                    "_t": "String",
+                    "_p": {
+                        "P7941200538": "R",
+                        "P9553486828": "R",
+                        "P9146896710": "R"
+                    }
+                },
+                "dsFile1010": {
+                    "_t": "String",
+                    "_p": {
+                        "P7941200538": "R",
+                        "P9553486828": "R",
+                        "P9146896710": "R"
+                    }
+                },
+                "dsFile1011": {
+                    "_t": "String",
+                    "_p": {
+                        "P7941200538": "R",
+                        "P9553486828": "R",
+                        "P9146896710": "R"
+                    }
+                },
+                "dsFile1012": {
+                    "_t": "String",
+                    "_p": {
+                        "P7941200538": "R",
+                        "P9553486828": "R",
+                        "P9146896710": "R"
+                    }
+                },
+                "dsFile1013": {
+                    "_t": "String",
+                    "_p": {
+                        "P7941200538": "R",
+                        "P9553486828": "R",
+                        "P9146896710": "R"
+                    }
+                }
+            }
+        },
+        "__v": 0
+    },
+    "app": "harshi"
+}

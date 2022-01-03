@@ -1,0 +1,62 @@
+{
+    "testName": "Create Super admin ,App and app admin ",
+    "url": [
+        "https://bifrost.ds.appveen.com/api"
+    ],
+    "modules": [],
+    "globals": ["loginResponse", "createGroupResponse", "groupResponse"],
+    "tests": [{
+            "endpoint": "1",
+            "name": "Login as superAdmin",
+            "request": {
+                "method": "POST",
+                "url": "/a/rbac/login",
+                "payload": {
+                    "username": "admin",
+                    "password": "u?5k167v13w5"
+                },
+                "wait": 5,
+                "responseCode": 200,
+                "saveResponse": "loginResponse"
+            }
+        },
+        {
+            "endpoint": "1",
+            "name": "Delete App-admin",
+            "request": {
+                "method": "DELETE",
+                "url": "/a/rbac/usr/test_appadmin@appveen.com",
+                "wait": 5,
+                "headers": {
+                    "Authorization": "JWT {{loginResponse.token}}"
+                },
+                "responseCode": 200
+            }
+        },
+        {
+            "endpoint": "1",
+            "name": "Delete Super-admin",
+            "request": {
+                "method": "DELETE",
+                "url": "/a/rbac/usr/test_superadmin@appveen.com",
+                "wait": 5,
+                "headers": {
+                    "Authorization": "JWT {{loginResponse.token}}"
+                },
+                "responseCode": 200
+            }
+        }, {
+            "endpoint": "1",
+            "name": "Delete App",
+            "request": {
+                "method": "DELETE",
+                "url": "/a/rbac/app/TEST-API",
+                "wait": 5,
+                "headers": {
+                    "Authorization": "JWT {{loginResponse.token}}"
+                },
+                "responseCode": 200
+            }
+        }
+    ]
+}

@@ -1,0 +1,86 @@
+{
+    "testName": "01::Delete NS groups",
+    "url": ["https://bifrost.ds.appveen.com/api"],
+    "globals": [
+        "loginResponse"
+    ],
+    "tests": [{
+            "endpoint": "1",
+            "name": "Login",
+            "request": {
+                "method": "POST",
+                "url": "/a/rbac/login",
+                "payload": {
+                    "username": "test_appadmin@appveen.com",
+                    "password": "123123123"
+                },
+                "responseCode": 200,
+                "saveResponse": "loginResponse"
+            },
+            "response": {
+                "body": {
+                    "token": null
+                }
+            }
+        },
+        {
+            "endpoint": "1",
+            "name": "Delete Group: NS all Blocked",
+            "request": {
+                "method": "DELETE",
+                "url": "/a/rbac/group/{{dataPipe.read('00-01-Groups-NS-Create.json').ns_all_blocked._id}}",
+                "headers": {
+                    "Authorization": "JWT {{loginResponse.token}}"
+                },
+                "responseCode": 200
+            }
+        },
+        {
+            "endpoint": "1",
+            "name": "Delete Group: NS basic View",
+            "request": {
+                "method": "DELETE",
+                "url": "/a/rbac/group/{{dataPipe.read('00-01-Groups-NS-Create.json').ns_basic_view._id}}",
+                "headers": {
+                    "Authorization": "JWT {{loginResponse.token}}"
+                },
+                "responseCode": 200
+            }
+        },
+        {
+            "endpoint": "1",
+            "name": "Delete Group: Ns basic Manage",
+            "request": {
+                "method": "DELETE",
+                "url": "/a/rbac/group/{{dataPipe.read('00-01-Groups-NS-Create.json').ns_basic_manage._id}}",
+                "headers": {
+                    "Authorization": "JWT {{loginResponse.token}}"
+                },
+                "responseCode": 200
+            }
+        },
+        {
+            "endpoint": "1",
+            "name": "Delete Group: NS design view",
+            "request": {
+                "method": "DELETE",
+                "url": "/a/rbac/group/{{dataPipe.read('00-01-Groups-NS-Create.json').ns_design_view._id}}",
+                "headers": {
+                    "Authorization": "JWT {{loginResponse.token}}"
+                },
+                "responseCode": 200
+            }
+        }, {
+            "endpoint": "1",
+            "name": "Delete Group: NS design Manage",
+            "request": {
+                "method": "DELETE",
+                "url": "/a/rbac/group/{{dataPipe.read('00-01-Groups-NS-Create.json').ns_design_manage._id}}",
+                "headers": {
+                    "Authorization": "JWT {{loginResponse.token}}"
+                },
+                "responseCode": 200
+            }
+        }
+    ]
+}

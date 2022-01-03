@@ -1,0 +1,8 @@
+{
+    "authType": "local",
+    "bot": false,
+    "sessionActive": null,
+    "name": "John Doe",
+    "rbacUserToSingleSession": null,
+    "rbacUserReloginAction": null
+}

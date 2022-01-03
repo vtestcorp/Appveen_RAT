@@ -1,0 +1,409 @@
+{
+    "name": "DS-BOOLEAN",
+    "description": null,
+    "api": "/dsBoolean",
+    "permanentDeleteData": true,
+    "wizard": [],
+    "definition": [{
+        "key": "_id",
+        "type": "String",
+        "prefix": "DS",
+        "suffix": null,
+        "padding": null,
+        "counter": 1001,
+        "properties": {
+            "label": null,
+            "readonly": false,
+            "errorMessage": null,
+            "name": "ID",
+            "required": false,
+            "fieldLength": 10,
+            "_description": null,
+            "_typeChanged": "id",
+            "_isParrentArray": null,
+            "_isGrpParentArray": null,
+            "dataPath": "_id",
+            "_detailedType": "",
+            "dataKey": "_id"
+        }
+    }, {
+        "type": "Boolean",
+        "key": "dsBoolean1001",
+        "properties": {
+            "name": "DS BOOLEAN 1001",
+            "fieldLength": 10,
+            "_typeChanged": "Boolean",
+            "dataKey": "dsBoolean1001",
+            "dataPath": "dsBoolean1001"
+        }
+    }, {
+        "type": "Boolean",
+        "key": "dsBoolean1002",
+        "properties": {
+            "label": "Custom DS BOOLEAN 1002",
+            "errorMessage": "Error DS BOOLEAN 1002",
+            "name": "DS BOOLEAN 1002",
+            "required": true,
+            "fieldLength": 10,
+            "_description": "test description",
+            "_typeChanged": "Boolean",
+            "default": true,
+            "createOnly": true,
+            "dataKey": "dsBoolean1002",
+            "dataPath": "dsBoolean1002"
+        }
+    }, {
+        "type": "Boolean",
+        "key": "dsBoolean1003",
+        "properties": {
+            "name": "DS BOOLEAN 1003",
+            "required": true,
+            "fieldLength": 10,
+            "_typeChanged": "Boolean",
+            "dataKey": "dsBoolean1003",
+            "dataPath": "dsBoolean1003"
+        }
+    }, {
+        "type": "Boolean",
+        "key": "dsBoolean1004",
+        "properties": {
+            "name": "DS BOOLEAN 1004",
+            "fieldLength": 10,
+            "_typeChanged": "Boolean",
+            "createOnly": true,
+            "dataKey": "dsBoolean1004",
+            "dataPath": "dsBoolean1004"
+        }
+    }, {
+        "type": "Boolean",
+        "key": "dsBoolean1005",
+        "properties": {
+            "readonly": true,
+            "name": "DS BOOLEAN 1005",
+            "fieldLength": 10,
+            "_typeChanged": "Boolean",
+            "dataKey": "dsBoolean1005",
+            "dataPath": "dsBoolean1005"
+        }
+    }, {
+        "type": "Boolean",
+        "key": "dsBoolean1006",
+        "properties": {
+            "name": "DS BOOLEAN 1006",
+            "required": true,
+            "fieldLength": 10,
+            "_typeChanged": "Boolean",
+            "createOnly": true,
+            "dataKey": "dsBoolean1006",
+            "dataPath": "dsBoolean1006"
+        }
+    }, {
+        "type": "Boolean",
+        "key": "dsBoolean1007",
+        "properties": {
+            "readonly": true,
+            "name": "DS BOOLEAN 1007",
+            "required": true,
+            "fieldLength": 10,
+            "_typeChanged": "Boolean",
+            "dataKey": "dsBoolean1007",
+            "dataPath": "dsBoolean1007"
+        }
+    }, {
+        "type": "Boolean",
+        "key": "dsBoolean1008",
+        "properties": {
+            "readonly": true,
+            "name": "DS BOOLEAN 1008",
+            "fieldLength": 10,
+            "_typeChanged": "Boolean",
+            "createOnly": true,
+            "dataKey": "dsBoolean1008",
+            "dataPath": "dsBoolean1008"
+        }
+    }, {
+        "type": "Boolean",
+        "key": "dsBoolean1009",
+        "properties": {
+            "readonly": true,
+            "name": "DS BOOLEAN 1009",
+            "required": true,
+            "fieldLength": 10,
+            "_typeChanged": "Boolean",
+            "createOnly": true,
+            "dataKey": "dsBoolean1009",
+            "dataPath": "dsBoolean1009"
+        }
+    }, {
+        "type": "Boolean",
+        "key": "dsBoolean1010",
+        "properties": {
+            "label": "Custom DS BOOLEAN 1010",
+            "name": "DS BOOLEAN 1010",
+            "fieldLength": 10,
+            "_typeChanged": "Boolean",
+            "dataKey": "dsBoolean1010",
+            "dataPath": "dsBoolean1010"
+        }
+    }, {
+        "type": "Boolean",
+        "key": "dsBoolean1011",
+        "properties": {
+            "errorMessage": "Error DS BOOLEAN 1011",
+            "name": "DS BOOLEAN 1011",
+            "fieldLength": 10,
+            "_typeChanged": "Boolean",
+            "dataKey": "dsBoolean1011",
+            "dataPath": "dsBoolean1011"
+        }
+    }, {
+        "type": "Boolean",
+        "key": "dsBoolean1012",
+        "properties": {
+            "label": "Custom DS BOOLEAN 1012",
+            "errorMessage": "Error DS BOOLEAN 1012",
+            "name": "DS BOOLEAN 1012",
+            "fieldLength": 10,
+            "_typeChanged": "Boolean",
+            "dataKey": "dsBoolean1012",
+            "dataPath": "dsBoolean1012"
+        }
+    }, {
+        "type": "Boolean",
+        "key": "dsBoolean1013",
+        "properties": {
+            "name": "DS BOOLEAN 1013",
+            "fieldLength": 10,
+            "_typeChanged": "Boolean",
+            "default": true,
+            "dataKey": "dsBoolean1013",
+            "dataPath": "dsBoolean1013"
+        }
+    }, {
+        "type": "Boolean",
+        "key": "dsBoolean1014",
+        "properties": {
+            "readonly": true,
+            "name": "DS BOOLEAN 1014",
+            "fieldLength": 10,
+            "_typeChanged": "Boolean",
+            "default": true,
+            "dataKey": "dsBoolean1014",
+            "dataPath": "dsBoolean1014"
+        }
+    }, {
+        "type": "Boolean",
+        "key": "dsBoolean1015",
+        "properties": {
+            "name": "DS BOOLEAN 1015",
+            "fieldLength": 10,
+            "_description": "test description",
+            "_typeChanged": "Boolean",
+            "dataKey": "dsBoolean1015",
+            "dataPath": "dsBoolean1015"
+        }
+    }],
+    "webHooks": [],
+    "preHooks": [],
+    "workflowHooks": {
+        "postHooks": {
+            "submit": [],
+            "rework": [],
+            "discard": [],
+            "approve": [],
+            "reject": []
+        }
+    },
+    "versionValidity": {
+        "validityType": "count",
+        "validityValue": -1
+    },
+    "disableInsights": false,
+    "headers": [],
+    "enableSearchIndex": false,
+    "role": {
+        "_id": "SRVC2111",
+        "_metadata": {
+            "version": {
+                "document": 1,
+                "release": "1.0"
+            },
+            "deleted": false,
+            "lastUpdated": "2021-01-28T05:59:55.772Z",
+            "createdAt": "2021-01-28T05:59:55.766Z"
+        },
+        "app": "harshi",
+        "entity": "SRVC2111",
+        "entityName": "DS-BOOLEAN",
+        "roles": [{
+            "skipReviewRole": true,
+            "id": "P6509113564",
+            "name": "Skip Review",
+            "operations": [{
+                "method": "SKIP_REVIEW"
+            }, {
+                "method": "POST"
+            }, {
+                "method": "PUT"
+            }, {
+                "method": "DELETE"
+            }],
+            "description": "This role entitles an authorized user to create, update or delete a record and without any approval"
+        }, {
+            "manageRole": true,
+            "id": "P3665267577",
+            "name": "Manage",
+            "operations": [{
+                "method": "POST"
+            }, {
+                "method": "PUT"
+            }, {
+                "method": "DELETE"
+            }, {
+                "method": "GET"
+            }],
+            "description": "This role entitles an authorized user to create, update or delete a record"
+        }, {
+            "viewRole": true,
+            "id": "P8454623831",
+            "name": "View",
+            "operations": [{
+                "method": "GET"
+            }],
+            "description": "This role entitles an authorized user to view the record"
+        }],
+        "type": "appcenter",
+        "fields": {
+            "_id": {
+                "_t": "String",
+                "_p": {
+                    "P6509113564": "R",
+                    "P3665267577": "R",
+                    "P8454623831": "R"
+                }
+            },
+            "dsBoolean1001": {
+                "_t": "Boolean",
+                "_p": {
+                    "P6509113564": "R",
+                    "P3665267577": "R",
+                    "P8454623831": "R"
+                }
+            },
+            "dsBoolean1002": {
+                "_t": "Boolean",
+                "_p": {
+                    "P6509113564": "R",
+                    "P3665267577": "R",
+                    "P8454623831": "R"
+                }
+            },
+            "dsBoolean1003": {
+                "_t": "Boolean",
+                "_p": {
+                    "P6509113564": "R",
+                    "P3665267577": "R",
+                    "P8454623831": "R"
+                }
+            },
+            "dsBoolean1004": {
+                "_t": "Boolean",
+                "_p": {
+                    "P6509113564": "R",
+                    "P3665267577": "R",
+                    "P8454623831": "R"
+                }
+            },
+            "dsBoolean1005": {
+                "_t": "Boolean",
+                "_p": {
+                    "P6509113564": "R",
+                    "P3665267577": "R",
+                    "P8454623831": "R"
+                }
+            },
+            "dsBoolean1006": {
+                "_t": "Boolean",
+                "_p": {
+                    "P6509113564": "R",
+                    "P3665267577": "R",
+                    "P8454623831": "R"
+                }
+            },
+            "dsBoolean1007": {
+                "_t": "Boolean",
+                "_p": {
+                    "P6509113564": "R",
+                    "P3665267577": "R",
+                    "P8454623831": "R"
+                }
+            },
+            "dsBoolean1008": {
+                "_t": "Boolean",
+                "_p": {
+                    "P6509113564": "R",
+                    "P3665267577": "R",
+                    "P8454623831": "R"
+                }
+            },
+            "dsBoolean1009": {
+                "_t": "Boolean",
+                "_p": {
+                    "P6509113564": "R",
+                    "P3665267577": "R",
+                    "P8454623831": "R"
+                }
+            },
+            "dsBoolean1010": {
+                "_t": "Boolean",
+                "_p": {
+                    "P6509113564": "R",
+                    "P3665267577": "R",
+                    "P8454623831": "R"
+                }
+            },
+            "dsBoolean1011": {
+                "_t": "Boolean",
+                "_p": {
+                    "P6509113564": "R",
+                    "P3665267577": "R",
+                    "P8454623831": "R"
+                }
+            },
+            "dsBoolean1012": {
+                "_t": "Boolean",
+                "_p": {
+                    "P6509113564": "R",
+                    "P3665267577": "R",
+                    "P8454623831": "R"
+                }
+            },
+            "dsBoolean1013": {
+                "_t": "Boolean",
+                "_p": {
+                    "P6509113564": "R",
+                    "P3665267577": "R",
+                    "P8454623831": "R"
+                }
+            },
+            "dsBoolean1014": {
+                "_t": "Boolean",
+                "_p": {
+                    "P6509113564": "R",
+                    "P3665267577": "R",
+                    "P8454623831": "R"
+                }
+            },
+            "dsBoolean1015": {
+                "_t": "Boolean",
+                "_p": {
+                    "P6509113564": "R",
+                    "P3665267577": "R",
+                    "P8454623831": "R"
+                }
+            }
+        },
+        "__v": 0
+    },
+    "app": "harshi"
+}

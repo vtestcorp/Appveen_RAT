@@ -1,0 +1,135 @@
+{
+  "testName": "00::Groups for BOT users",
+  "url": [
+    "https://bifrost.ds.appveen.com/api"
+  ],
+  "globals": [
+    "loginResponse",
+    "bot_all_blocked",
+		"bot_info_view",
+		"bot_info_manage",
+		"bot_session_manage",
+		"bot_group_manage"
+  ],
+  "tests": [
+    {
+      "endpoint": "1",
+      "name": "Login",
+      "request": {
+        "method": "POST",
+        "url": "/a/rbac/login",
+        "payload": {
+          "username": "test_appadmin@appveen.com",
+          "password": "123123123"
+        },
+        "responseCode": 200,
+        "saveResponse": "loginResponse"
+      },
+      "response": {
+        "body": {
+          "token": null
+        }
+      }
+    },
+    {
+      "endpoint": "1",
+      "delimiters": ["<%","%>"],
+      "name": "Create Group: Bot All Blocked",
+      "request": {
+        "method": "POST",
+        "url": "/a/rbac/group",
+        "headers": {"Authorization": "JWT <%loginResponse.token%>"},
+        "responseCode": 200,
+        "payload": {
+        	"name": "Bot All Blocked", "app": "TEST-API", "users": ["test_bot_all_blocked@appveen.com"]
+        },
+        "saveResponse": "bot_all_blocked"
+      },
+      "response": {"body": {"name": "Bot All Blocked","app": "TEST-API"}}
+    },
+    {
+      "endpoint": "1",
+      "delimiters": ["<%","%>"],
+      "name": "Create Group: Bot Info View",
+      "request": {
+        "method": "POST",
+        "url": "/a/rbac/group",
+        "headers": {"Authorization": "JWT <%loginResponse.token%>"},
+        "responseCode": 200,
+        "payload": {
+          "name": "Bot Info View", "app": "TEST-API",
+          "users": ["test_bot_info_view@appveen.com"],
+          "roles": [
+            {"id": "PVBB", "app": "TEST-API", "entity": "USER", "type": "author"}
+          ]
+        },
+        "saveResponse": "bot_info_view"
+      },
+      "response": {"body": {"name": "Bot Info View","app": "TEST-API"}}
+    },
+    {
+      "endpoint": "1",
+      "delimiters": [ "<%", "%>" ],
+      "name": "Create Group: Bot Info Manage",
+      "request": {
+        "method": "POST",
+        "url": "/a/rbac/group",
+        "headers": {"Authorization": "JWT <%loginResponse.token%>"},
+        "responseCode": 200,
+        "payload": {
+          "name": "Bot Info Manage", "app": "TEST-API",
+          "users": ["test_bot_info_manage@appveen.com"],
+          "roles": [
+          	{"id": "PMBBC", "app": "TEST-API", "entity": "USER", "type": "author"},
+          	{"id": "PMBBU", "app": "TEST-API", "entity": "USER", "type": "author"},
+          	{"id": "PMBBD", "app": "TEST-API", "entity": "USER", "type": "author"}
+          ]
+        },
+        "saveResponse": "bot_info_manage"
+      },
+      "response": {"body": {"name": "Bot Info Manage","app": "TEST-API"}}
+    },
+    {
+      "endpoint": "1",
+      "delimiters": [ "<%", "%>" ],
+      "name": "Create Group: Bot Session Manage",
+      "request": {
+        "method": "POST",
+        "url": "/a/rbac/group",
+        "headers": {"Authorization": "JWT <%loginResponse.token%>"},
+        "responseCode": 200,
+        "payload": {
+          "name": "Bot Session Manage", "app": "TEST-API",
+          "users": ["test_bot_session_manage@appveen.com"],
+          "roles": [
+          	{"id": "PVBB", "app": "TEST-API", "entity": "USER", "type": "author"},
+          	{"id": "PMBA", "app": "TEST-API", "entity": "USER", "type": "author"}
+          ]
+        },
+        "saveResponse": "bot_session_manage"
+      },
+      "response": {"body": {"name": "Bot Session Manage","app": "TEST-API"}}
+    },
+    {
+      "endpoint": "1",
+      "delimiters": [ "<%", "%>" ],
+      "name": "Create Group: Bot Group Manage",
+      "request": {
+        "method": "POST",
+        "url": "/a/rbac/group",
+        "headers": {"Authorization": "JWT <%loginResponse.token%>"},
+        "responseCode": 200,
+        "payload": {
+          "name": "Bot Group Manage", "app": "TEST-API",
+          "users": ["test_bot_group_manage@appveen.com"],
+          "roles": [
+          	{"id": "PVBB", "app": "TEST-API", "entity": "USER", "type": "author"},
+          	{"id": "PMBG", "app": "TEST-API", "entity": "USER", "type": "author"}
+          ]
+        },
+        "saveResponse": "bot_group_manage"
+      },
+      "response": {"body": {"name": "Bot Group Manage","app": "TEST-API"}}
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+    "basicDetails": {
+        "phone": "1234567890"
+    },
+    "isSuperAdmin": true,
+    "enableSessionRefresh": true,
+    "bot": false,
+    "_id": "admin",
+    "username": "admin",
+    "auth": {
+        "authType": "local"
+    },
+    "apps": [null],
+    "token": null,
+    "rToken": null,
+    "expiresIn": null,
+    "rbacUserTokenDuration": null,
+    "rbacUserTokenRefresh": null,
+    "rbacUserToSingleSession": null,
+    "rbacUserCloseWindowToLogout": null,
+    "rbacBotTokenDuration": null,
+    "rbacHbInterval": null,
+    "uuid": null
+}

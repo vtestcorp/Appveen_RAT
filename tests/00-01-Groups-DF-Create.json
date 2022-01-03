@@ -1,0 +1,106 @@
+{
+    "testName": "00::Groups for DF users",
+    "url": [
+        "https://bifrost.ds.appveen.com/api"
+    ],
+    "globals": [
+        "loginResponse","df_blocked","df_view","df_manage"
+    ],
+    "tests": [{
+            "endpoint": "1",
+            "name": "Login",
+            "request": {
+                "method": "POST",
+                "url": "/a/rbac/login",
+                "payload": {
+                    "username": "test_appadmin@appveen.com",
+                    "password": "123123123"
+                },
+                "responseCode": 200,
+                "saveResponse": "loginResponse"
+            }
+        },
+        {
+            "endpoint": "1",
+            "delimiters": ["<%", "%>"],
+            "name": "Create Group: DF Blocked",
+            "request": {
+                "method": "POST",
+                "url": "/a/rbac/group",
+                "headers": {
+                    "Authorization": "JWT <%loginResponse.token%>"
+                },
+                "responseCode": 200,
+                "payload": {
+                    "name": "DF Blocked",
+                    "app": "TEST-API",
+                    "users": ["test_df_blocked@appveen.com"]
+                },
+                "saveResponse": "df_blocked"
+            }
+        },
+        {
+            "endpoint": "1",
+            "delimiters": ["<%", "%>"],
+            "name": "Create Group: DF View",
+            "request": {
+                "method": "POST",
+                "url": "/a/rbac/group",
+                "headers": {
+                    "Authorization": "JWT <%loginResponse.token%>"
+                },
+                "responseCode": 200,
+                "payload": {
+                    "name": "DF View",
+                    "app": "TEST-API",
+                    "users": ["test_df_view@appveen.com"],
+                    "roles": [{
+                            "id": "PVL",
+                            "app": "TEST-API",
+                            "entity": "GS",
+                            "type": "author"
+                        },{
+                            "id": "PVDF",
+                            "app": "TEST-API",
+                            "entity": "DF",
+                            "type": "author"
+                        }
+
+                    ]
+                },
+                "saveResponse": "df_view"
+            }
+        },
+        {
+            "endpoint": "1",
+            "delimiters": ["<%", "%>"],
+            "name": "Create Group: DF Manage",
+            "request": {
+                "method": "POST",
+                "url": "/a/rbac/group",
+                "headers": {
+                    "Authorization": "JWT <%loginResponse.token%>"
+                },
+                "responseCode": 200,
+                "payload": {
+                    "name": "DF Manage",
+                    "app": "TEST-API",
+                    "users": ["test_df_manage@appveen.com"],
+                    "roles": [{
+                            "id": "PML",
+                            "app": "TEST-API",
+                            "entity": "GS",
+                            "type": "author"
+                        },{
+                            "id": "PMDF",
+                            "app": "TEST-API",
+                            "entity": "DF",
+                            "type": "author"
+                        }
+                    ]
+                },
+                "saveResponse": "df_manage"
+            }
+        }
+    ]
+}

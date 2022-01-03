@@ -1,0 +1,507 @@
+{
+  "name": "STRING-SECURE-TEXT",
+  "description": null,
+  "api": "/stringSecureText",
+  "permanentDeleteData": true,
+  "wizard": [],
+  "definition": [{
+    "key": "_id",
+    "type": "String",
+    "prefix": "STR",
+    "suffix": null,
+    "padding": null,
+    "counter": 1001,
+    "properties": {
+      "label": null,
+      "readonly": false,
+      "errorMessage": null,
+      "name": "ID",
+      "required": false,
+      "fieldLength": 10,
+      "_description": null,
+      "_typeChanged": "id",
+      "_isParrentArray": null,
+      "_isGrpParentArray": null,
+      "dataPath": "_id",
+      "_detailedType": "",
+      "dataKey": "_id"
+    }
+  }, {
+    "type": "String",
+    "key": "dsStringSecureText1001",
+    "properties": {
+      "name": "DS STRING SECURE TEXT 1001",
+      "fieldLength": 10,
+      "_typeChanged": "String",
+      "password": true,
+      "dataKey": "dsStringSecureText1001",
+      "dataPath": "dsStringSecureText1001"
+    }
+  }, {
+    "type": "String",
+    "key": "dsStringSecureText1002",
+    "properties": {
+      "label": "Custom DS STRING SECURE TEXT 1002",
+      "errorMessage": "Error DS STRING SECURE TEXT 1002",
+      "name": "DS STRING SECURE TEXT 1002",
+      "required": true,
+      "fieldLength": 10,
+      "_description": "test description",
+      "_typeChanged": "String",
+      "createOnly": true,
+      "unique": true,
+      "pattern": "^TES",
+      "password": true,
+      "dataKey": "dsStringSecureText1002",
+      "dataPath": "dsStringSecureText1002"
+    }
+  }, {
+    "type": "String",
+    "key": "dsStringSecureText1003",
+    "properties": {
+      "name": "DS STRING SECURE TEXT 1003",
+      "required": true,
+      "fieldLength": 10,
+      "_typeChanged": "String",
+      "password": true,
+      "dataKey": "dsStringSecureText1003",
+      "dataPath": "dsStringSecureText1003"
+    }
+  }, {
+    "type": "String",
+    "key": "dsStringSecureText1004",
+    "properties": {
+      "name": "DS STRING SECURE TEXT 1004",
+      "fieldLength": 10,
+      "_typeChanged": "String",
+      "createOnly": true,
+      "password": true,
+      "dataKey": "dsStringSecureText1004",
+      "dataPath": "dsStringSecureText1004"
+    }
+  }, {
+    "type": "String",
+    "key": "dsStringSecureText1005",
+    "properties": {
+      "name": "DS STRING SECURE TEXT 1005",
+      "fieldLength": 10,
+      "_typeChanged": "String",
+      "unique": true,
+      "password": true,
+      "dataKey": "dsStringSecureText1005",
+      "dataPath": "dsStringSecureText1005"
+    }
+  }, {
+    "type": "String",
+    "key": "dsStringSecureText1006",
+    "properties": {
+      "readonly": true,
+      "name": "DS STRING SECURE TEXT 1006",
+      "fieldLength": 10,
+      "_typeChanged": "String",
+      "password": true,
+      "dataKey": "dsStringSecureText1006",
+      "dataPath": "dsStringSecureText1006"
+    }
+  }, {
+    "type": "String",
+    "key": "dsStringSecureText1007",
+    "properties": {
+      "name": "DS STRING SECURE TEXT 1007",
+      "required": true,
+      "fieldLength": 10,
+      "_typeChanged": "String",
+      "createOnly": true,
+      "password": true,
+      "dataKey": "dsStringSecureText1007",
+      "dataPath": "dsStringSecureText1007"
+    }
+  }, {
+    "type": "String",
+    "key": "dsStringSecureText1008",
+    "properties": {
+      "name": "DS STRING SECURE TEXT 1008",
+      "required": true,
+      "fieldLength": 10,
+      "_typeChanged": "String",
+      "unique": true,
+      "password": true,
+      "dataKey": "dsStringSecureText1008",
+      "dataPath": "dsStringSecureText1008"
+    }
+  }, {
+    "type": "String",
+    "key": "dsStringSecureText1009",
+    "properties": {
+      "readonly": true,
+      "name": "DS STRING SECURE TEXT 1009",
+      "required": true,
+      "fieldLength": 10,
+      "_typeChanged": "String",
+      "password": true,
+      "dataKey": "dsStringSecureText1009",
+      "dataPath": "dsStringSecureText1009"
+    }
+  }, {
+    "type": "String",
+    "key": "dsStringSecureText1010",
+    "properties": {
+      "name": "DS STRING SECURE TEXT 1010",
+      "fieldLength": 10,
+      "_typeChanged": "String",
+      "createOnly": true,
+      "unique": true,
+      "password": true,
+      "dataKey": "dsStringSecureText1010",
+      "dataPath": "dsStringSecureText1010"
+    }
+  }, {
+    "type": "String",
+    "key": "dsStringSecureText1011",
+    "properties": {
+      "readonly": true,
+      "name": "DS STRING SECURE TEXT 1011",
+      "fieldLength": 10,
+      "_typeChanged": "String",
+      "createOnly": true,
+      "password": true,
+      "dataKey": "dsStringSecureText1011",
+      "dataPath": "dsStringSecureText1011"
+    }
+  }, {
+    "type": "String",
+    "key": "dsStringSecureText1012",
+    "properties": {
+      "readonly": true,
+      "name": "DS STRING SECURE TEXT 1012",
+      "fieldLength": 10,
+      "_typeChanged": "String",
+      "unique": true,
+      "password": true,
+      "dataKey": "dsStringSecureText1012",
+      "dataPath": "dsStringSecureText1012"
+    }
+  }, {
+    "type": "String",
+    "key": "dsStringSecureText1013",
+    "properties": {
+      "label": "Custom DS STRING SECURE TEXT 1013",
+      "name": "DS STRING SECURE TEXT 1013",
+      "fieldLength": 10,
+      "_typeChanged": "String",
+      "password": true,
+      "dataKey": "dsStringSecureText1013",
+      "dataPath": "dsStringSecureText1013"
+    }
+  }, {
+    "type": "String",
+    "key": "dsStringSecureText1014",
+    "properties": {
+      "errorMessage": "Error DS STRING SECURE TEXT 1014",
+      "name": "DS STRING SECURE TEXT 1014",
+      "fieldLength": 10,
+      "_typeChanged": "String",
+      "password": true,
+      "dataKey": "dsStringSecureText1014",
+      "dataPath": "dsStringSecureText1014"
+    }
+  }, {
+    "type": "String",
+    "key": "dsStringSecureText1015",
+    "properties": {
+      "label": "Custom DS STRING SECURE TEXT 1015",
+      "errorMessage": "Error DS STRING SECURE TEXT 1015",
+      "name": "DS STRING SECURE TEXT 1015",
+      "fieldLength": 10,
+      "_typeChanged": "String",
+      "password": true,
+      "dataKey": "dsStringSecureText1015",
+      "dataPath": "dsStringSecureText1015"
+    }
+  }, {
+    "type": "String",
+    "key": "dsStringSecureText1016",
+    "properties": {
+      "label": "Custom DS STRING SECURE TEXT 1016",
+      "readonly": true,
+      "name": "DS STRING SECURE TEXT 1016",
+      "fieldLength": 10,
+      "_typeChanged": "String",
+      "password": true,
+      "dataKey": "dsStringSecureText1016",
+      "dataPath": "dsStringSecureText1016"
+    }
+  }, {
+    "type": "String",
+    "key": "dsStringSecureText1017",
+    "properties": {
+      "readonly": true,
+      "errorMessage": "Custom DS STRING SECURE TEXT 1017",
+      "name": "DS STRING SECURE TEXT 1017",
+      "fieldLength": 10,
+      "_typeChanged": "String",
+      "password": true,
+      "dataKey": "dsStringSecureText1017",
+      "dataPath": "dsStringSecureText1017"
+    }
+  }, {
+    "type": "String",
+    "key": "dsStringSecureText1018",
+    "properties": {
+      "name": "DS STRING SECURE TEXT 1018",
+      "fieldLength": 10,
+      "_typeChanged": "String",
+      "pattern": "^TES",
+      "password": true,
+      "dataKey": "dsStringSecureText1018",
+      "dataPath": "dsStringSecureText1018"
+    }
+  }, {
+    "type": "String",
+    "key": "dsStringSecureText1019",
+    "properties": {
+      "name": "DS STRING SECURE TEXT 1019",
+      "fieldLength": 10,
+      "_description": "test description",
+      "_typeChanged": "String",
+      "password": true,
+      "dataKey": "dsStringSecureText1019",
+      "dataPath": "dsStringSecureText1019"
+    }
+  }],
+  "webHooks": [],
+  "preHooks": [],
+  "workflowHooks": {
+    "postHooks": {
+      "submit": [],
+      "rework": [],
+      "discard": [],
+      "approve": [],
+      "reject": []
+    }
+  },
+  "versionValidity": {
+    "validityType": "count",
+    "validityValue": -1
+  },
+  "disableInsights": false,
+  "headers": [],
+  "enableSearchIndex": false,
+  "role": {
+    "_id": "SRVC2109",
+    "_metadata": {
+      "version": {
+        "document": 1,
+        "release": "1.0"
+      },
+      "deleted": false,
+      "lastUpdated": "2021-01-28T05:28:52.548Z",
+      "createdAt": "2021-01-28T05:28:52.545Z"
+    },
+    "app": "harshi",
+    "entity": "SRVC2109",
+    "entityName": "STRING-SECURE-TEXT",
+    "roles": [{
+      "skipReviewRole": true,
+      "id": "P8471328161",
+      "name": "Skip Review",
+      "operations": [{
+        "method": "SKIP_REVIEW"
+      }, {
+        "method": "POST"
+      }, {
+        "method": "PUT"
+      }, {
+        "method": "DELETE"
+      }],
+      "description": "This role entitles an authorized user to create, update or delete a record and without any approval"
+    }, {
+      "manageRole": true,
+      "id": "P6816412346",
+      "name": "Manage",
+      "operations": [{
+        "method": "POST"
+      }, {
+        "method": "PUT"
+      }, {
+        "method": "DELETE"
+      }, {
+        "method": "GET"
+      }],
+      "description": "This role entitles an authorized user to create, update or delete a record"
+    }, {
+      "viewRole": true,
+      "id": "P6288764170",
+      "name": "View",
+      "operations": [{
+        "method": "GET"
+      }],
+      "description": "This role entitles an authorized user to view the record"
+    }],
+    "type": "appcenter",
+    "fields": {
+      "_id": {
+        "_t": "String",
+        "_p": {
+          "P8471328161": "R",
+          "P6816412346": "R",
+          "P6288764170": "R"
+        }
+      },
+      "dsStringSecureText1001": {
+        "_t": "String",
+        "_p": {
+          "P8471328161": "R",
+          "P6816412346": "R",
+          "P6288764170": "R"
+        }
+      },
+      "dsStringSecureText1002": {
+        "_t": "String",
+        "_p": {
+          "P8471328161": "R",
+          "P6816412346": "R",
+          "P6288764170": "R"
+        }
+      },
+      "dsStringSecureText1003": {
+        "_t": "String",
+        "_p": {
+          "P8471328161": "R",
+          "P6816412346": "R",
+          "P6288764170": "R"
+        }
+      },
+      "dsStringSecureText1004": {
+        "_t": "String",
+        "_p": {
+          "P8471328161": "R",
+          "P6816412346": "R",
+          "P6288764170": "R"
+        }
+      },
+      "dsStringSecureText1005": {
+        "_t": "String",
+        "_p": {
+          "P8471328161": "R",
+          "P6816412346": "R",
+          "P6288764170": "R"
+        }
+      },
+      "dsStringSecureText1006": {
+        "_t": "String",
+        "_p": {
+          "P8471328161": "R",
+          "P6816412346": "R",
+          "P6288764170": "R"
+        }
+      },
+      "dsStringSecureText1007": {
+        "_t": "String",
+        "_p": {
+          "P8471328161": "R",
+          "P6816412346": "R",
+          "P6288764170": "R"
+        }
+      },
+      "dsStringSecureText1008": {
+        "_t": "String",
+        "_p": {
+          "P8471328161": "R",
+          "P6816412346": "R",
+          "P6288764170": "R"
+        }
+      },
+      "dsStringSecureText1009": {
+        "_t": "String",
+        "_p": {
+          "P8471328161": "R",
+          "P6816412346": "R",
+          "P6288764170": "R"
+        }
+      },
+      "dsStringSecureText1010": {
+        "_t": "String",
+        "_p": {
+          "P8471328161": "R",
+          "P6816412346": "R",
+          "P6288764170": "R"
+        }
+      },
+      "dsStringSecureText1011": {
+        "_t": "String",
+        "_p": {
+          "P8471328161": "R",
+          "P6816412346": "R",
+          "P6288764170": "R"
+        }
+      },
+      "dsStringSecureText1012": {
+        "_t": "String",
+        "_p": {
+          "P8471328161": "R",
+          "P6816412346": "R",
+          "P6288764170": "R"
+        }
+      },
+      "dsStringSecureText1013": {
+        "_t": "String",
+        "_p": {
+          "P8471328161": "R",
+          "P6816412346": "R",
+          "P6288764170": "R"
+        }
+      },
+      "dsStringSecureText1014": {
+        "_t": "String",
+        "_p": {
+          "P8471328161": "R",
+          "P6816412346": "R",
+          "P6288764170": "R"
+        }
+      },
+      "dsStringSecureText1015": {
+        "_t": "String",
+        "_p": {
+          "P8471328161": "R",
+          "P6816412346": "R",
+          "P6288764170": "R"
+        }
+      },
+      "dsStringSecureText1016": {
+        "_t": "String",
+        "_p": {
+          "P8471328161": "R",
+          "P6816412346": "R",
+          "P6288764170": "R"
+        }
+      },
+      "dsStringSecureText1017": {
+        "_t": "String",
+        "_p": {
+          "P8471328161": "R",
+          "P6816412346": "R",
+          "P6288764170": "R"
+        }
+      },
+      "dsStringSecureText1018": {
+        "_t": "String",
+        "_p": {
+          "P8471328161": "R",
+          "P6816412346": "R",
+          "P6288764170": "R"
+        }
+      },
+      "dsStringSecureText1019": {
+        "_t": "String",
+        "_p": {
+          "P8471328161": "R",
+          "P6816412346": "R",
+          "P6288764170": "R"
+        }
+      }
+    },
+    "__v": 0
+  },
+  "app": "harshi"
+}

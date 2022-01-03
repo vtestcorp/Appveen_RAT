@@ -1,0 +1,420 @@
+{
+    "testName": "00::Groups for group users",
+    "url": [
+        "https://bifrost.ds.appveen.com/api"
+    ],
+    "globals": [
+        "loginResponse", "group_all_blocked", "group_basic_view", "group_member_view", "group_member_manage",
+         "group_author_view", "group_author_manage", "group_appcenter_view", "group_appcenter_manage"
+    ],
+    "tests": [{
+            "endpoint": "1",
+            "name": "Login",
+            "request": {
+                "method": "POST",
+                "url": "/a/rbac/login",
+                "payload": {
+                    "username": "test_appadmin@appveen.com",
+                    "password": "123123123"
+                },
+                "responseCode": 200,
+                "saveResponse": "loginResponse"
+            }
+        },
+        {
+            "endpoint": "1",
+            "delimiters": ["<%", "%>"],
+            "name": "Create Group: Group All Blocked",
+            "request": {
+                "method": "POST",
+                "url": "/a/rbac/group",
+                "headers": {
+                    "Authorization": "JWT <%loginResponse.token%>"
+                },
+                "responseCode": 200,
+                "payload": {
+                    "name": "Group All Blocked",
+                    "app": "TEST-API",
+                    "users": ["test_group_all_blocked@appveen.com"]
+                },
+                "saveResponse": "group_all_blocked"
+            }
+        },
+        {
+            "endpoint": "1",
+            "delimiters": ["<%", "%>"],
+            "name": "Create Group: Group Basic View",
+            "request": {
+                "method": "POST",
+                "url": "/a/rbac/group",
+                "headers": {
+                    "Authorization": "JWT <%loginResponse.token%>"
+                },
+                "responseCode": 200,
+                "payload": {
+                    "name": "Group Basic View",
+                    "app": "TEST-API",
+                    "users": ["test_group_basic_view@appveen.com"],
+                    "roles": [{
+                            "id": "PVGB",
+                            "app": "TEST-API",
+                            "entity": "GROUP",
+                            "type": "author"
+                        }
+
+                    ]
+                },
+                "saveResponse": "group_basic_view"
+            }
+        },
+        {
+            "endpoint": "1",
+            "delimiters": ["<%", "%>"],
+            "name": "Create Group: Group Basic Manage",
+            "request": {
+                "method": "POST",
+                "url": "/a/rbac/group",
+                "headers": {
+                    "Authorization": "JWT <%loginResponse.token%>"
+                },
+                "responseCode": 200,
+                "payload": {
+                    "name": "Group Basic Manage",
+                    "app": "TEST-API",
+                    "users": ["test_group_basic_manage@appveen.com"],
+                    "roles": [{
+                            "id": "PMGBC",
+                            "app": "TEST-API",
+                            "entity": "GROUP",
+                            "type": "author"
+                        },
+                        {
+                            "id": "PMGBU",
+                            "app": "TEST-API",
+                            "entity": "GROUP",
+                            "type": "author"
+                        },
+                        {
+                            "id": "PMGBD",
+                            "app": "TEST-API",
+                            "entity": "GROUP",
+                            "type": "author"
+                        }
+                    ]
+                },
+                "saveResponse": "group_basic_manage"
+            }
+        },
+        {
+            "endpoint": "1",
+            "delimiters": ["<%", "%>"],
+            "name": "Create Group: Group Member View",
+            "request": {
+                "method": "POST",
+                "url": "/a/rbac/group",
+                "headers": {
+                    "Authorization": "JWT <%loginResponse.token%>"
+                },
+                "responseCode": 200,
+                "payload": {
+                    "name": "Group Member View",
+                    "app": "TEST-API",
+                    "users": ["test_group_member_view@appveen.com"],
+                    "roles": [{
+                            "id": "PVGB",
+                            "app": "TEST-API",
+                            "entity": "GROUP",
+                            "type": "author"
+                        },
+                        {
+                            "id": "PVGMU",
+                            "app": "TEST-API",
+                            "entity": "GROUP",
+                            "type": "author"
+                        }
+                    ]
+                },
+                "saveResponse": "group_member_view"
+            }
+        },
+        {
+            "endpoint": "1",
+            "delimiters": ["<%", "%>"],
+            "name": "Create Group: Group Member Manage",
+            "request": {
+                "method": "POST",
+                "url": "/a/rbac/group",
+                "headers": {
+                    "Authorization": "JWT <%loginResponse.token%>"
+                },
+                "responseCode": 200,
+                "payload": {
+                    "name": "Group Member Manage",
+                    "app": "TEST-API",
+                    "users": ["test_group_member_manage@appveen.com"],
+                    "roles": [{
+                            "id": "PVGB",
+                            "app": "TEST-API",
+                            "entity": "GROUP",
+                            "type": "author"
+                        },
+                        {
+                            "id": "PMGMUC",
+                            "app": "TEST-API",
+                            "entity": "GROUP",
+                            "type": "author"
+                        },{
+                            "id": "PMGMUD",
+                            "app": "TEST-API",
+                            "entity": "GROUP",
+                            "type": "author"
+                        }
+                    ]
+                },
+                "saveResponse": "group_member_manage"
+            }
+        },
+        {
+            "endpoint": "1",
+            "delimiters": ["<%", "%>"],
+            "name": "Create Group: Group Author View",
+            "request": {
+                "method": "POST",
+                "url": "/a/rbac/group",
+                "headers": {
+                    "Authorization": "JWT <%loginResponse.token%>"
+                },
+                "responseCode": 200,
+                "payload": {
+                    "name": "Group Author View",
+                    "app": "TEST-API",
+                    "users": ["test_group_author_view@appveen.com"],
+                    "roles": [{
+                        "id": "PVGB",
+                        "app": "TEST-API",
+                        "entity": "GROUP",
+                        "type": "author"
+                    },{
+                        "id": "PVGADS",
+                        "app": "TEST-API",
+                        "entity": "GROUP",
+                        "type": "author"
+                    },{
+                        "id": "PVGAL",
+                        "app": "TEST-API",
+                        "entity": "GROUP",
+                        "type": "author"
+                    },{
+                        "id": "PVGAP",
+                        "app": "TEST-API",
+                        "entity": "GROUP",
+                        "type": "author"
+                    },{
+                        "id": "PVGADF",
+                        "app": "TEST-API",
+                        "entity": "GROUP",
+                        "type": "author"
+                    },{
+                        "id": "PVGAG",
+                        "app": "TEST-API",
+                        "entity": "GROUP",
+                        "type": "author"
+                    },{
+                        "id": "PVGAB",
+                        "app": "TEST-API",
+                        "entity": "GROUP",
+                        "type": "author"
+                    },{
+                        "id": "PVGAU",
+                        "app": "TEST-API",
+                        "entity": "GROUP",
+                        "type": "author"
+                    },{
+                        "id": "PVGAA",
+                        "app": "TEST-API",
+                        "entity": "GROUP",
+                        "type": "author"
+                    },{
+                        "id": "PVGABM",
+                        "app": "TEST-API",
+                        "entity": "GROUP",
+                        "type": "author"
+                    },{
+                        "id": "PVGANS",
+                        "app": "TEST-API",
+                        "entity": "GROUP",
+                        "type": "author"
+                    }
+                    ]
+                },
+                "saveResponse": "group_author_view"
+            }
+        },
+        {
+            "endpoint": "1",
+            "delimiters": ["<%", "%>"],
+            "name": "Create Group: Group Author Manage",
+            "request": {
+                "method": "POST",
+                "url": "/a/rbac/group",
+                "headers": {
+                    "Authorization": "JWT <%loginResponse.token%>"
+                },
+                "responseCode": 200,
+                "payload": {
+                    "name": "Group Author Manage",
+                    "app": "TEST-API",
+                    "users": ["test_group_author_manage@appveen.com"],
+                    "roles": [{
+                            "id": "PVGB",
+                            "app": "TEST-API",
+                            "entity": "GROUP",
+                            "type": "author"
+                        },
+                        {
+                            "id": "PMGADS",
+                            "app": "TEST-API",
+                            "entity": "GROUP",
+                            "type": "author"
+                        },{
+                            "id": "PMGAL",
+                            "app": "TEST-API",
+                            "entity": "GROUP",
+                            "type": "author"
+                        },
+                        {
+                            "id": "PMGAP",
+                            "app": "TEST-API",
+                            "entity": "GROUP",
+                            "type": "author"
+                        },{
+                            "id": "PMGADF",
+                            "app": "TEST-API",
+                            "entity": "GROUP",
+                            "type": "author"
+                        },
+                        {
+                            "id": "PMGANS",
+                            "app": "TEST-API",
+                            "entity": "GROUP",
+                            "type": "author"
+                        },{
+                            "id": "PMGAA",
+                            "app": "TEST-API",
+                            "entity": "GROUP",
+                            "type": "author"
+                        },
+                        {
+                            "id": "PMGABM",
+                            "app": "TEST-API",
+                            "entity": "GROUP",
+                            "type": "author"
+                        },{
+                            "id": "PMGAU",
+                            "app": "TEST-API",
+                            "entity": "GROUP",
+                            "type": "author"
+                        },
+                        {
+                            "id": "PMGAB",
+                            "app": "TEST-API",
+                            "entity": "GROUP",
+                            "type": "author"
+                        },
+                        {
+                            "id": "PMGAG",
+                            "app": "TEST-API",
+                            "entity": "GROUP",
+                            "type": "author"
+                        }
+                    ]
+                },
+                "saveResponse": "group_author_manage"
+            }
+        },
+        {
+            "endpoint": "1",
+            "delimiters": ["<%", "%>"],
+            "name": "Create Group: Group AppCenter View",
+            "request": {
+                "method": "POST",
+                "url": "/a/rbac/group",
+                "headers": {
+                    "Authorization": "JWT <%loginResponse.token%>"
+                },
+                "responseCode": 200,
+                "payload": {
+                    "name": "Group AppCenter View",
+                    "app": "TEST-API",
+                    "users": ["test_group_appcenter_view@appveen.com"],
+                    "roles": [{
+                            "id": "PVGB",
+                            "app": "TEST-API",
+                            "entity": "GROUP",
+                            "type": "author"
+                        },
+                        {
+                            "id": "PVGCDS",
+                            "app": "TEST-API",
+                            "entity": "GROUP",
+                            "type": "author"
+                        },{
+                            "id": "PVGCI",
+                            "app": "TEST-API",
+                            "entity": "GROUP",
+                            "type": "author"
+                        },{
+                            "id": "PVGCBM",
+                            "app": "TEST-API",
+                            "entity": "GROUP",
+                            "type": "author"
+                        }
+                    ]
+                },
+                "saveResponse": "group_appcenter_view"
+            }
+        },
+        {
+            "endpoint": "1",
+            "delimiters": ["<%", "%>"],
+            "name": "Create Group: Group AppCenter Manage",
+            "request": {
+                "method": "POST",
+                "url": "/a/rbac/group",
+                "headers": {
+                    "Authorization": "JWT <%loginResponse.token%>"
+                },
+                "responseCode": 200,
+                "payload": {
+                    "name": "Group AppCenter Manage",
+                    "app": "TEST-API",
+                    "users": ["test_group_appcenter_manage@appveen.com"],
+                    "roles": [{
+                        "id": "PVGB",
+                        "app": "TEST-API",
+                        "entity": "GROUP",
+                        "type": "author"
+                    },
+                    {
+                        "id": "PMGCDS",
+                        "app": "TEST-API",
+                        "entity": "GROUP",
+                        "type": "author"
+                    },{
+                        "id": "PMGCI",
+                        "app": "TEST-API",
+                        "entity": "GROUP",
+                        "type": "author"
+                    },{
+                        "id": "PMGCBM",
+                        "app": "TEST-API",
+                        "entity": "GROUP",
+                        "type": "author"
+                    }
+                    ]
+                },
+                "saveResponse": "group_appcenter_manage"
+            }
+        }
+    ]
+}

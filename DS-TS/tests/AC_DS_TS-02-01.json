@@ -1,0 +1,93 @@
+{
+    "testName": "AppCenter API Tests",
+    "url": [
+        "https://qa.ds.appveen.com/api"
+    ],
+    "modules": [
+        "sampleFunction"
+    ],
+    "globals": [
+        "loginResponse",
+        "dataServiceData",
+        "recordTest"
+    ],
+    "tests": [
+        {
+            "endpoint": "1",
+            "name": "Login - Valid as test_group_appcenter_manage in AC",
+            "request": {
+                "wait": 5,
+                "method": "POST",
+                "url": "/a/rbac/login",
+                "payload": {
+                    "username": "test_group_appcenter_manage@appveen.com",
+                    "password": "123123123"
+                },
+                "responseCode": 200,
+                "saveResponse": "loginResponse"
+            },
+            "response": {
+                "body": {
+                    "token": "{{loginResponse.token}}"
+                }
+            }
+        },
+        {
+            "endpoint": "1",
+            "delimiters": [
+                "<%",
+                "%>"
+            ],
+            "name": "TS_01 Create record in testing3 data service",
+            "request": {
+                "wait":20,
+                "method": "POST",
+                "url": "/c/TEST-API/testing3",
+                "headers": {
+                    "Authorization": "JWT <%loginResponse.token%>"
+                },
+                "responseCode": 200,
+                "payloadFile": "testing3RecordPayload.json",
+                "saveResponse": "testing3Record"
+            }
+        },
+        {
+            "endpoint": "1",
+            "delimiters": [
+                "<%",
+                "%>"
+            ],
+            "name": "TS_01 Create record in testing2 data service",
+            "request": {
+                "wait":50,
+                "method": "POST",
+                "url": "/c/TEST-API/testing2",
+                "headers": {
+                    "Authorization": "JWT <%loginResponse.token%>"
+                },
+                "responseCode": 200,
+                "payloadFile": "testing2RecordPayload.json",
+                "saveResponse": "testing2Record"
+            }
+        },
+        {
+            "endpoint": "1",
+            "delimiters": [
+                "<%",
+                "%>"
+            ],
+            "name": "TS_01 Create record in testing1 data service",
+            "request": {
+                "wait":100,
+                "method": "POST",
+                "url": "/c/TEST-API/testing1",
+                "headers": {
+                    "Authorization": "JWT <%loginResponse.token%>"
+                },
+                "responseCode": 200,
+                "payloadFile": "testing1RecordPayload.json",
+                "saveResponse": "testing1Record"
+            }
+        }
+    ]
+}

@@ -1,0 +1,188 @@
+{
+    "testName": "01::Delete data service groups",
+    "url": ["https://bifrost.ds.appveen.com/api"],
+    "globals": [
+    	"loginResponse"
+    ],
+    "tests": [
+    	{
+        "endpoint": "1",
+        "name": "Login",
+        "request": {
+            "method": "POST",
+            "url": "/a/rbac/login",
+            "payload": {
+                "username": "test_appadmin@appveen.com",
+                "password": "123123123"
+            },
+            "responseCode": 200,
+            "saveResponse": "loginResponse"
+        },
+        "response": {
+            "body": {
+            	"token": null
+            }
+        }
+  		},
+  		{
+        "endpoint": "1",
+        "name": "Delete Group: DS All Blocked",
+        "request": {
+            "method": "DELETE",
+            "url": "/a/rbac/group/{{dataPipe.read('00-01-Groups-DS-Create.json').ds_all_blocked._id}}",
+            "headers": {"Authorization": "JWT {{loginResponse.token}}"},
+            "responseCode": 200
+        }
+  		},
+  		{
+        "endpoint": "1",
+        "name": "Delete Group: DS Basic View",
+        "request": {
+            "method": "DELETE",
+            "url": "/a/rbac/group/{{dataPipe.read('00-01-Groups-DS-Create.json').ds_basic_view._id}}",
+            "headers": {"Authorization": "JWT {{loginResponse.token}}"},
+            "responseCode": 200
+        }
+  		},
+  		{
+        "endpoint": "1",
+        "name": "Delete Group: DS Basic Manage",
+        "request": {
+            "method": "DELETE",
+            "url": "/a/rbac/group/{{dataPipe.read('00-01-Groups-DS-Create.json').ds_basic_manage._id}}",
+            "headers": {"Authorization": "JWT {{loginResponse.token}}"},
+            "responseCode": 200
+        }
+  		},
+  		{
+        "endpoint": "1",
+        "name": "Delete Group: DS Deployment Manage",
+        "request": {
+            "method": "DELETE",
+            "url": "/a/rbac/group/{{dataPipe.read('00-01-Groups-DS-Create.json').ds_deployment_manage._id}}",
+            "headers": {"Authorization": "JWT {{loginResponse.token}}"},
+            "responseCode": 200
+        }
+  		},
+  		{
+        "endpoint": "1",
+        "name": "Delete Group: DS Start Stop Manage",
+        "request": {
+            "method": "DELETE",
+            "url": "/a/rbac/group/{{dataPipe.read('00-01-Groups-DS-Create.json').ds_start_stop_manage._id}}",
+            "headers": {"Authorization": "JWT {{loginResponse.token}}"},
+            "responseCode": 200
+        }
+  		},
+  		{
+        "endpoint": "1",
+        "name": "Delete Group: DS Design View",
+        "request": {
+            "method": "DELETE",
+            "url": "/a/rbac/group/{{dataPipe.read('00-01-Groups-DS-Create.json').ds_design_view._id}}",
+            "headers": {"Authorization": "JWT {{loginResponse.token}}"},
+            "responseCode": 200
+        }
+  		},
+  		{
+        "endpoint": "1",
+        "name": "Delete Group: DS Design Manage",
+        "request": {
+            "method": "DELETE",
+            "url": "/a/rbac/group/{{dataPipe.read('00-01-Groups-DS-Create.json').ds_design_manage._id}}",
+            "headers": {"Authorization": "JWT {{loginResponse.token}}"},
+            "responseCode": 200
+        }
+  		},
+  		{
+        "endpoint": "1",
+        "name": "Delete Group: DS Integration View",
+        "request": {
+            "method": "DELETE",
+            "url": "/a/rbac/group/{{dataPipe.read('00-01-Groups-DS-Create.json').ds_integration_view._id}}",
+            "headers": {"Authorization": "JWT {{loginResponse.token}}"},
+            "responseCode": 200
+        }
+  		},
+  		{
+        "endpoint": "1",
+        "name": "Delete Group: DS Integration Manage",
+        "request": {
+            "method": "DELETE",
+            "url": "/a/rbac/group/{{dataPipe.read('00-01-Groups-DS-Create.json').ds_integration_manage._id}}",
+            "headers": {"Authorization": "JWT {{loginResponse.token}}"},
+            "responseCode": 200
+        }
+  		},
+  		{
+        "endpoint": "1",
+        "name": "Delete Group: DS Experience View",
+        "request": {
+            "method": "DELETE",
+            "url": "/a/rbac/group/{{dataPipe.read('00-01-Groups-DS-Create.json').ds_experience_view._id}}",
+            "headers": {"Authorization": "JWT {{loginResponse.token}}"},
+            "responseCode": 200
+        }
+  		},
+  		{
+        "endpoint": "1",
+        "name": "Delete Group: DS Experience Manage",
+        "request": {
+            "method": "DELETE",
+            "url": "/a/rbac/group/{{dataPipe.read('00-01-Groups-DS-Create.json').ds_experience_manage._id}}",
+            "headers": {"Authorization": "JWT {{loginResponse.token}}"},
+            "responseCode": 200
+        }
+  		},
+  		{
+        "endpoint": "1",
+        "name": "Delete Group: DS Role View",
+        "request": {
+            "method": "DELETE",
+            "url": "/a/rbac/group/{{dataPipe.read('00-01-Groups-DS-Create.json').ds_role_view._id}}",
+            "headers": {"Authorization": "JWT {{loginResponse.token}}"},
+            "responseCode": 200
+        }
+  		},
+  		{
+        "endpoint": "1",
+        "name": "Delete Group: DS Role Manage",
+        "request": {
+            "method": "DELETE",
+            "url": "/a/rbac/group/{{dataPipe.read('00-01-Groups-DS-Create.json').ds_role_manage._id}}",
+            "headers": {"Authorization": "JWT {{loginResponse.token}}"},
+            "responseCode": 200
+        }
+  		},
+  		{
+        "endpoint": "1",
+        "name": "Delete Group: DS Settings View",
+        "request": {
+            "method": "DELETE",
+            "url": "/a/rbac/group/{{dataPipe.read('00-01-Groups-DS-Create.json').ds_settings_view._id}}",
+            "headers": {"Authorization": "JWT {{loginResponse.token}}"},
+            "responseCode": 200
+        }
+  		},
+  		{
+        "endpoint": "1",
+        "name": "Delete Group: DS Settings Manage",
+        "request": {
+            "method": "DELETE",
+            "url": "/a/rbac/group/{{dataPipe.read('00-01-Groups-DS-Create.json').ds_settings_manage._id}}",
+            "headers": {"Authorization": "JWT {{loginResponse.token}}"},
+            "responseCode": 200
+        }
+  		},
+  		{
+        "endpoint": "1",
+        "name": "Delete Group: DS Audit View",
+        "request": {
+            "method": "DELETE",
+            "url": "/a/rbac/group/{{dataPipe.read('00-01-Groups-DS-Create.json').ds_audit_view._id}}",
+            "headers": {"Authorization": "JWT {{loginResponse.token}}"},
+            "responseCode": 200
+        }
+  		}
+  	]
+}

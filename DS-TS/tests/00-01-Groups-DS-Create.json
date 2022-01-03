@@ -1,0 +1,310 @@
+{
+  "testName": "00::Groups for data service users",
+  "url": ["https://bifrost.ds.appveen.com/api"],
+  "globals": [
+  	"loginResponse",
+  	"ds_all_blocked",
+  	"ds_basic_view",
+  	"ds_basic_manage",
+  	"ds_deployment_manage",
+  	"ds_start_stop_manage",
+  	"ds_design_view",
+  	"ds_design_manage",
+  	"ds_integration_view",
+  	"ds_integration_manage",
+  	"ds_experience_view",
+  	"ds_experience_manage",
+  	"ds_role_view",
+  	"ds_role_manage",
+  	"ds_settings_view",
+  	"ds_settings_manage",
+  	"ds_audit_view"
+  ],
+  "tests": [
+  	{
+      "endpoint": "1",
+      "name": "Login",
+      "request": {"method": "POST","url": "/a/rbac/login","payload": {"username": "test_appadmin@appveen.com","password": "123123123"},"responseCode": 200,"saveResponse": "loginResponse"},
+      "response": {"body": {"token": null}}
+		},
+		{
+      "endpoint": "1",
+      "delimiters":["<%", "%>"],
+      "name": "Create Group: DS All Blocked",
+      "request": {
+        "method": "POST", "url": "/a/rbac/group",
+        "headers": {"Authorization": "JWT <%loginResponse.token%>"},
+        "responseCode": 200,
+        "payload": {"name":"DS All Blocked","app":"TEST-API", "users":["test_ds_all_blocked@appveen.com"]},
+        "saveResponse": "ds_all_blocked"
+      },
+      "response": {"body": {"name":"DS All Blocked","app":"TEST-API"}}
+		},
+		{
+      "endpoint": "1",
+      "delimiters":["<%", "%>"],
+      "name": "Create Group: DS Basic View",
+      "request": {
+        "method": "POST", "url": "/a/rbac/group",
+        "headers": {"Authorization": "JWT <%loginResponse.token%>"},
+        "responseCode": 200,
+        "payload": {"name":"DS Basic View","app":"TEST-API", "users":["test_ds_basic_view@appveen.com"], "roles": [
+        	{"id": "PVDSB", "app": "TEST-API", "entity": "SM", "type": "author"}
+        ]},
+        "saveResponse": "ds_basic_view"
+      },
+      "response": {"body": {"name":"DS Basic View","app":"TEST-API"}}
+		},
+		{
+      "endpoint": "1",
+      "delimiters":["<%", "%>"],
+      "name": "Create Group: DS Basic Manage",
+      "request": {
+        "method": "POST", "url": "/a/rbac/group",
+        "headers": {"Authorization": "JWT <%loginResponse.token%>"},
+        "responseCode": 200,
+        "payload": {"name":"DS Basic Manage","app":"TEST-API", "users":["test_ds_basic_manage@appveen.com"], "roles": [
+        	{"id": "PMDSBC", "app": "TEST-API", "entity": "SM", "type": "author"},
+        	{"id": "PMDSBU", "app": "TEST-API", "entity": "SM", "type": "author"},
+        	{"id": "PMDSBD", "app": "TEST-API", "entity": "SM", "type": "author"}
+        ]},
+        "saveResponse": "ds_basic_manage"
+      },
+      "response": {"body": {"name":"DS Basic Manage","app":"TEST-API"}}
+		},
+		{
+      "endpoint": "1",
+      "delimiters":["<%", "%>"],
+      "name": "Create Group: DS Deployment Manage",
+      "request": {
+        "method": "POST", "url": "/a/rbac/group",
+        "headers": {"Authorization": "JWT <%loginResponse.token%>"},
+        "responseCode": 200,
+        "payload": {"name":"DS Deployment Manage","app":"TEST-API", "users":["test_ds_deployment_manage@appveen.com"], "roles": [
+        	{"id": "PVDSB", "app": "TEST-API", "entity": "SM", "type": "author"},
+        	{"id": "PMDSPD", "app": "TEST-API", "entity": "SM", "type": "author"}
+        ]},
+        "saveResponse": "ds_deployment_manage"
+      },
+      "response": {"body": {"name":"DS Deployment Manage","app":"TEST-API"}}
+		},
+		{
+      "endpoint": "1",
+      "delimiters":["<%", "%>"],
+      "name": "Create Group: DS Start Stop Manage",
+      "request": {
+        "method": "POST", "url": "/a/rbac/group",
+        "headers": {"Authorization": "JWT <%loginResponse.token%>"},
+        "responseCode": 200,
+        "payload": {"name":"DS Start Stop Manage","app":"TEST-API", "users":["test_ds_start_stop_manage@appveen.com"], "roles": [
+        	{"id": "PVDSB", "app": "TEST-API", "entity": "SM", "type": "author"},
+        	{"id": "PMDSPS", "app": "TEST-API", "entity": "SM", "type": "author"}
+        ]},
+        "saveResponse": "ds_start_stop_manage"
+      },
+      "response": {"body": {"name":"DS Start Stop Manage","app":"TEST-API"}}
+		},
+		{
+      "endpoint": "1",
+      "delimiters":["<%", "%>"],
+      "name": "Create Group: DS Design View",
+      "request": {
+        "method": "POST", "url": "/a/rbac/group",
+        "headers": {"Authorization": "JWT <%loginResponse.token%>"},
+        "responseCode": 200,
+        "payload": {"name":"DS Design View","app":"TEST-API", "users":["test_ds_design_view@appveen.com"], "roles": [
+        	{"id": "PVDSB", "app": "TEST-API", "entity": "SM", "type": "author"},
+        	{"id": "PVDSD", "app": "TEST-API", "entity": "SM", "type": "author"}
+        ]},
+        "saveResponse": "ds_design_view"
+      },
+      "response": {"body": {"name":"DS Design View","app":"TEST-API"}}
+		},
+		{
+      "endpoint": "1",
+      "delimiters":["<%", "%>"],
+      "name": "Create Group: DS Design Manage",
+      "request": {
+        "method": "POST", "url": "/a/rbac/group",
+        "headers": {"Authorization": "JWT <%loginResponse.token%>"},
+        "responseCode": 200,
+        "payload": {"name":"DS Design Manage","app":"TEST-API", "users":["test_ds_design_manage@appveen.com"], "roles": [
+        	{"id": "PVDSB", "app": "TEST-API", "entity": "SM", "type": "author"},
+        	{"id": "PMDSD", "app": "TEST-API", "entity": "SM", "type": "author"}
+        ]},
+        "saveResponse": "ds_design_manage"
+      },
+      "response": {"body": {"name":"DS Design Manage","app":"TEST-API"}}
+		},
+		{
+      "endpoint": "1",
+      "delimiters":["<%", "%>"],
+      "name": "Create Group: DS Integration View",
+      "request": {
+        "method": "POST", "url": "/a/rbac/group",
+        "headers": {"Authorization": "JWT <%loginResponse.token%>"},
+        "responseCode": 200,
+        "payload": {"name":"DS Integration View","app":"TEST-API", "users":["test_ds_integration_view@appveen.com"], "roles": [
+        	{"id": "PVDSB", "app": "TEST-API", "entity": "SM", "type": "author"},
+        	{"id": "PVDSIDPR", "app": "TEST-API", "entity": "SM", "type": "author"},
+        	{"id": "PVDSIDPO", "app": "TEST-API", "entity": "SM", "type": "author"},
+        	{"id": "PVDSIRSU", "app": "TEST-API", "entity": "SM", "type": "author"},
+        	{"id": "PVDSIRAP", "app": "TEST-API", "entity": "SM", "type": "author"},
+        	{"id": "PVDSIRRJ", "app": "TEST-API", "entity": "SM", "type": "author"},
+        	{"id": "PVDSIRDI", "app": "TEST-API", "entity": "SM", "type": "author"},
+        	{"id": "PVDSIRRW", "app": "TEST-API", "entity": "SM", "type": "author"}
+        ]},
+        "saveResponse": "ds_integration_view"
+      },
+      "response": {"body": {"name":"DS Integration View","app":"TEST-API"}}
+		},
+		{
+      "endpoint": "1",
+      "delimiters":["<%", "%>"],
+      "name": "Create Group: DS Integration Manage",
+      "request": {
+        "method": "POST", "url": "/a/rbac/group",
+        "headers": {"Authorization": "JWT <%loginResponse.token%>"},
+        "responseCode": 200,
+        "payload": {"name":"DS Integration Manage","app":"TEST-API", "users":["test_ds_integration_manage@appveen.com"], "roles": [
+        	{"id": "PVDSB", "app": "TEST-API", "entity": "SM", "type": "author"},
+        	{"id": "PMDSIDPR", "app": "TEST-API", "entity": "SM", "type": "author"},
+        	{"id": "PMDSIDPO", "app": "TEST-API", "entity": "SM", "type": "author"},
+        	{"id": "PMDSIRSU", "app": "TEST-API", "entity": "SM", "type": "author"},
+        	{"id": "PMDSIRAP", "app": "TEST-API", "entity": "SM", "type": "author"},
+        	{"id": "PMDSIRRJ", "app": "TEST-API", "entity": "SM", "type": "author"},
+        	{"id": "PMDSIRDI", "app": "TEST-API", "entity": "SM", "type": "author"},
+        	{"id": "PMDSIRRW", "app": "TEST-API", "entity": "SM", "type": "author"}
+        ]},
+        "saveResponse": "ds_integration_manage"
+      },
+      "response": {"body": {"name":"DS Integration Manage","app":"TEST-API"}}
+		},
+		{
+      "endpoint": "1",
+      "delimiters":["<%", "%>"],
+      "name": "Create Group: DS Experience View",
+      "request": {
+        "method": "POST", "url": "/a/rbac/group",
+        "headers": {"Authorization": "JWT <%loginResponse.token%>"},
+        "responseCode": 200,
+        "payload": {"name":"DS Experience View","app":"TEST-API", "users":["test_ds_experience_view@appveen.com"], "roles": [
+        	{"id": "PVDSB", "app": "TEST-API", "entity": "SM", "type": "author"},
+        	{"id": "PVDSE", "app": "TEST-API", "entity": "SM", "type": "author"}
+        ]},
+        "saveResponse": "ds_experience_view"
+      },
+      "response": {"body": {"name":"DS Experience View","app":"TEST-API"}}
+		},
+		{
+      "endpoint": "1",
+      "delimiters":["<%", "%>"],
+      "name": "Create Group: DS Experience Manage",
+      "request": {
+        "method": "POST", "url": "/a/rbac/group",
+        "headers": {"Authorization": "JWT <%loginResponse.token%>"},
+        "responseCode": 200,
+        "payload": {"name":"DS Experience Manage","app":"TEST-API", "users":["test_ds_experience_manage@appveen.com"], "roles": [
+        	{"id": "PVDSB", "app": "TEST-API", "entity": "SM", "type": "author"},
+        	{"id": "PMDSE", "app": "TEST-API", "entity": "SM", "type": "author"}
+        ]},
+        "saveResponse": "ds_experience_manage"
+      },
+      "response": {"body": {"name":"DS Experience Manage","app":"TEST-API"}}
+		},
+		{
+      "endpoint": "1",
+      "delimiters":["<%", "%>"],
+      "name": "Create Group: DS Role View",
+      "request": {
+        "method": "POST", "url": "/a/rbac/group",
+        "headers": {"Authorization": "JWT <%loginResponse.token%>"},
+        "responseCode": 200,
+        "payload": {"name":"DS Role View","app":"TEST-API", "users":["test_ds_role_view@appveen.com"], "roles": [
+        	{"id": "PVDSB", "app": "TEST-API", "entity": "SM", "type": "author"},
+        	{"id": "PVDSR", "app": "TEST-API", "entity": "SM", "type": "author"}
+        ]},
+        "saveResponse": "ds_role_view"
+      },
+      "response": {"body": {"name":"DS Role View","app":"TEST-API"}}
+		},
+		{
+      "endpoint": "1",
+      "delimiters":["<%", "%>"],
+      "name": "Create Group: DS Role Manage",
+      "request": {
+        "method": "POST", "url": "/a/rbac/group",
+        "headers": {"Authorization": "JWT <%loginResponse.token%>"},
+        "responseCode": 200,
+        "payload": {"name":"DS Role Manage","app":"TEST-API", "users":["test_ds_role_manage@appveen.com"], "roles": [
+        	{"id": "PVDSB", "app": "TEST-API", "entity": "SM", "type": "author"},
+        	{"id": "PMDSR", "app": "TEST-API", "entity": "SM", "type": "author"}
+        ]},
+        "saveResponse": "ds_role_manage"
+      },
+      "response": {"body": {"name":"DS Role Manage","app":"TEST-API"}}
+		},
+		{
+      "endpoint": "1",
+      "delimiters":["<%", "%>"],
+      "name": "Create Group: DS Settings View",
+      "request": {
+        "method": "POST", "url": "/a/rbac/group",
+        "headers": {"Authorization": "JWT <%loginResponse.token%>"},
+        "responseCode": 200,
+        "payload": {"name":"DS Settings View","app":"TEST-API", "users":["test_ds_settings_view@appveen.com"], "roles": [
+        	{"id": "PVDSB", "app": "TEST-API", "entity": "SM", "type": "author"},
+        	{"id": "PVDSSDH", "app": "TEST-API", "entity": "SM", "type": "author"},
+        	{"id": "PVDSSPD", "app": "TEST-API", "entity": "SM", "type": "author"},
+        	{"id": "PVDSSEP", "app": "TEST-API", "entity": "SM", "type": "author"},
+        	{"id": "PVDSSFS", "app": "TEST-API", "entity": "SM", "type": "author"},
+        	{"id": "PVDSSPR", "app": "TEST-API", "entity": "SM", "type": "author"},
+        	{"id": "PVDSSRE", "app": "TEST-API", "entity": "SM", "type": "author"}
+        ]},
+        "saveResponse": "ds_settings_view"
+      },
+      "response": {"body": {"name":"DS Settings View","app":"TEST-API"}}
+		},
+		{
+      "endpoint": "1",
+      "delimiters":["<%", "%>"],
+      "name": "Create Group: DS Settings Manage",
+      "request": {
+        "method": "POST", "url": "/a/rbac/group",
+        "headers": {"Authorization": "JWT <%loginResponse.token%>"},
+        "responseCode": 200,
+        "payload": {"name":"DS Settings Manage","app":"TEST-API", "users":["test_ds_settings_manage@appveen.com"], "roles": [
+        	{"id": "PVDSB", "app": "TEST-API", "entity": "SM", "type": "author"},
+        	{"id": "PMDSSDH", "app": "TEST-API", "entity": "SM", "type": "author"},
+        	{"id": "PMDSSPD", "app": "TEST-API", "entity": "SM", "type": "author"},
+        	{"id": "PMDSSEP", "app": "TEST-API", "entity": "SM", "type": "author"},
+        	{"id": "PMDSSFS", "app": "TEST-API", "entity": "SM", "type": "author"},
+        	{"id": "PMDSSPR", "app": "TEST-API", "entity": "SM", "type": "author"},
+        	{"id": "PMDSSRE", "app": "TEST-API", "entity": "SM", "type": "author"}
+        ]},
+        "saveResponse": "ds_settings_manage"
+      },
+      "response": {"body": {"name":"DS Settings Manage","app":"TEST-API"}}
+		},
+		{
+      "endpoint": "1",
+      "delimiters":["<%", "%>"],
+      "name": "Create Group: DS Audit View",
+      "request": {
+        "method": "POST", "url": "/a/rbac/group",
+        "headers": {"Authorization": "JWT <%loginResponse.token%>"},
+        "responseCode": 200,
+        "payload": {"name":"DS Audit View","app":"TEST-API", "users":["test_ds_audit_view@appveen.com"], "roles": [
+        	{"id": "PVDSB", "app": "TEST-API", "entity": "SM", "type": "author"},
+        	{"id": "PVDSAAP", "app": "TEST-API", "entity": "SM", "type": "author"},
+        	{"id": "PVDSASR", "app": "TEST-API", "entity": "SM", "type": "author"},
+        	{"id": "PVDSAPO", "app": "TEST-API", "entity": "SM", "type": "author"},
+        	{"id": "PVDSASR", "app": "TEST-API", "entity": "SM", "type": "author"},
+        	{"id": "PVDSAPR", "app": "TEST-API", "entity": "SM", "type": "author"}
+        ]},
+        "saveResponse": "ds_audit_view"
+      },
+      "response": {"body": {"name":"DS Audit View","app":"TEST-API"}}
+		}
+	]
+}

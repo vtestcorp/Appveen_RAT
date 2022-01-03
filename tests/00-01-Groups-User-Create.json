@@ -1,0 +1,136 @@
+{
+  "testName": "00::Groups for User management",
+  "url": [
+    "https://bifrost.ds.appveen.com/api"
+  ],
+  "globals": [
+    "loginResponse",
+    "user_all_blocked",
+		"user_info_view",
+		"user_info_manage",
+		"user_session_manage",
+		"user_group_manage"
+  ],
+  "tests": [
+    {
+      "endpoint": "1",
+      "name": "Login",
+      "request": {
+        "method": "POST",
+        "url": "/a/rbac/login",
+        "payload": {
+          "username": "test_appadmin@appveen.com",
+          "password": "123123123"
+        },
+        "responseCode": 200,
+        "saveResponse": "loginResponse"
+      },
+      "response": {
+        "body": {
+          "token": null
+        }
+      }
+    },
+    {
+      "endpoint": "1",
+      "delimiters": ["<%","%>"],
+      "name": "Create Group: User All Blocked",
+      "request": {
+        "method": "POST",
+        "url": "/a/rbac/group",
+        "headers": {"Authorization": "JWT <%loginResponse.token%>"},
+        "responseCode": 200,
+        "payload": {
+        	"name": "User All Blocked", "app": "TEST-API", "users": ["test_user_all_blocked@appveen.com"]
+        },
+        "saveResponse": "user_all_blocked"
+      },
+      "response": {"body": {"name": "User All Blocked","app": "TEST-API"}}
+    },
+    {
+      
+      "endpoint": "1",
+      "delimiters": ["<%","%>"],
+      "name": "Create Group: User Info View",
+      "request": {
+        "method": "POST",
+        "url": "/a/rbac/group",
+        "headers": {"Authorization": "JWT <%loginResponse.token%>"},
+        "responseCode": 200,
+        "payload": {
+          "name": "User Info View", "app": "TEST-API",
+          "users": ["test_user_info_view@appveen.com"],
+          "roles": [
+            {"id": "PVUB", "app": "TEST-API", "entity": "USER", "type": "author"}
+          ]
+        },
+        "saveResponse": "user_info_view"
+      },
+      "response": {"body": {"name": "User Info View","app": "TEST-API"}}
+    },
+    {
+      "endpoint": "1",
+      "delimiters": [ "<%", "%>" ],
+      "name": "Create Group: User Info Manage",
+      "request": {
+        "method": "POST",
+        "url": "/a/rbac/group",
+        "headers": {"Authorization": "JWT <%loginResponse.token%>"},
+        "responseCode": 200,
+        "payload": {
+          "name": "User Info Manage", "app": "TEST-API",
+          "users": ["test_user_info_manage@appveen.com"],
+          "roles": [
+          	{"id": "PMUBC", "app": "TEST-API", "entity": "USER", "type": "author"},
+          	{"id": "PMUBU", "app": "TEST-API", "entity": "USER", "type": "author"},
+          	{"id": "PMUBD", "app": "TEST-API", "entity": "USER", "type": "author"}
+          ]
+        },
+        "saveResponse": "user_info_manage"
+      },
+      "response": {"body": {"name": "User Info Manage","app": "TEST-API"}}
+    },
+    {
+      "endpoint": "1",
+      "delimiters": [ "<%", "%>" ],
+      "name": "Create Group: User Session Manage",
+      "request": {
+        "method": "POST",
+        "url": "/a/rbac/group",
+        "headers": {"Authorization": "JWT <%loginResponse.token%>"},
+        "responseCode": 200,
+        "payload": {
+          "name": "User Session Manage", "app": "TEST-API",
+          "users": ["test_user_session_manage@appveen.com"],
+          "roles": [
+          	{"id": "PVUB", "app": "TEST-API", "entity": "USER", "type": "author"},
+          	{"id": "PMUA", "app": "TEST-API", "entity": "USER", "type": "author"}
+          ]
+        },
+        "saveResponse": "user_session_manage"
+      },
+      "response": {"body": {"name": "User Session Manage","app": "TEST-API"}}
+    },
+    {
+      "endpoint": "1",
+      "delimiters": [ "<%", "%>" ],
+      "name": "Create Group: User Group Manage",
+      "request": {
+        "method": "POST",
+        "url": "/a/rbac/group",
+        "headers": {"Authorization": "JWT <%loginResponse.token%>"},
+        "responseCode": 200,
+        "payload": {
+          "name": "User Group Manage", "app": "TEST-API",
+          "users": ["test_user_group_manage@appveen.com"],
+          "roles": [
+          	{"id": "PVUB", "app": "TEST-API", "entity": "USER", "type": "author"},
+          	{"id": "PMUG", "app": "TEST-API", "entity": "USER", "type": "author"}
+          ]
+        },
+        "saveResponse": "user_group_manage"
+      },
+      "response": {"body": {"name": "User Group Manage","app": "TEST-API"}}
+    }
+  ]
+}

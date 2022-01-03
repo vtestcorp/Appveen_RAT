@@ -1,0 +1,64 @@
+{
+    "testName": "Create a Data Service with attributes of type Boolean ",
+    "url": [
+        "https://bifrost.ds.appveen.com/api"
+    ],
+    "modules": [],
+    "globals": ["loginResponse", "dataServiceResponse","DS_FILE"],
+    "tests": [{
+            "endpoint": "1",
+            "name": "Login as superAdmin",
+            "request": {
+                "method": "POST",
+                "url": "/a/rbac/login",
+                "payload": {"username":"admin","password":"u?5k167v13w5"},
+                "wait": 5,
+                "responseCode": 200,
+                "saveResponse": "loginResponse"
+            }
+        },
+        {
+            "endpoint": "1",
+            "name": "Create a DS DS_FILE",
+            "request": {
+                "method": "POST",
+                "url": "/a/sm/service",
+                "payload": {"name": "DS_FILE", "description": null, "app": "harshi"},
+                "headers": {
+                    "Authorization": "JWT {{loginResponse.token}}",
+                    "content-type": "application/json"
+                },
+                "wait": 10,
+                "responseCode": 200,
+                "saveResponse": "DS_FILE"
+            }
+        },
+        {
+            "endpoint": "1",
+            "name": "Create Design for DS_FILE",
+            "request": {
+                "method": "PUT",
+                "url": "/a/sm/service/{{DS_FILE._id}}",
+                "payloadFile": "ds_file_payload.json",
+                "headers": {
+                    "Authorization": "JWT {{loginResponse.token}}",
+                    "content-type": "application/json"
+                },
+                "wait": 10,
+                "responseCode": 200
+            }
+        },{
+            "endpoint": "1",
+            "name": "Deploy DS_FILE",
+            "request": {
+                "method": "PUT",
+                "url": "/a/sm/{{DS_FILE._id}}/deploy",
+                "headers": {
+                    "Authorization": "JWT {{loginResponse.token}}",
+                    "content-type": "application/json"
+                },
+                "wait": 10,
+                "responseCode": 202
+            }
+        }
+    ]}

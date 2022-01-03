@@ -1,0 +1,312 @@
+{
+    "testName": "Create a Data Service with attributes of type String ",
+    "url": [
+        "https://bifrost.ds.appveen.com/api"
+    ],
+    "modules": [],
+    "globals": ["loginResponse", "dataServiceResponse","DS_STRING_TEXT","DS_STRING_LONG_TEXT","DS_STRING_RICH_TEXT","DS_STRING_SECURE_TEXT", "DS_STRING_EMAIL","DS_STRING_LIST_OF_VALUES"],
+    "tests": [{
+            "endpoint": "1",
+            "name": "Login as superAdmin",
+            "request": {
+                "method": "POST",
+                "url": "/a/rbac/login",
+                "payload": {"username":"admin","password":"u?5k167v13w5"},
+                "wait": 5,
+                "responseCode": 200,
+                "saveResponse": "loginResponse"
+            }
+        }, {
+            "endpoint": "1",
+            "name": "Create an app",
+            "request": {
+                "method": "POST",
+                "url": "/a/rbac/app",
+                "payload": {
+                    "_id": "harshi"
+                },
+                "headers": {
+                    "Authorization": "JWT {{loginResponse.token}}",
+                    "content-type": "application/json"
+                },
+                "wait": 10,
+                "responseCode": 200
+            }
+        } ,
+        {
+            "endpoint": "1",
+            "name": "Create a DS TEST-String",
+            "request": {
+                "method": "POST",
+                "url": "/a/sm/service",
+                "payload": {"name": "TEST-String", "description": null, "app": "harshi"},
+                "headers": {
+                    "Authorization": "JWT {{loginResponse.token}}",
+                    "content-type": "application/json"
+                },
+                "wait": 10,
+                "responseCode": 200,
+                "saveResponse": "DS_STRING_TEXT"
+            }
+        },
+        {
+            "endpoint": "1",
+            "name": "Create Design for DS-STRING-TEXT",
+            "request": {
+                "method": "PUT",
+                "url": "/a/sm/service/{{DS_STRING_TEXT._id}}",
+                "payloadFile": "ds_string_text_payload.json",
+                "headers": {
+                    "Authorization": "JWT {{loginResponse.token}}",
+                    "content-type": "application/json"
+                },
+                "wait": 10,
+                "responseCode": 200
+            }
+        },{
+            "endpoint": "1",
+            "name": "Deploy DS-STRING-TEXT",
+            "request": {
+                "method": "PUT",
+                "url": "/a/sm/{{DS_STRING_TEXT._id}}/deploy",
+                "headers": {
+                    "Authorization": "JWT {{loginResponse.token}}",
+                    "content-type": "application/json"
+                },
+                "wait": 10,
+                "responseCode": 202
+            }
+        },
+
+        {
+            "endpoint": "1",
+            "name": "Create a DS TEST-LONG-String",
+            "request": {
+                "method": "POST",
+                "url": "/a/sm/service",
+                "payload": {"name": "DS-STRING-LONG-TEXT", "description": null, "app": "harshi"},
+                "headers": {
+                    "Authorization": "JWT {{loginResponse.token}}",
+                    "content-type": "application/json"
+                },
+                "wait": 10,
+                "responseCode": 200,
+                "saveResponse": "DS_STRING_LONG_TEXT"
+            }
+        },
+        {
+            "endpoint": "1",
+            "name": "Create Design for DS-STRING-LONG-TEXT",
+            "request": {
+                "method": "PUT",
+                "url": "/a/sm/service/{{DS_STRING_LONG_TEXT._id}}",
+                "payloadFile": "ds_string_long_text_payload.json",
+                "headers": {
+                    "Authorization": "JWT {{loginResponse.token}}",
+                    "content-type": "application/json"
+                },
+                "wait": 10,
+                "responseCode": 200
+            }
+        },
+        {
+            "endpoint": "1",
+            "name": "Deploy DS-STRING-LONG-TEXT",
+            "request": {
+                "method": "PUT",
+                "url": "/a/sm/{{DS_STRING_LONG_TEXT._id}}/deploy",
+                "headers": {
+                    "Authorization": "JWT {{loginResponse.token}}",
+                    "content-type": "application/json"
+                },
+                "wait": 10,
+                "responseCode": 202
+            }
+        },
+        {
+            "endpoint": "1",
+            "name": "Create a DS_STRING_RICH_TEXT",
+            "request": {
+                "method": "POST",
+                "url": "/a/sm/service",
+                "payload": {"name": "DS-STRING-RICH-TEXT", "description": null, "app": "harshi"},
+                "headers": {
+                    "Authorization": "JWT {{loginResponse.token}}",
+                    "content-type": "application/json"
+                },
+                "wait": 10,
+                "responseCode": 200,
+                "saveResponse": "DS_STRING_RICH_TEXT"
+            }
+        },
+        {
+            "endpoint": "1",
+            "name": "Create Design for DS_STRING_RICH_TEXT",
+            "request": {
+                "method": "PUT",
+                "url": "/a/sm/service/{{DS_STRING_RICH_TEXT._id}}",
+                "payloadFile": "ds_string_rich_text_payload.json",
+                "headers": {
+                    "Authorization": "JWT {{loginResponse.token}}",
+                    "content-type": "application/json"
+                },
+                "wait": 10,
+                "responseCode": 200
+            }
+        },
+        {
+            "endpoint": "1",
+            "name": "Deploy DS_STRING_RICH_TEXT",
+            "request": {
+                "method": "PUT",
+                "url": "/a/sm/{{DS_STRING_RICH_TEXT._id}}/deploy",
+                "headers": {
+                    "Authorization": "JWT {{loginResponse.token}}",
+                    "content-type": "application/json"
+                },
+                "wait": 10,
+                "responseCode": 202
+            }
+        },
+        {
+            "endpoint": "1",
+            "name": "Create a DS_STRING_SECURE_TEXT",
+            "request": {
+                "method": "POST",
+                "url": "/a/sm/service",
+                "payload": {"name": "DS-STRING-SECURE-TEXT", "description": null, "app": "harshi"},
+                "headers": {
+                    "Authorization": "JWT {{loginResponse.token}}",
+                    "content-type": "application/json"
+                },
+                "wait": 10,
+                "responseCode": 200,
+                "saveResponse": "DS_STRING_SECURE_TEXT"
+            }
+        },
+        {
+            "endpoint": "1",
+            "name": "Create Design for DS_STRING_SECURE_TEXT",
+            "request": {
+                "method": "PUT",
+                "url": "/a/sm/service/{{DS_STRING_SECURE_TEXT._id}}",
+                "payloadFile": "ds_string_secure_text_payload.json",
+                "headers": {
+                    "Authorization": "JWT {{loginResponse.token}}",
+                    "content-type": "application/json"
+                },
+                "wait": 10,
+                "responseCode": 200
+            }
+        },
+        {
+            "endpoint": "1",
+            "name": "Deploy DS_STRING_SECURE_TEXT",
+            "request": {
+                "method": "PUT",
+                "url": "/a/sm/{{DS_STRING_SECURE_TEXT._id}}/deploy",
+                "headers": {
+                    "Authorization": "JWT {{loginResponse.token}}",
+                    "content-type": "application/json"
+                },
+                "wait": 10,
+                "responseCode": 202
+            }
+        },
+
+        {
+            "endpoint": "1",
+            "name": "Create a DS-STRING-EMAIL",
+            "request": {
+                "method": "POST",
+                "url": "/a/sm/service",
+                "payload": {"name": "DS-STRING-EMAIL", "description": null, "app": "harshi"},
+                "headers": {
+                    "Authorization": "JWT {{loginResponse.token}}",
+                    "content-type": "application/json"
+                },
+                "wait": 10,
+                "responseCode": 200,
+                "saveResponse": "DS_STRING_EMAIL"
+            }
+        },
+        {
+            "endpoint": "1",
+            "name": "Create Design for DS-STRING-EMAIL",
+            "request": {
+                "method": "PUT",
+                "url": "/a/sm/service/{{DS_STRING_EMAIL._id}}",
+                "payloadFile": "ds_string_email_text_payload.json",
+                "headers": {
+                    "Authorization": "JWT {{loginResponse.token}}",
+                    "content-type": "application/json"
+                },
+                "wait": 10,
+                "responseCode": 200
+            }
+        },
+        {
+            "endpoint": "1",
+            "name": "Deploy DS-STRING-EMAIL",
+            "request": {
+                "method": "PUT",
+                "url": "/a/sm/{{DS_STRING_EMAIL._id}}/deploy",
+                "headers": {
+                    "Authorization": "JWT {{loginResponse.token}}",
+                    "content-type": "application/json"
+                },
+                "wait": 10,
+                "responseCode": 202
+            }
+        },
+
+
+        {
+            "endpoint": "1",
+            "name": "Create a DS-STRING-LIST-OF-VALUES",
+            "request": {
+                "method": "POST",
+                "url": "/a/sm/service",
+                "payload": {"name": "DS-STRING-LIST-OF-VALUES", "description": null, "app": "harshi"},
+                "headers": {
+                    "Authorization": "JWT {{loginResponse.token}}",
+                    "content-type": "application/json"
+                },
+                "wait": 10,
+                "responseCode": 200,
+                "saveResponse": "DS_STRING_LIST_OF_VALUES"
+            }
+        },
+        {
+            "endpoint": "1",
+            "name": "Create Design for DS-STRING-LIST-OF-VALUES",
+            "request": {
+                "method": "PUT",
+                "url": "/a/sm/service/{{DS_STRING_LIST_OF_VALUES._id}}",
+                "payloadFile": "ds_string_list_text_payload.json",
+                "headers": {
+                    "Authorization": "JWT {{loginResponse.token}}",
+                    "content-type": "application/json"
+                },
+                "wait": 10,
+                "responseCode": 200
+            }
+        },
+        {
+            "endpoint": "1",
+            "name": "Deploy DS-STRING-LIST-OF-VALUES",
+            "request": {
+                "method": "PUT",
+                "url": "/a/sm/{{DS_STRING_LIST_OF_VALUES._id}}/deploy",
+                "headers": {
+                    "Authorization": "JWT {{loginResponse.token}}",
+                    "content-type": "application/json"
+                },
+                "wait": 10,
+                "responseCode": 202
+            }
+        }
+        
+
+    ]
+}

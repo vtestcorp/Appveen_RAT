@@ -1,0 +1,77 @@
+{
+    "testName": "AppCenter API Tests",
+    "url": [
+        "https://qa.ds.appveen.com/api"
+    ],
+    "modules": [
+        "sampleFunction"
+    ],
+    "globals": [
+        "loginResponse",
+        "dataServiceData",
+        "recordTest",
+        "acLoginResponse"
+    ],
+    "tests": [
+        {
+            "endpoint": "1",
+            "name": "Login - Valid as test_appadm in AC",
+            "request": {
+                "wait": 50,
+                "method": "POST",
+                "url": "/a/rbac/login",
+                "payload": {
+                    "username": "test_appadmin@appveen.com",
+                    "password": "123123123"
+                },
+                "responseCode": 200,
+                "saveResponse": "loginResponse"
+            },
+            "response": {
+                "body": {
+                    "token": "{{loginResponse.token}}"
+                }
+            }
+        },{
+            "endpoint": "1",
+            "delimiters": [
+                "<%",
+                "%>"
+            ],
+            "name": "TS_01 Create testing2 data service",
+            "request": {
+                "method": "POST",
+                "url": "/a/sm/service",
+                "headers": {
+                    "Authorization": "JWT <%loginResponse.token%>"
+                },
+                "responseCode": 200,
+                "payload": {
+                    "name":"testing2",
+                    "description": null,
+                    "app":"TEST-API"
+                },
+                "saveResponse": "secondDataService"
+            }
+        },
+        {
+            "endpoint": "1",
+            "delimiters": [
+                "<%",
+                "%>"
+            ],
+            "name": "TS_01 Edit testing2 data service",
+            "request": {
+                "wait":50,
+                "method": "PUT",
+                "url": "/a/sm/service/<%secondDataService._id%>",
+                "headers": {
+                    "Authorization": "JWT <%loginResponse.token%>"
+                },
+                "responseCode": 200,
+                "payloadFile": "ds2Payload.json",
+                "saveResponse": "secondDataService"
+            }
+        }
+    ]
+}

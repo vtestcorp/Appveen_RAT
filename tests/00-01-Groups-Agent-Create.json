@@ -1,0 +1,122 @@
+{
+    "testName": "00::Groups for Agent users",
+    "url": [
+      "https://bifrost.ds.appveen.com/api"
+    ],
+    "globals": [
+      "loginResponse",
+      "agent_all_blocked","agent_basic_view","agent_basic_manage","agent_power_manage","agent_view_password"  
+    ],
+    "tests": [
+      {
+        "endpoint": "1",
+        "name": "Login",
+        "request": {
+          "method": "POST",
+          "url": "/a/rbac/login",
+          "payload": {
+            "username": "test_appadmin@appveen.com",
+            "password": "123123123"
+          },
+          "responseCode": 200,
+          "saveResponse": "loginResponse"
+        }
+      },
+      {
+        "endpoint": "1",
+        "delimiters": ["<%","%>"],
+        "name": "Create Group: Agent All Blocked",
+        "request": {
+          "method": "POST",
+          "url": "/a/rbac/group",
+          "headers": {"Authorization": "JWT <%loginResponse.token%>"},
+          "responseCode": 200,
+          "payload": {
+              "name": "Agent All Blocked", "app": "TEST-API", "users": ["test_agent_all_blocked@appveen.com"]
+          },
+          "saveResponse": "agent_all_blocked"
+        }},
+      {
+        "endpoint": "1",
+        "delimiters": ["<%","%>"],
+        "name": "Create Group: Agent Basic View",
+        "request": {
+          "method": "POST",
+          "url": "/a/rbac/group",
+          "headers": {"Authorization": "JWT <%loginResponse.token%>"},
+          "responseCode": 200,
+          "payload": {
+            "name": "Agent Basic View", "app": "TEST-API",
+            "users": ["test_agent_basic_view@appveen.com"],
+            "roles": [
+              {"id": "PVAB", "app": "TEST-API", "entity": "AGENT", "type": "author"}
+              
+            ]
+          },
+          "saveResponse": "agent_basic_view"
+        }
+      },
+      {
+        "endpoint": "1",
+        "delimiters": [ "<%", "%>" ],
+        "name": "Create Group: Agent Basic Manage",
+        "request": {
+          "method": "POST",
+          "url": "/a/rbac/group",
+          "headers": {"Authorization": "JWT <%loginResponse.token%>"},
+          "responseCode": 200,
+          "payload": {
+            "name": "Agent Basic Manage", "app": "TEST-API",
+            "users": ["test_agent_basic_manage@appveen.com"],
+            "roles": [
+                {"id": "PMABC", "app": "TEST-API", "entity": "AGENT", "type": "author"},
+                {"id": "PMABU", "app": "TEST-API", "entity": "AGENT", "type": "author"},
+                {"id": "PMABD", "app": "TEST-API", "entity": "AGENT", "type": "author"}
+            ]
+          },
+          "saveResponse": "agent_basic_manage"
+        }},
+      {
+        "endpoint": "1",
+        "delimiters": [ "<%", "%>" ],
+        "name": "Create Group: Agent Power Manage",
+        "request": {
+          "method": "POST",
+          "url": "/a/rbac/group",
+          "headers": {"Authorization": "JWT <%loginResponse.token%>"},
+          "responseCode": 200,
+          "payload": {
+            "name": "Agent Power Manage", "app": "TEST-API",
+            "users": ["test_agent_power_manage@appveen.com"],
+            "roles": [
+                {"id": "PVAB", "app": "TEST-API", "entity": "AGENT", "type": "author"},
+                {"id": "PMAEN", "app": "TEST-API", "entity": "AGENT", "type": "author"},
+                {"id": "PMAS", "app": "TEST-API", "entity": "AGENT", "type": "author"},
+                {"id": "PMABD", "app": "TEST-API", "entity": "AGENT", "type": "author"},
+                {"id": "PMADL", "app": "TEST-API", "entity": "AGENT", "type": "author"},               
+                 {"id": "PMAPW", "app": "TEST-API", "entity": "AGENT", "type": "author"}
+            ]
+          },
+          "saveResponse": "agent_power_manage"
+        }},
+      {
+        "endpoint": "1",
+        "delimiters": [ "<%", "%>" ],
+        "name": "Create Group: Agent View Password",
+        "request": {
+          "method": "POST",
+          "url": "/a/rbac/group",
+          "headers": {"Authorization": "JWT <%loginResponse.token%>"},
+          "responseCode": 200,
+          "payload": {
+            "name": "Agent View Password", "app": "TEST-API",
+            "users": ["test_agent_view_password@appveen.com"],
+            "roles": [
+                {"id": "PVAB", "app": "TEST-API", "entity": "AGENT", "type": "author"},
+                {"id": "PVAPW", "app": "TEST-API", "entity": "AGENT", "type": "author"}
+            ]
+          },
+          "saveResponse": "agent_view_password"
+        }}
+    ]
+  }

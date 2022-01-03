@@ -1,0 +1,64 @@
+{
+    "testName": "Create a Library with attributes of type String ",
+    "url": [
+        "https://bifrost.ds.appveen.com/api"
+    ],
+    "modules": [],
+    "globals": ["loginResponse","LIB_STRING_TEXT","LIB_STRING_LONG_TEXT","LIB_STRING_RICH_TEXT","LIB_STRING_SECURE_TEXT", "LIB_STRING_EMAIL","LIB_STRING_LIST_OF_VALUES"],
+    "tests": [{
+            "endpoint": "1",
+            "name": "Login as superAdmin",
+            "request": {
+                "method": "POST",
+                "url": "/a/rbac/login",
+                "payload": {"username":"admin","password":"u?5k167v13w5"},
+                "wait": 5,
+                "responseCode": 200,
+                "saveResponse": "loginResponse"
+            }
+        },
+        {
+            "endpoint": "1",
+            "name": "Create a LIB TEST-String",
+            "request": {
+                "method": "POST",
+                "url": "/a/sm/globalSchema",
+                "payload": {"name": "LIB-TEST-STRING", "description": null, "app": "harshi"},
+                "headers": {
+                    "Authorization": "JWT {{loginResponse.token}}",
+                    "content-type": "application/json"
+                },
+                "wait": 10,
+                "responseCode": 200,
+                "saveResponse": "LIB_STRING_TEXT"
+            }
+        },
+        {
+            "endpoint": "1",
+            "name": "Create Design for LIB-STRING-TEXT",
+            "request": {
+                "method": "PUT",
+                "url": "/a/sm/globalSchema/{{LIB_STRING_TEXT._id}}",
+                "payloadFile": "lib_string_text_payload.json",
+                "headers": {
+                    "Authorization": "JWT {{loginResponse.token}}",
+                    "content-type": "application/json"
+                },
+                "wait": 10,
+                "responseCode": 200
+            }
+        },{
+            "endpoint": "1",
+            "name": "Deploy LIB-STRING-TEXT",
+            "request": {
+                "method": "PUT",
+                "url": "/a/sm/{{LIB_STRING_TEXT._id}}/deploy",
+                "headers": {
+                    "Authorization": "JWT {{loginResponse.token}}",
+                    "content-type": "application/json"
+                },
+                "wait": 10,
+                "responseCode": 202
+            }
+        }  ]
+}

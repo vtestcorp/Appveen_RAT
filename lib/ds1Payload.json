@@ -1,0 +1,1001 @@
+{
+    "name": "testing1",
+    "description": null,
+    "api": "/testing1",
+    "permanentDeleteData": true,
+    "allowedFileTypes": [
+        "jpeg",
+        "ppt",
+        "xls",
+        "csv",
+        "doc",
+        "jpg",
+        "png",
+        "gif",
+        "zip",
+        "tar",
+        "rar",
+        "gz",
+        "bz2",
+        "7z",
+        "mp4",
+        "mp3",
+        "pdf",
+        "ico",
+        "docx",
+        "pptx",
+        "xlsx",
+        "ods",
+        "xml",
+        "txt"
+    ],
+    "wizard": [],
+    "stateModel": {
+        "attribute": "",
+        "initialStates": [],
+        "states": {},
+        "enabled": false
+    },
+    "definition": [
+        {
+            "key": "_id",
+            "type": "String",
+            "prefix": "TES",
+            "suffix": null,
+            "padding": null,
+            "counter": 1001,
+            "properties": {
+                "label": null,
+                "readonly": false,
+                "errorMessage": null,
+                "name": "ID",
+                "required": false,
+                "fieldLength": 10,
+                "_description": null,
+                "_typeChanged": "id",
+                "_isParrentArray": null,
+                "_isGrpParentArray": null,
+                "dataPath": "_id",
+                "_detailedType": ""
+            }
+        },
+        {
+            "type": "String",
+            "key": "textVal",
+            "properties": {
+                "name": "Text_Val",
+                "fieldLength": 10,
+                "_typeChanged": "String"
+            }
+        },
+        {
+            "type": "String",
+            "key": "textReq",
+            "properties": {
+                "name": "Text_Req",
+                "required": true,
+                "fieldLength": 10,
+                "_typeChanged": "String"
+            }
+        },
+        {
+            "type": "String",
+            "key": "textCreate",
+            "properties": {
+                "name": "Text_Create",
+                "fieldLength": 10,
+                "_typeChanged": "String"
+            }
+        },
+        {
+            "type": "String",
+            "key": "textUnique",
+            "properties": {
+                "name": "Text_Unique",
+                "fieldLength": 10,
+                "_typeChanged": "String"
+            }
+        },
+        {
+            "type": "String",
+            "key": "textLong",
+            "properties": {
+                "name": "Text_Long",
+                "fieldLength": 10,
+                "_typeChanged": "String",
+                "longText": true
+            }
+        },
+        {
+            "type": "String",
+            "key": "textRich",
+            "properties": {
+                "name": "Text_Rich",
+                "fieldLength": 10,
+                "_typeChanged": "String",
+                "richText": true
+            }
+        },
+        {
+            "type": "String",
+            "key": "textEmail",
+            "properties": {
+                "name": "text_email",
+                "fieldLength": 10,
+                "_typeChanged": "String",
+                "email": true
+            }
+        },
+        {
+            "type": "String",
+            "key": "textSecure",
+            "properties": {
+                "name": "Text Secure",
+                "fieldLength": 10,
+                "_typeChanged": "String",
+                "password": true
+            }
+        },
+        {
+            "type": "String",
+            "key": "textList",
+            "properties": {
+                "name": "Text List",
+                "fieldLength": 10,
+                "_typeChanged": "String"
+            }
+        },
+        {
+            "type": "String",
+            "key": "textDef",
+            "properties": {
+                "name": "Text Def",
+                "fieldLength": 10,
+                "_typeChanged": "String"
+            }
+        },
+        {
+            "type": "Number",
+            "key": "numVal",
+            "properties": {
+                "name": "Num Val",
+                "fieldLength": 10,
+                "_typeChanged": "Number",
+                "precision": 2
+            }
+        },
+        {
+            "type": "Number",
+            "key": "numReq",
+            "properties": {
+                "name": "Num Req",
+                "required": true,
+                "fieldLength": 10,
+                "_typeChanged": "Number",
+                "precision": 2
+            }
+        },
+        {
+            "type": "Number",
+            "key": "numCreate",
+            "properties": {
+                "name": "Num Create",
+                "fieldLength": 10,
+                "_typeChanged": "Number",
+                "precision": 2
+            }
+        },
+        {
+            "type": "Number",
+            "key": "numUnique",
+            "properties": {
+                "name": "Num Unique",
+                "fieldLength": 10,
+                "_typeChanged": "Number",
+                "precision": 2
+            }
+        },
+        {
+            "type": "Number",
+            "key": "numList",
+            "properties": {
+                "name": "Num List",
+                "fieldLength": 10,
+                "_typeChanged": "Number",
+                "precision": 2
+            }
+        },
+        {
+            "type": "Number",
+            "key": "numCurrency",
+            "properties": {
+                "name": "Num Currency",
+                "fieldLength": 10,
+                "_typeChanged": "Number",
+                "currency": "INR",
+                "precision": 2
+            }
+        },
+        {
+            "type": "Number",
+            "key": "numDef",
+            "properties": {
+                "name": "Num Def",
+                "fieldLength": 10,
+                "_typeChanged": "Number",
+                "precision": 2
+            }
+        },
+        {
+            "type": "Boolean",
+            "key": "boolVal",
+            "properties": {
+                "name": "Bool Val",
+                "fieldLength": 10,
+                "_typeChanged": "Boolean"
+            }
+        },
+        {
+            "type": "Boolean",
+            "key": "boolReq",
+            "properties": {
+                "name": "Bool Req",
+                "required": true,
+                "fieldLength": 10,
+                "_typeChanged": "Boolean"
+            }
+        },
+        {
+            "type": "Boolean",
+            "key": "boolCreate",
+            "properties": {
+                "name": "Bool Create",
+                "fieldLength": 10,
+                "_typeChanged": "Boolean"
+            }
+        },
+        {
+            "type": "Boolean",
+            "key": "boolDef",
+            "properties": {
+                "name": "Bool Def",
+                "fieldLength": 10,
+                "_typeChanged": "Boolean"
+            }
+        },
+        {
+            "type": "Date",
+            "key": "dateVal",
+            "properties": {
+                "name": "Date Val",
+                "fieldLength": 10,
+                "_typeChanged": "Date",
+                "dateType": "date",
+                "defaultTimezone": "Zulu",
+                "supportedTimezones": []
+            }
+        },
+        {
+            "type": "Date",
+            "key": "dateReq",
+            "properties": {
+                "name": "Date Req",
+                "required": true,
+                "fieldLength": 10,
+                "_typeChanged": "Date",
+                "dateType": "date",
+                "defaultTimezone": "Zulu",
+                "supportedTimezones": []
+            }
+        },
+        {
+            "type": "Date",
+            "key": "dateCreate",
+            "properties": {
+                "name": "Date Create",
+                "fieldLength": 10,
+                "_typeChanged": "Date",
+                "dateType": "date",
+                "defaultTimezone": "Zulu",
+                "supportedTimezones": []
+            }
+        },
+        {
+            "type": "String",
+            "key": "dateDef",
+            "properties": {
+                "name": "Date Def",
+                "required": true,
+                "fieldLength": 10,
+                "_typeChanged": "String"
+            }
+        },
+        {
+            "type": "Object",
+            "key": "groupVal",
+            "properties": {
+                "name": "Group Val",
+                "fieldLength": 10,
+                "_typeChanged": "Object"
+            },
+            "definition": [
+                {
+                    "type": "String",
+                    "key": "groupText",
+                    "properties": {
+                        "name": "Group Text",
+                        "fieldLength": 10,
+                        "_typeChanged": "String"
+                    }
+                },
+                {
+                    "type": "String",
+                    "key": "groupLong",
+                    "properties": {
+                        "name": "Group Long",
+                        "fieldLength": 10,
+                        "_typeChanged": "String",
+                        "longText": true
+                    }
+                },
+                {
+                    "type": "String",
+                    "key": "groupRich",
+                    "properties": {
+                        "name": "Group Rich",
+                        "fieldLength": 10,
+                        "_typeChanged": "String",
+                        "richText": true
+                    }
+                },
+                {
+                    "type": "String",
+                    "key": "groupEmail",
+                    "properties": {
+                        "name": "Group Email",
+                        "fieldLength": 10,
+                        "_typeChanged": "String",
+                        "email": true
+                    }
+                },
+                {
+                    "type": "String",
+                    "key": "groupSecure",
+                    "properties": {
+                        "name": "Group Secure",
+                        "fieldLength": 10,
+                        "_typeChanged": "String",
+                        "password": true
+                    }
+                },
+                {
+                    "type": "String",
+                    "key": "groupList",
+                    "properties": {
+                        "name": "Group List",
+                        "fieldLength": 10,
+                        "_typeChanged": "String"
+                    }
+                },
+                {
+                    "type": "Number",
+                    "key": "groupNum",
+                    "properties": {
+                        "name": "Group Num",
+                        "fieldLength": 10,
+                        "_typeChanged": "Number",
+                        "precision": 2
+                    }
+                },
+                {
+                    "type": "Number",
+                    "key": "groupNumList",
+                    "properties": {
+                        "name": "Group Num List",
+                        "fieldLength": 10,
+                        "_typeChanged": "Number",
+                        "precision": 2
+                    }
+                },
+                {
+                    "type": "Number",
+                    "key": "groupCurrency",
+                    "properties": {
+                        "name": "Group Currency",
+                        "fieldLength": 10,
+                        "_typeChanged": "Number",
+                        "currency": "INR",
+                        "precision": 2
+                    }
+                },
+                {
+                    "type": "Boolean",
+                    "key": "groupBool",
+                    "properties": {
+                        "name": "Group Bool",
+                        "fieldLength": 10,
+                        "_typeChanged": "Boolean"
+                    }
+                },
+                {
+                    "type": "Date",
+                    "key": "groupDate",
+                    "properties": {
+                        "name": "Group Date",
+                        "fieldLength": 10,
+                        "_typeChanged": "Date",
+                        "dateType": "date",
+                        "defaultTimezone": "Zulu",
+                        "supportedTimezones": []
+                    }
+                },
+                {
+                    "type": "Geojson",
+                    "key": "groupLoc",
+                    "properties": {
+                        "name": "Group Loc",
+                        "fieldLength": 10,
+                        "_typeChanged": "Geojson",
+                        "geoType": "point"
+                    }
+                },
+                {
+                    "type": "File",
+                    "key": "groupFile",
+                    "properties": {
+                        "name": "Group File",
+                        "fieldLength": 10,
+                        "_typeChanged": "File",
+                        "fileType": "All"
+                    }
+                },
+                {
+                    "type": "String",
+                    "key": "groupReq",
+                    "properties": {
+                        "name": "Group Req",
+                        "required": true,
+                        "fieldLength": 10,
+                        "_typeChanged": "String"
+                    }
+                },
+                {
+                    "type": "String",
+                    "key": "groupCreate",
+                    "properties": {
+                        "name": "Group Create",
+                        "fieldLength": 10,
+                        "_typeChanged": "String"
+                    }
+                },
+                {
+                    "type": "String",
+                    "key": "groupUnique",
+                    "properties": {
+                        "name": "Group Unique",
+                        "fieldLength": 10,
+                        "_typeChanged": "String"
+                    }
+                }
+            ]
+        },
+        {
+            "type": "Array",
+            "key": "collectionVal",
+            "properties": {
+                "name": "Collection Val",
+                "fieldLength": 10,
+                "_typeChanged": "Array"
+            },
+            "definition": [
+                {
+                    "type": "String",
+                    "key": "_self",
+                    "properties": {
+                        "name": "_self",
+                        "fieldLength": 10,
+                        "_typeChanged": "String"
+                    }
+                }
+            ]
+        },
+        {
+            "type": "Array",
+            "key": "collectionLong",
+            "properties": {
+                "name": "Collection Long",
+                "fieldLength": 10,
+                "_typeChanged": "Array"
+            },
+            "definition": [
+                {
+                    "type": "String",
+                    "key": "_self",
+                    "properties": {
+                        "name": "_self",
+                        "fieldLength": 10,
+                        "_typeChanged": "String",
+                        "longText": true
+                    }
+                }
+            ]
+        },
+        {
+            "type": "Array",
+            "key": "collectionRich",
+            "properties": {
+                "name": "Collection Rich",
+                "fieldLength": 10,
+                "_typeChanged": "Array"
+            },
+            "definition": [
+                {
+                    "type": "String",
+                    "key": "_self",
+                    "properties": {
+                        "name": "_self",
+                        "fieldLength": 10,
+                        "_typeChanged": "String",
+                        "richText": true
+                    }
+                }
+            ]
+        },
+        {
+            "type": "Array",
+            "key": "collectionEmail",
+            "properties": {
+                "name": "Collection Email",
+                "fieldLength": 10,
+                "_typeChanged": "Array"
+            },
+            "definition": [
+                {
+                    "type": "String",
+                    "key": "_self",
+                    "properties": {
+                        "name": "_self",
+                        "fieldLength": 10,
+                        "_typeChanged": "String",
+                        "email": true
+                    }
+                }
+            ]
+        },
+        {
+            "type": "Array",
+            "key": "collectionSecure",
+            "properties": {
+                "name": "Collection Secure",
+                "fieldLength": 10,
+                "_typeChanged": "Array"
+            },
+            "definition": [
+                {
+                    "type": "String",
+                    "key": "_self",
+                    "properties": {
+                        "name": "_self",
+                        "fieldLength": 10,
+                        "_typeChanged": "String",
+                        "password": true
+                    }
+                }
+            ]
+        },
+        {
+            "type": "Array",
+            "key": "collectionList",
+            "properties": {
+                "name": "Collection List",
+                "fieldLength": 10,
+                "_typeChanged": "Array"
+            },
+            "definition": [
+                {
+                    "type": "String",
+                    "key": "_self",
+                    "properties": {
+                        "name": "_self",
+                        "fieldLength": 10,
+                        "_typeChanged": "String"
+                    }
+                }
+            ]
+        },
+        {
+            "type": "Array",
+            "key": "collectionNum",
+            "properties": {
+                "name": "Collection Num",
+                "fieldLength": 10,
+                "_typeChanged": "Array"
+            },
+            "definition": [
+                {
+                    "type": "Number",
+                    "key": "_self",
+                    "properties": {
+                        "name": "_self",
+                        "fieldLength": 10,
+                        "_typeChanged": "Number",
+                        "precision": 2
+                    }
+                }
+            ]
+        },
+        {
+            "type": "Array",
+            "key": "collectionNumList",
+            "properties": {
+                "name": "Collection Num List",
+                "fieldLength": 10,
+                "_typeChanged": "Array"
+            },
+            "definition": [
+                {
+                    "type": "Number",
+                    "key": "_self",
+                    "properties": {
+                        "name": "_self",
+                        "fieldLength": 10,
+                        "_typeChanged": "Number",
+                        "precision": 2
+                    }
+                }
+            ]
+        },
+        {
+            "type": "Array",
+            "key": "collectionCurrency",
+            "properties": {
+                "name": "Collection Currency",
+                "fieldLength": 10,
+                "_typeChanged": "Array"
+            },
+            "definition": [
+                {
+                    "type": "Number",
+                    "key": "_self",
+                    "properties": {
+                        "name": "_self",
+                        "fieldLength": 10,
+                        "_typeChanged": "Number",
+                        "currency": "INR",
+                        "precision": 2
+                    }
+                }
+            ]
+        },
+        {
+            "type": "Array",
+            "key": "collectionBool",
+            "properties": {
+                "name": "Collection Bool",
+                "fieldLength": 10,
+                "_typeChanged": "Array"
+            },
+            "definition": [
+                {
+                    "type": "Boolean",
+                    "key": "_self",
+                    "properties": {
+                        "name": "_self",
+                        "fieldLength": 10,
+                        "_typeChanged": "Boolean"
+                    }
+                }
+            ]
+        },
+        {
+            "type": "Array",
+            "key": "collectionDate",
+            "properties": {
+                "name": "Collection Date",
+                "fieldLength": 10,
+                "_typeChanged": "Array"
+            },
+            "definition": [
+                {
+                    "type": "Date",
+                    "key": "_self",
+                    "properties": {
+                        "name": "_self",
+                        "fieldLength": 10,
+                        "_typeChanged": "Date",
+                        "dateType": "date",
+                        "defaultTimezone": "Zulu",
+                        "supportedTimezones": []
+                    }
+                }
+            ]
+        },
+        {
+            "type": "Array",
+            "key": "collectionGroup",
+            "properties": {
+                "name": "Collection Group",
+                "fieldLength": 10,
+                "_typeChanged": "Array"
+            },
+            "definition": [
+                {
+                    "type": "Object",
+                    "key": "_self",
+                    "properties": {
+                        "name": "_self",
+                        "fieldLength": 10,
+                        "_typeChanged": "Object"
+                    },
+                    "definition": [
+                        {
+                            "type": "String",
+                            "key": "val",
+                            "properties": {
+                                "name": "Val",
+                                "fieldLength": 10,
+                                "_typeChanged": "String"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Array",
+            "key": "collectionLoc",
+            "properties": {
+                "name": "Collection Loc",
+                "fieldLength": 10,
+                "_typeChanged": "Array"
+            },
+            "definition": [
+                {
+                    "type": "Geojson",
+                    "key": "_self",
+                    "properties": {
+                        "name": "_self",
+                        "fieldLength": 10,
+                        "_typeChanged": "Geojson",
+                        "geoType": "point"
+                    }
+                }
+            ]
+        },
+        {
+            "type": "Array",
+            "key": "collectionFile",
+            "properties": {
+                "name": "Collection File",
+                "fieldLength": 10,
+                "_typeChanged": "Array"
+            },
+            "definition": [
+                {
+                    "type": "File",
+                    "key": "_self",
+                    "properties": {
+                        "name": "_self",
+                        "fieldLength": 10,
+                        "_typeChanged": "File",
+                        "fileType": "All"
+                    }
+                }
+            ]
+        },
+        {
+            "type": "Array",
+            "key": "collectionDef",
+            "properties": {
+                "name": "Collection Def",
+                "fieldLength": 10,
+                "_typeChanged": "Array"
+            },
+            "definition": [
+                {
+                    "type": "String",
+                    "key": "_self",
+                    "properties": {
+                        "name": "_self",
+                        "fieldLength": 10,
+                        "_typeChanged": "String"
+                    }
+                }
+            ]
+        },
+        {
+            "type": "Geojson",
+            "key": "locVal",
+            "properties": {
+                "name": "Loc Val ",
+                "fieldLength": 10,
+                "_typeChanged": "Geojson",
+                "geoType": "point"
+            }
+        },
+        {
+            "type": "Geojson",
+            "key": "locReq",
+            "properties": {
+                "name": "Loc Req ",
+                "required": true,
+                "fieldLength": 10,
+                "_typeChanged": "Geojson",
+                "geoType": "point"
+            }
+        },
+        {
+            "type": "File",
+            "key": "fileVal",
+            "properties": {
+                "name": "File Val",
+                "fieldLength": 10,
+                "_typeChanged": "File",
+                "fileType": "All"
+            }
+        },
+        {
+            "type": "File",
+            "key": "fileReq",
+            "properties": {
+                "name": "File req",
+                "required": true,
+                "fieldLength": 10,
+                "_typeChanged": "File",
+                "fileType": "All"
+            }
+        },
+        {
+            "type": "File",
+            "key": "fileCreate",
+            "properties": {
+                "name": "File Create",
+                "fieldLength": 10,
+                "_typeChanged": "File",
+                "createOnly": true,
+                "fileType": "All"
+            }
+        },
+        {
+            "type": "User",
+            "key": "groupUser",
+            "properties": {
+                "name": "Group User",
+                "fieldLength": 10,
+                "_typeChanged": "User",
+                "deleteAction": "restrict",
+                "relatedSearchField": "_id",
+                "relatedViewFields": []
+            }
+        },
+        {
+            "type": "Array",
+            "key": "collectionUser",
+            "properties": {
+                "name": "Collection User",
+                "fieldLength": 10,
+                "_typeChanged": "Array"
+            },
+            "definition": [
+                {
+                    "type": "User",
+                    "key": "_self",
+                    "properties": {
+                        "name": "_self",
+                        "fieldLength": 10,
+                        "_typeChanged": "User",
+                        "deleteAction": "restrict",
+                        "relatedSearchField": "_id",
+                        "relatedViewFields": []
+                    }
+                }
+            ]
+        },
+        {
+            "type": "User",
+            "key": "userVal",
+            "properties": {
+                "name": "User Val",
+                "fieldLength": 10,
+                "_typeChanged": "User",
+                "deleteAction": "restrict",
+                "relatedSearchField": "_id",
+                "relatedViewFields": []
+            }
+        },
+        {
+            "type": "User",
+            "key": "userReq",
+            "properties": {
+                "name": "User Req",
+                "required": true,
+                "fieldLength": 10,
+                "_typeChanged": "User",
+                "deleteAction": "restrict",
+                "relatedSearchField": "_id",
+                "relatedViewFields": []
+            }
+        },
+        {
+            "type": "User",
+            "key": "userCreate",
+            "properties": {
+                "name": "User Create",
+                "fieldLength": 10,
+                "_typeChanged": "User",
+                "deleteAction": "restrict",
+                "relatedSearchField": "_id",
+                "relatedViewFields": []
+            }
+        },
+        {
+            "type": "User",
+            "key": "userUnique",
+            "properties": {
+                "name": "User Unique",
+                "fieldLength": 10,
+                "_typeChanged": "User",
+                "deleteAction": "restrict",
+                "relatedSearchField": "_id",
+                "relatedViewFields": []
+            }
+        },
+        {
+            "type": "Relation",
+            "key": "relationDs2",
+            "properties": {
+                "name": "Relation _Ds2",
+                "fieldLength": 10,
+                "_typeChanged": "Relation",
+                "deleteAction": "restrict",
+                "relatedTo": "<%dataPipe.read('AC_DS_TS-01-00-02.json').secondDataService._id%>",
+                "relatedSearchField": "_id",
+                "relatedViewFields": [
+                    {
+                       
+                        "key": "_id",
+                        "type": "String",
+                        "prefix": "TES",
+                        "suffix": null,
+                        "padding": null,
+                        "counter": 1001,
+                        "properties": {
+                            "label": null,
+                            "readonly": false,
+                            "errorMessage": null,
+                            "name": "ID",
+                            "required": false,
+                            "fieldLength": 10,
+                            "_description": null,
+                            "_typeChanged": "id",
+                            "_isParrentArray": null,
+                            "_isGrpParentArray": null,
+                            "dataPath": "_id",
+                            "_detailedType": "",
+                            "dataKey": "_id"
+                        }
+                    }
+                ]
+            }
+        }
+    ],
+    "webHooks": [],
+    "preHooks": [],
+    "workflowHooks": {
+        "postHooks": {
+            "submit": [],
+            "rework": [],
+            "discard": [],
+            "approve": [],
+            "reject": []
+        }
+    },
+    "tags": [],
+    "versionValidity": {
+        "validityType": "count",
+        "validityValue": -1
+    },
+    "disableInsights": false,
+    "headers": [],
+    "enableSearchIndex": false
+}
