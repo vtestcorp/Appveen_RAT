@@ -27,8 +27,8 @@
                 "url": "/a/rbac/usr",
                 "payload": {
                     "username": "test_superadmin@appveen.com",
-                    "password": "123123123",
-                    "cpassword": "123123123",
+                    "password": "test@123",
+                    "cpassword": "test@123",
                     "isSuperAdmin": true,
                     "attributes": {},
                     "basicDetails": {
@@ -74,8 +74,8 @@
                 "payload": {
                     "user": {
                         "username": "test_appadmin@appveen.com",
-                        "password": "123123123",
-                        "cpassword": "123123123",
+                        "password": "test@123",
+                        "cpassword": "test@123",
                         "isSuperAdmin": false,
                         "attributes": {},
                         "basicDetails": {
