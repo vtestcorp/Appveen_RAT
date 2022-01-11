@@ -12,8 +12,8 @@
                 "method": "POST",
                 "url": "/a/rbac/login",
                 "payload": {
-                    "username": "admin",
-                    "password": "u?5k167v13w5"
+                    "username": "PreetiTester@1gamil.com",
+                    "password": "Test@12345"
                 },
                 "wait": 5,
                 "responseCode": 200,
@@ -26,14 +26,19 @@
                 "method": "POST",
                 "url": "/a/rbac/usr",
                 "payload": {
-                    "username": "test_superadmin@appveen.com",
-                    "password": "test@123",
-                    "cpassword": "test@123",
+                    "auth": {
+                        "authType": "local"
+                    },
+                    "username": "PreetiTester@1gamil.com",
+                    "password": "Test@12345",
+                    "cpassword": "Test@12345",
                     "isSuperAdmin": true,
                     "attributes": {},
                     "basicDetails": {
-                        "name": "test_superadmin@appveen.com",
-                        "phone": null
+                        "name": "PreetiTester",
+                        "phone": null,
+                        "alternateEmail": "PreetiTester@1gamil.com",
+                        "description": null
                     },
                     "accessControl": {
                         "accessLevel": "Selected",
@@ -74,8 +79,8 @@
                 "payload": {
                     "user": {
                         "username": "test_appadmin@appveen.com",
-                        "password": "test@123",
-                        "cpassword": "test@123",
+                        "password": "Test@12345",
+                        "cpassword": "Test@12345",
                         "isSuperAdmin": false,
                         "attributes": {},
                         "basicDetails": {
