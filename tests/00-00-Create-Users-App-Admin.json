@@ -1,7 +1,7 @@
 {
     "testName": "Create Super admin ,App and app admin ",
     "url": [
-        "https://qa.ds.appveen.com/api"
+        "https://biforst.ds.appveen.com/api"
     ],
     "modules": [],
     "globals": ["loginResponse", "createGroupResponse", "groupResponse"],
@@ -12,7 +12,7 @@
                 "method": "POST",
                 "url": "/a/rbac/login",
                 "payload": {
-                    "username": "PreetiTester@1gamil.com",
+                    "username": "PreetiTester@appveen.com",
                     "password": "Test@12345"
                 },
                 "wait": 5,
@@ -29,7 +29,7 @@
                     "auth": {
                         "authType": "local"
                     },
-                    "username": "PreetiTester@1gamil.com",
+                    "username": "PreetiTester@appveen.com",
                     "password": "Test@12345",
                     "cpassword": "Test@12345",
                     "isSuperAdmin": true,
@@ -37,7 +37,7 @@
                     "basicDetails": {
                         "name": "PreetiTester",
                         "phone": null,
-                        "alternateEmail": "PreetiTester@1gamil.com",
+                        "alternateEmail": "PreetiTester@appveen.com",
                         "description": null
                     },
                     "accessControl": {
@@ -60,7 +60,7 @@
                 "method": "POST",
                 "url": "/a/rbac/app",
                 "payload": {
-                    "_id": "TEST-API"
+                    "_id": "TEST-API1"
                 },
                 "headers": {
                     "Authorization": "JWT {{loginResponse.token}}",
@@ -75,21 +75,21 @@
             "name": "Create a user",
             "request": {
                 "method": "POST",
-                "url": "/a/rbac/usr/app/TEST-API/create",
+                "url": "/a/rbac/usr/app/TEST-API1/create",
                 "payload": {
                     "user": {
                         "username": "test_appadmin@appveen.com",
                         "password": "Test@12345",
                         "cpassword": "Test@12345",
-                        "isSuperAdmin": false,
+                        "isSuperAdmin": true,
                         "attributes": {},
                         "basicDetails": {
                             "name": "test_appadmin@appveen.com",
-                            "phone": null
+                            "phone": "9999999991"
                         },
                         "accessControl": {
                             "accessLevel": "Selected",
-                            "apps": ["TEST-API"]
+                            "apps": ["TEST-API1"]
                         },
                         "roles": null
                     },
@@ -109,7 +109,7 @@
                 "method": "PUT",
                 "url": "/a/rbac/usr/test_appadmin@appveen.com/appAdmin/grant",
                 "payload": {
-                    "apps": ["TEST-API"]
+                    "apps": ["TEST-API1"]
                 },
                 "headers": {
                     "Authorization": "JWT {{loginResponse.token}}",
